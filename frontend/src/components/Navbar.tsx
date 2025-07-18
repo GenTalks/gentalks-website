@@ -13,7 +13,7 @@ export default function Navbar() {
       </div>
 
       <div className="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none lg:flex-1 lg:ml-6">
-        <h1 className="font-teachers text-[32px] sm:text-[40px] lg:text-[50px] text-laurel tracking-widest text-center lg:text-left">
+        <h1 className="font-teachers text-[32px] sm:text-[40px] lg:text-[50px] text-laurel tracking-widest text-center translate-x-5 lg:text-left">
           GENTALKS
         </h1>
       </div>
