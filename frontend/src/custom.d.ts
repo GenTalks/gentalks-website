@@ -8,7 +8,7 @@ declare module '*.svg' {
   export default content;
 }
 
-// custom.d.ts
+
 declare module '*.png' {
   const value: string;
   export default value;
