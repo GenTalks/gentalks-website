@@ -15,13 +15,13 @@ export default function Navbar() {
 
       <div className="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none lg:flex-1 lg:ml-6">
         <Link to="/" onClick={() => setOpen(false)}>
-        <h1 className="font-teachers text-[32px] sm:text-[40px] lg:text-[50px] text-laurel tracking-widest text-center translate-x-5 lg:text-left cursor-pointer">
+        <h1 className="font-teachers text-[30px] sm:text-[34px] lg:text-[36px] text-laurel tracking-widest text-center translate-x-4 lg:text-left cursor-pointer">
             GENTALKS
         </h1>
         </Link>
       </div>
 
-      <div className="hidden lg:flex gap-6">
+      <div className="hidden lg:flex gap-2">
         <NavButton to="/about" label="About" />
         <NavButton to="/community" label="Community" />
         <NavButton to="/media" label="Media" />
