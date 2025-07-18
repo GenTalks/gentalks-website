@@ -18,6 +18,15 @@ function App() {
       <div className="min-h-screen flex flex-col bg-white text-gray-500">
         <Navbar />
 
+        <div className="flex justify-center space-x-4 mt-4">
+          <HomeButton />
+          <NavButton to="/about" label="About" />
+          <NavButton to="/community" label="Community" />
+          <NavButton to="/contact" label="Contact" />
+          <NavButton to="/shop" label="Shop" />
+          <NavButton to="/team" label="Team" />
+        </div>
+        
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
