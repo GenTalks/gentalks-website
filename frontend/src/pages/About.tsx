@@ -1,8 +1,11 @@
 const About = () => {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-teachers">About Us</h1>
-      <p>Coming Soon!</p>
+    <div>
+      <div className="w-full flex flex-col items-center py-8 font-teachers space-y-6">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl transform">
+          About GenTalks
+        </h1>
+      </div>
     </div>
   );
 };

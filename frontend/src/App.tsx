@@ -6,7 +6,7 @@ import Community from './pages/Community';
 import Media from './pages/Media';
 import Home from './pages/Home';
 import Mentors from './pages/Mentors';
-import Team from './pages/Team';
+import Teams from './pages/Teams';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
             <Route path="/community" element={<Community />} />
             <Route path="/media" element={<Media />} />
             <Route path="/mentors" element={<Mentors />} />
-            <Route path="/team" element={<Team />} />
+            <Route path="/teams" element={<Teams />} />
           </Routes>
         </main>
 
