@@ -30,13 +30,9 @@ export default {
         evergreen: '3px 5px 4px rgba(51, 85, 52, 0.8)', 
         myrtle: '3px 5px 1px rgba(14, 46, 3, 0.8)',
       },
-      /*
       fontFamily: {
-        bosk: ['Poppins', 'sans-serif'],
-        biski: ['Pacifico', 'cursive'],
-        acherus: ['Montserrat', 'sans-serif'],
+        teachers: ['Teachers', 'cursive'],
       },
-      */
     },
   },
   plugins: [],
