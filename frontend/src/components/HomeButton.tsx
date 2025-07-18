@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
 import gtLogo from '../assets/icons/gt_steam.png';
 
-const HomeButton = () => {
+interface HomeButtonProps {
+  onClick?: () => void;
+}
+
+const HomeButton = ({ onClick }: HomeButtonProps) => {
     return (
-        <Link to="/">
+        <Link to="/" onClick = {onClick}>
         <img
           src={gtLogo}  
           alt="GenTalks Home"
