@@ -30,6 +30,9 @@ export default {
         evergreen: '3px 5px 4px rgba(51, 85, 52, 0.8)', 
         myrtle: '3px 5px 1px rgba(14, 46, 3, 0.8)',
       },
+      boxShadow: {
+        'deep': '0 1px 18px rgba(0, 0, 0, 0.3)', // <-- 120px blur
+      },
       fontFamily: {
         teachers: ['Teachers', 'cursive'],
       },
