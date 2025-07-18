@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="flex items-center justify-between px-6 lg:px-12 py-4 bg-cream shadow-deep relative">
       
-      <HomeButton />
+      <HomeButton onClick={() => setOpen(false)}/>
 
       <h1 className="font-teachers text-[50px] flex-1 text-center text-laurel tracking-widest">
         GENTALKS
@@ -47,12 +47,12 @@ export default function Navbar() {
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 right-0 bg-cream flex flex-col space-y-4 p-6 shadow-md lg:hidden z-10">
-          <NavButton to="/about" label="About" />
-          <NavButton to="/community" label="Community" />
-          <NavButton to="/media" label="Media" />
-          <NavButton to="/mentors" label="Mentors" />
-          <NavButton to="/team" label="Team" />
+        <div className="absolute top-full left-0 right-0 bg-cream flex flex-col space-y-4 p-6 shadow-md lg:hidden z-50">
+          <NavButton to="/about" label="About" onClick={() => setOpen(false)}/>
+          <NavButton to="/community" label="Community" onClick={() => setOpen(false)}/>
+          <NavButton to="/media" label="Media" onClick={() => setOpen(false)}/>
+          <NavButton to="/mentors" label="Mentors" onClick={() => setOpen(false)}/>
+          <NavButton to="/team" label="Team" onClick={() => setOpen(false)}/>
         </div>
       )}
     </nav>
