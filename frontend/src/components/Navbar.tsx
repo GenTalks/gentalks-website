@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import HomeButton from './HomeButton';
 import NavButton from './NavButton';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -13,9 +14,11 @@ export default function Navbar() {
       </div>
 
       <div className="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none lg:flex-1 lg:ml-6">
-        <h1 className="font-teachers text-[32px] sm:text-[40px] lg:text-[50px] text-laurel tracking-widest text-center translate-x-5 lg:text-left">
-          GENTALKS
+        <Link to="/" onClick={() => setOpen(false)}>
+        <h1 className="font-teachers text-[32px] sm:text-[40px] lg:text-[50px] text-laurel tracking-widest text-center translate-x-5 lg:text-left cursor-pointer">
+            GENTALKS
         </h1>
+        </Link>
       </div>
 
       <div className="hidden lg:flex gap-6">

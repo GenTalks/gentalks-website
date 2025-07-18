@@ -5,7 +5,7 @@ const Media = () => {
         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl transform">
           Check out our media!
         </h1>
-        <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-auto">
+        <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
           We're GenTalks, a student-led high school startup community dedicated to generational empowerment through nurturing conversations, inspired by the spirit of BobaTalks.
         </h3>
 
