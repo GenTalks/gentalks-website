@@ -14,7 +14,7 @@ import NavButton from './components/NavButton'
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-white text-gray-500">
+      <div className="min-h-screen flex flex-col bg-laurel text-fog">
         <Navbar />
 
         <div className="flex justify-center space-x-4 mt-4">
