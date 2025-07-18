@@ -8,19 +8,16 @@ export default function Navbar() {
   return (
     <nav className="relative flex items-center justify-between px-6 lg:px-12 py-4 bg-cream shadow-deep">
 
-      {/* LEFT: Home icon */}
       <div className="shrink-0">
         <HomeButton onClick={() => setOpen(false)} />
       </div>
 
-      {/* CENTER: GENTALKS title */}
       <div className="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none lg:flex-1 lg:ml-6">
         <h1 className="font-teachers text-[32px] sm:text-[40px] lg:text-[50px] text-laurel tracking-widest text-center lg:text-left">
           GENTALKS
         </h1>
       </div>
 
-      {/* RIGHT: nav links on desktop */}
       <div className="hidden lg:flex gap-6">
         <NavButton to="/about" label="About" />
         <NavButton to="/community" label="Community" />
@@ -29,7 +26,6 @@ export default function Navbar() {
         <NavButton to="/teams" label="Teams" />
       </div>
 
-      {/* RIGHT: hamburger on mobile */}
       <button
         className="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-laurel"
         onClick={() => setOpen(!open)}
@@ -45,7 +41,6 @@ export default function Navbar() {
         </svg>
       </button>
 
-      {/* Mobile dropdown menu */}
       {open && (
         <div className="absolute top-full left-0 right-0 bg-cream flex flex-col space-y-4 p-6 shadow-md lg:hidden z-50">
           <NavButton to="/about" label="About" onClick={() => setOpen(false)} />
