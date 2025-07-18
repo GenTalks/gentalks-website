@@ -7,7 +7,7 @@ const HomeButton = () => {
         <img
           src={gtLogo}  
           alt="GenTalks Home"
-          className="h-16 w-16 rounded-full hover:opacity-80 transition duration-200"
+          className="h-16 w-16 rounded-full hover:opacity-80 border-2 border-evergreen transition duration-200"
         />
       </Link>
     )
