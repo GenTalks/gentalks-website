@@ -7,10 +7,10 @@ export default function Navbar() {
       <HomeButton />
       <div className="flex space-x-4">
         <NavButton to="/about" label="About" />
-        <NavButton to="/community" label="Community" />
-        <NavButton to="/contact" label="Contact" />
-        <NavButton to="/shop" label="Shop" />
         <NavButton to="/team" label="Team" />
+        <NavButton to="/community" label="Community" />
+        <NavButton to="/shop" label="Shop" />
+        <NavButton to="/contact" label="Contact" />
       </div>
     </nav>
   );
