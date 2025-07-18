@@ -2,6 +2,7 @@ import { useState } from 'react';
 import HomeButton from './HomeButton';
 import NavButton from './NavButton';
 import { Link } from 'react-router-dom';
+import ContactButton from './ContactButton';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,12 +22,13 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className="hidden lg:flex gap-2">
-        <NavButton to="/about" label="About" />
+      <div className="hidden lg:flex gap-1">
+        <NavButton to="/ourstory" label="Our Story" />
         <NavButton to="/community" label="Community" />
-        <NavButton to="/media" label="Media" />
-        <NavButton to="/mentors" label="Mentors" />
-        <NavButton to="/teams" label="Teams" />
+        <NavButton to="/content" label="Content" />
+        <NavButton to="/resources" label="Resources" />
+        <NavButton to="/faqs" label="FAQs" />
+        <ContactButton to="/contact" label ="Contact" />
       </div>
 
       <button
@@ -46,11 +48,12 @@ export default function Navbar() {
 
       {open && (
         <div className="absolute top-full left-0 right-0 bg-cream flex flex-col space-y-4 p-6 shadow-md lg:hidden z-50">
-          <NavButton to="/about" label="About" onClick={() => setOpen(false)} />
+          <NavButton to="/ourstory" label="Our Story" onClick={() => setOpen(false)} />
           <NavButton to="/community" label="Community" onClick={() => setOpen(false)} />
-          <NavButton to="/media" label="Media" onClick={() => setOpen(false)} />
-          <NavButton to="/mentors" label="Mentors" onClick={() => setOpen(false)} />
-          <NavButton to="/teams" label="Teams" onClick={() => setOpen(false)} />
+          <NavButton to="/content" label="Content" onClick={() => setOpen(false)} />
+          <NavButton to="/resources" label="Resources" onClick={() => setOpen(false)} />
+          <NavButton to="/faqs" label="FAQs" onClick={() => setOpen(false)} />
+          <ContactButton to="/contact" label="Contact" onClick={() => setOpen(false)} />
         </div>
       )}
     </nav>
