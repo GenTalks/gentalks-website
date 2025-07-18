@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import About from './pages/About';
 import Community from './pages/Community';
-import Contact from './pages/Contact';
+import Media from './pages/Media';
 import Home from './pages/Home';
 import Mentors from './pages/Mentors';
 import Team from './pages/Team';
@@ -19,9 +19,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/community" element={<Community />} />
-            <Route path="/team" element={<Team />} />
+            <Route path="/media" element={<Media />} />
             <Route path="/mentors" element={<Mentors />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/team" element={<Team />} />
           </Routes>
         </main>
 
