@@ -9,7 +9,7 @@ interface NavButtonProps {
 const NavButton = ({ to, label, onClick }: NavButtonProps) => {
   return (
     <Link to={to} onClick={onClick}>
-      <button className="bg-sage text-cream px-5 py-3 rounded-[20px] hover:bg-laurel drop-shadow-evergreen">
+      <button className="text-fog text-lg px-8 py-4 hover:text-laurel">
         {label}
       </button>
     </Link>
