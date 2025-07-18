@@ -1,13 +1,17 @@
 const Home = () => {
   return (
     <div>
-      <div className="max-w-[800px] mx-auto py-4 space-y-4 font-teachers">
-        <h1 className="text-[120px] text-left">Innovation.</h1>
-        <h1 className="text-[120px] text-right">Meets.</h1>
-        <h1 className="text-[120px] text-left">Impact.</h1>
+      <div className="w-full flex flex-col items-center py-8 font-teachers space-y-6">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl transform -translate-x-10 sm:-translate-x-20">
+          Innovation.
+        </h1>
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl transform translate-x-10 sm:translate-x-20">
+          Meets.
+        </h1>
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl transform -translate-x-10 sm:-translate-x-20">
+          Impact.
+        </h1>
       </div>
-      {/*<div className="h-[2px] bg-cream w-full my-6"></div>*/}
-
     </div>
   );
 };

@@ -17,9 +17,9 @@ export default function Navbar() {
       <div className="hidden lg:flex flex-wrap gap-6 max-w-full">
         <NavButton to="/about" label="About" />
         <NavButton to="/community" label="Community" />
-        <NavButton to="/team" label="Team" />
+        <NavButton to="/media" label="Media" />
         <NavButton to="/mentors" label="Mentors" />
-        <NavButton to="/contact" label="Contact" />
+        <NavButton to="/team" label="Team" />
       </div>
 
       <button
@@ -50,9 +50,9 @@ export default function Navbar() {
         <div className="absolute top-full left-0 right-0 bg-cream flex flex-col space-y-4 p-6 shadow-md lg:hidden z-10">
           <NavButton to="/about" label="About" />
           <NavButton to="/community" label="Community" />
-          <NavButton to="/team" label="Team" />
+          <NavButton to="/media" label="Media" />
           <NavButton to="/mentors" label="Mentors" />
-          <NavButton to="/contact" label="Contact" />
+          <NavButton to="/team" label="Team" />
         </div>
       )}
     </nav>
