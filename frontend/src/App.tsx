@@ -5,7 +5,7 @@ import About from './pages/About';
 import Community from './pages/Community';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
-import Shop from './pages/Shop';
+import Mentors from './pages/Mentors';
 import Team from './pages/Team';
 
 function App() {
@@ -17,10 +17,10 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />\
-            <Route path="/team" element={<Team />} />
+            <Route path="/about" element={<About />} />
             <Route path="/community" element={<Community />} />
-            <Route path="/shop" element={<Shop />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/mentors" element={<Mentors />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

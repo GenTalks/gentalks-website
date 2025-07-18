@@ -7,9 +7,9 @@ export default function Navbar() {
       <HomeButton />
       <div className="flex space-x-8">
         <NavButton to="/about" label="About" />
-        <NavButton to="/team" label="Team" />
         <NavButton to="/community" label="Community" />
-        <NavButton to="/shop" label="Shop" />
+        <NavButton to="/team" label="Team" />
+        <NavButton to="/mentors" label="Mentors" />
         <NavButton to="/contact" label="Contact" />
       </div>
     </nav>
