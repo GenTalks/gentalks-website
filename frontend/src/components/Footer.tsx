@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="text-center p-4 border-t">
-      © 2025 My App. All rights reserved.
+      © 2025 GenTalks. All rights reserved.
     </footer>
   );
 };
