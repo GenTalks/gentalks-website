@@ -9,8 +9,8 @@ export default function Navbar() {
         <NavButton to="/about" label="About" />
         <NavButton to="/team" label="Team" />
         <NavButton to="/community" label="Community" />
-        <NavButton to="/shop" label="Shop" />
         <NavButton to="/contact" label="Contact" />
+        <NavButton to="/shop" label="Shop" />
       </div>
     </nav>
   );
