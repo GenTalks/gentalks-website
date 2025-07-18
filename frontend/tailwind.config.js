@@ -23,6 +23,8 @@ export default {
         canary: '#FBFFD7',
         fog: '#484743',
         sage: '#BAC4A6',
+        caramel: '#FFF7F0',
+        cream: '#FFFBF8',
       },
       /*
       fontFamily: {
