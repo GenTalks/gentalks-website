@@ -6,7 +6,7 @@ const Community = () => {
           Community Page
         </h1>
         <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          We're GenTalks, a student-led high school startup community dedicated to generational empowerment through nurturing conversations, inspired by the spirit of BobaTalks.
+          showcase hs ambasssador program, featured community projects, idk, gt stats
         </h3>
 
       </div>

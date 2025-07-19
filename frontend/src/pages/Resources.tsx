@@ -6,7 +6,7 @@ const Resources = () => {
           Resources!
         </h1>
         <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          We're GenTalks, a student-led high school startup community dedicated to generational empowerment through nurturing conversations, inspired by the spirit of BobaTalks.
+          uc csu recs, how to adult, adapting to college
         </h3>
 
       </div>
