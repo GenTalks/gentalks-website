@@ -6,7 +6,7 @@ const Contact = () => {
           Contact Us!
         </h1>
         <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          join us, join discord, join us, join newsletter, follow our socials, did i mention join us?! 👁️👄👁️
+          We're always available to talk and will respond as fast as possible! Feel free to join our community, and connect with us on our socials!
         </h3>
 
       </div>
