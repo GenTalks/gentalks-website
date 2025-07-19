@@ -6,7 +6,7 @@ const Home = () => {
           Welcome Home
         </h1>
         <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          if ur quotes have aura it will be put here without u knowing (jk consent matters🩷), look at clickbait worthy previews, spin the mentors like a pokestop until they get dizzy
+          if ur quotes have aura it will be put here without u knowing (jk we love u pls forgive us king/queen/member of the royal family), look at clickbait worthy previews, spin the mentors like a pokestop until they get dizzy
         </h3>
 
       </div>
