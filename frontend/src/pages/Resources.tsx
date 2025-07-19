@@ -6,7 +6,7 @@ const Resources = () => {
           Resources!
         </h1>
         <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          mentor signup(leads to a page not visible on menu), uc csu recs, how to adult, adapting to college
+          got help? no? me either. heres advice on uc csu apps, how to adult, adapting to college
         </h3>
 
       </div>

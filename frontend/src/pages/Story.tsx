@@ -6,7 +6,7 @@ const Story = () => {
           Our Story
         </h1>
         <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          the philosophy, how we got started, why we started
+          how did the capybara start drinking matcha and how did a sprout grow out of its head? idk. read more to find out (tooootallly not clickbait) "i stil cant get over that capybara, chat. it's so cute. why is it so cute?"
         </h3>
 
       </div>

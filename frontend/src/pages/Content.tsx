@@ -6,7 +6,7 @@ const Media = () => {
           GenContent!
         </h1>
         <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          gt content, recent posts from socials
+          renegade renegade jk im old, this page will have gt content & recent posts from socials
         </h3>
 
       </div>
