@@ -12,6 +12,7 @@ const Home = () => {
           style={{objectPosition: '90% 10%' }}
         />
         <div className="absolute inset-0 bg-laurel opacity-70" />
+        
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center font-teachers text-cream space-y-6 px-4">
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-8xl text-right self-end mr-[8rem] lg:mr-[20rem]">
             GenTalks
@@ -19,7 +20,7 @@ const Home = () => {
           <h3 className="text-md sm:text-xl md:text-2xl lg:text-6xl text-right self-end mr-[5rem] lg:mr-[15rem]">
             Grow with us
           </h3>
-          <div className="self-end mr-[8rem] lg:mr-[20rem] lg:pt-4 scale-80lg:scale-125">
+          <div className="self-end mr-[8rem] lg:mr-[20rem] lg:pt-4 sm:scale-50 scale-80 lg:scale-125">
             <LearnMoreButton to="/ourstory" />
           </div>
         </div>
