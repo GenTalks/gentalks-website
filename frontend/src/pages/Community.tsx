@@ -6,7 +6,7 @@ const Community = () => {
           Community Page
         </h1>
         <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          learn more abt our hs ambassadors and mentor programs bc theyre too cool 4 skool 💜, featured community projects, gt stat padding, the latest announcement (ppl not in gentalks: ... ppl in gentalks: ooohhhh)
+          learn more abt our hs ambassadors and mentor programs bc theyre 2 cool 4 skool 💜, featured community projects, gt stat padding, the latest announcement (ppl not in gentalks: ... ppl in gentalks: ooohhhh)
         </h3>
 
       </div>

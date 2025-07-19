@@ -6,7 +6,7 @@ const Home = () => {
           Welcome Home
         </h1>
         <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          if ur quotes have aura we're gonna let u aurafarm, look at clickbait worthy previews, spin the mentors like a pokestop until they get dizzy
+          if ur quotes have aura we're gonna let u aurafarm, look at clickbait worthy previews, spin the mentors like a pokestop
         </h3>
 
       </div>
