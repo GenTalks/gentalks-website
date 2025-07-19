@@ -7,34 +7,34 @@ const MentorCarousel = () => {
   
   const mentors = [
     {
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      name: "Alex Chen",
+      title: "Senior at MIT - Computer Science"
+    },
+    {
       image: "https://images.unsplash.com/photo-1494790108755-2616b612c106?w=400&h=400&fit=crop&crop=face",
-      name: "Sarah Chen",
-      title: "Software Engineer at Google"
+      name: "Maya Patel",
+      title: "Junior at Stanford - Pre-Med"
     },
     {
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      name: "Marcus Johnson",
-      title: "Product Manager at Meta"
+      name: "Jordan Williams",
+      title: "12th Grade - Westfield High"
     },
     {
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      name: "Emily Rodriguez",
-      title: "UX Designer at Apple"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      name: "David Kim",
-      title: "Data Scientist at Netflix"
+      name: "Sofia Rodriguez",
+      title: "Sophomore at UCLA - Business"
     },
     {
       image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&h=400&fit=crop&crop=face",
-      name: "Zoe Williams",
-      title: "Startup Founder"
+      name: "Emma Thompson",
+      title: "11th Grade - Lincoln Academy"
     },
     {
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-      name: "Alex Thompson",
-      title: "Investment Banker"
+      name: "Ryan Kim",
+      title: "Freshman at Georgia Tech - Engineering"
     }
   ];
 
