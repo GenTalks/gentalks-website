@@ -1,5 +1,6 @@
 import gtLogoTp from '../assets/icons/gt_steam_tp.png';
 import LearnMoreButton from '../components/LearnMore';
+import MentorCarousel from '../components/MentorCarousel';
 
 const Home = () => {
   return (
@@ -33,6 +34,10 @@ const Home = () => {
             GenTalks empowers students through mentorship, storytelling, and hands-on projects. We bring together a passionate community of learners and changemakers.
           </p>
         </div>
+      </section>
+
+      <section className="relative w-full overflow-hidden py-20 px-8">
+        <MentorCarousel />
       </section>
     </div>
   );
