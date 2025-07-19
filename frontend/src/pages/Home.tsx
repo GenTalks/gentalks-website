@@ -35,9 +35,15 @@ const Home = () => {
           </p>
         </div>
       </section>
-
       <section className="relative w-full overflow-hidden py-20 px-8">
         <MentorCarousel />
+      </section>
+
+      <section className="relative w-full overflow-hidden py-20 px-8">
+      // FAQ
+      </section>
+      <section className="relative w-full overflow-hidden py-20 px-8">
+        // Community + join us on discord
       </section>
     </div>
   );
