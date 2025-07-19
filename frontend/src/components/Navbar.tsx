@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="relative flex items-center justify-between px-6 lg:px-12 py-4 bg-cream shadow-deep">
+    <nav className="sticky top-0 z-50 relative flex items-center justify-between px-6 lg:px-12 py-4 bg-cream shadow-deep">
 
       <div className="shrink-0">
         <HomeButton onClick={() => setOpen(false)} />
