@@ -6,7 +6,7 @@ const FAQs = () => {
           Confused? me too tbh
         </h1>
         <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          your confuzzlements and mines and your pets' philosophy on their and your life
+          your confuzzlements and mines and your pets' outlook on your extraterrestrial hooman activities
         </h3>
 
       </div>
