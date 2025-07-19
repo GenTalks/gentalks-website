@@ -40,10 +40,18 @@ const Home = () => {
       </section>
 
       <section className="relative w-full overflow-hidden py-20 px-8">
-      // FAQ
+      {// FAQ
+      }
       </section>
-      <section className="relative w-full overflow-hidden py-20 px-8">
-        // Community + join us on discord
+      <section className="relative w-full overflow-hidden py-20 px-8 bg-white">
+        {// Community + join us on discord
+        }
+        <div className="max-w-5xl mx-auto space-y-8 rounded-3xl bg-stone-600 h-96 flex-col px-8 py-4">
+          <h3 className="font-semibold text-3xl text-wrap">
+            Join Our Discord Server
+          </h3>
+          <p></p>
+        </div>
       </section>
     </div>
   );
