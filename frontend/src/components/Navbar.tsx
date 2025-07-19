@@ -32,7 +32,7 @@ export default function Navbar() {
       </div>
 
       <button
-        className="2xl:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-laurel"
+        className="2xl:hidden p-2 rounded-md focus:outline-none"
         onClick={() => setOpen(!open)}
         aria-label="Toggle menu"
       >
@@ -52,7 +52,7 @@ export default function Navbar() {
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 right-0 bg-cream flex flex-col space-y-4 p-6 shadow-md 2xl:hidden z-50">
+        <div className="absolute top-full left-0 right-0 bg-cream flex flex-col items-center space-y-4 p-6 shadow-md 2xl:hidden z-50">
           <NavButton
             to="/ourstory"
             label="Our Story"
