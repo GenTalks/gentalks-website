@@ -3,13 +3,13 @@ const Footer = () => {
     <footer className="bg-laurel text-white font-teachers">
       <div className="px-[4rem] py-16">
         {/* Main footer */}
-        <div className="flex justify-between items-center mb-12">
-          <div className="flex items-center space-x-4">
+        <div className="flex flex-col lg:flex-row justify-between items-center mb-12 space-y-8 lg:space-y-0">
+          <div className="flex items-center space-x-4 order-1 lg:order-1">
             <div className="text-2xl font-bold">GenTalks</div>
           </div>
 
           {/* Navigation links */}
-          <div className="flex space-x-8 text-sm">
+          <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 text-sm text-center lg:text-left order-3 lg:order-2">
             <a
               href="/ourstory"
               className="hover:text-gray-200 transition-colors"
@@ -49,10 +49,11 @@ const Footer = () => {
           </div>
 
           {/* Social Media */}
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 order-2 lg:order-3">
             {/* TikTok */}
             <a
-              href="#"
+              href="https://www.tiktok.com/"
+              target="_blank"
               className="w-6 h-6 text-white hover:text-gray-200 transition-colors"
             >
               <svg
@@ -66,7 +67,8 @@ const Footer = () => {
 
             {/* Instagram */}
             <a
-              href="#"
+              href="https://www.instagram.com/"
+              target="_blank"
               className="w-6 h-6 text-white hover:text-gray-200 transition-colors"
             >
               <svg
@@ -80,7 +82,8 @@ const Footer = () => {
 
             {/* LinkedIn */}
             <a
-              href="#"
+              href="https://www.linkedin.com/company/gentalks/"
+              target="_blank"
               className="w-6 h-6 text-white hover:text-gray-200 transition-colors"
             >
               <svg
@@ -96,10 +99,12 @@ const Footer = () => {
 
         {/* Bottom section */}
         <div className="border-t border-white border-opacity-20 pt-8">
-          <div className="flex justify-between items-center text-sm">
-            <div>© 2025 GenTalks. All rights reserved.</div>
+          <div className="flex flex-col lg:flex-row justify-between items-center text-sm space-y-4 lg:space-y-0">
+            <div className="text-center lg:text-left">
+              © 2025 GenTalks. All rights reserved.
+            </div>
 
-            <div className="flex space-x-6">
+            <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-6 text-center lg:text-right">
               <a
                 href="/terms"
                 className="hover:text-gray-200 transition-colors"
