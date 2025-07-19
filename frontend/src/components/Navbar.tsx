@@ -2,7 +2,7 @@ import { useState } from 'react';
 import HomeButton from './HomeButton';
 import NavButton from './NavButton';
 import { Link } from 'react-router-dom';
-import ContactButton from './ContactButton';
+import MentorButton from './MentorButton';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -28,7 +28,8 @@ export default function Navbar() {
         <NavButton to="/content" label="Content" />
         <NavButton to="/resources" label="Resources" />
         <NavButton to="/faqs" label="FAQs" />
-        <ContactButton to="/contact" label ="Contact" />
+        <NavButton to="/contact" label="Contact" />
+        <MentorButton to="/mentors" label ="Book a mentor" />
       </div>
 
       <button
@@ -53,7 +54,8 @@ export default function Navbar() {
           <NavButton to="/content" label="Content" onClick={() => setOpen(false)} />
           <NavButton to="/resources" label="Resources" onClick={() => setOpen(false)} />
           <NavButton to="/faqs" label="FAQs" onClick={() => setOpen(false)} />
-          <ContactButton to="/contact" label="Contact" onClick={() => setOpen(false)} />
+          <NavButton to="/contact" label="Contact" onClick={() => setOpen(false)} />
+          <MentorButton to="/mentors" label="Book a mentor" onClick={() => setOpen(false)} />
         </div>
       )}
     </nav>
