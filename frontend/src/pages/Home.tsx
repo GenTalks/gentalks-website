@@ -18,10 +18,10 @@ const Home = () => {
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-8xl text-right self-end mr-[8rem] lg:mr-[20rem]">
             GenTalks
           </h1>
-          <h3 className="text-md sm:text-xl md:text-2xl lg:text-6xl text-right self-end mr-[5rem] lg:mr-[15rem]">
+          <h3 className="text-md sm:text-2xl md:text-3xl lg:text-6xl text-right self-end mr-[6rem] lg:mr-[15rem]">
             Grow with us
           </h3>
-          <div className="self-end mr-[8rem] lg:mr-[20rem] lg:pt-4 sm:scale-50 scale-80 lg:scale-125">
+          <div className="self-end mr-[8rem] lg:mr-[20rem] lg:pt-4 sm:scale-75 scale-80 lg:scale-125">
             <LearnMoreButton to="/ourstory" />
           </div>
         </div>
