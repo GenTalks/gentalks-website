@@ -1,6 +1,8 @@
 import gtLogoTp from '../assets/icons/gt_steam_tp.png';
+import DiscordBanner from '../components/DiscordBanner';
 import LearnMoreButton from '../components/LearnMore';
 import MentorCarousel from '../components/MentorCarousel';
+import ExploreButton from '../components/ExploreButton';
 
 const Home = () => {
   return (
@@ -29,13 +31,25 @@ const Home = () => {
 
       <section className="bg-cream text-fog py-20 px-8 font-teachers">
         <div className="max-w-5xl mx-auto space-y-8">
-          <h2 className="text-4xl lg:text-6xl font-bold">What We Do</h2>
+          
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
+            <h2 className="text-4xl lg:text-6xl font-bold">
+              Innovation Meets Impact
+            </h2>
+
+            <div className="border-laurel border-2 bg-creaam text-laurel rounded-full scale-125 ">
+              <ExploreButton to="/community" label="GenTalks" />
+            </div>
+          </div>
+
           <p className="text-lg lg:text-xl leading-relaxed">
-            GenTalks empowers students through mentorship, storytelling, and hands-on projects. We bring together a passionate community of learners and changemakers.
+            GenTalks is empowering a student-led community through mentorship, storytelling, and accessible resources as we aim to create the next generation of changemakers.
           </p>
+
         </div>
       </section>
-      <section className="relative w-full overflow-hidden py-20 px-8">
+      
+      <section className="relative w-full overflow-hidden py-20">
         <MentorCarousel />
       </section>
 
@@ -43,15 +57,13 @@ const Home = () => {
       {// FAQ
       }
       </section>
-      <section className="relative w-full overflow-hidden py-20 px-8 bg-white">
-        {// Community + join us on discord
+      <section className="relative w-full overflow-hidden py-40 px-8 bg-cream">
+        {// Community preview
         }
-        <div className="max-w-5xl mx-auto space-y-8 rounded-3xl bg-stone-600 h-96 flex-col px-8 py-4">
-          <h3 className="font-semibold text-3xl text-wrap">
-            Join Our Discord Server
-          </h3>
-          <p></p>
-        </div>
+      </section>
+
+      <section className="relative w-full overflow-hidden py-20 px-8 bg-laurel">
+        <DiscordBanner />
       </section>
     </div>
   );

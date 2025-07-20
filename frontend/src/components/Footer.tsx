@@ -1,49 +1,49 @@
 const Footer = () => {
   return (
-    <footer className="bg-laurel text-white font-teachers">
+    <footer className="bg-laurel text-cream font-teachers">
       <div className="px-[4rem] py-16">
         {/* Main footer */}
         <div className="flex flex-col lg:flex-row justify-between items-center mb-12 space-y-8 lg:space-y-0">
           <div className="flex items-center space-x-4 order-1 lg:order-1">
-            <div className="text-2xl font-bold">GenTalks</div>
+            <div className="text-3xl font-bosk">GenTalks</div>
           </div>
 
           {/* Navigation links */}
           <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 text-sm text-center lg:text-left order-3 lg:order-2">
             <a
               href="/ourstory"
-              className="hover:text-gray-200 transition-colors"
+              className="hover:text-sage transition-colors"
             >
               Our Story
             </a>
             <a
               href="/community"
-              className="hover:text-gray-200 transition-colors"
+              className="hover:text-sage transition-colors"
             >
               Community
             </a>
             <a
               href="/content"
-              className="hover:text-gray-200 transition-colors"
+              className="hover:text-sage transition-colors"
             >
               Content
             </a>
             <a
               href="/resources"
-              className="hover:text-gray-200 transition-colors"
+              className="hover:text-sage transition-colors"
             >
               Resources
             </a>
-            <a href="/faqs" className="hover:text-gray-200 transition-colors">
+            <a href="/faqs" className="hover:text-sage transition-colors">
               FAQs
             </a>
             <a
               href="/contact"
-              className="hover:text-gray-200 transition-colors"
+              className="hover:text-sage transition-colors"
             >
               Contact
             </a>
-            <a href="/mentor" className="hover:text-gray-200 transition-colors">
+            <a href="/mentor" className="hover:text-sage transition-colors">
               Book a Mentor
             </a>
           </div>

@@ -35,6 +35,8 @@ export default {
       },
       fontFamily: {
         teachers: ['Teachers', 'cursive'],
+        bosk: ['Bosk', 'sans-serif'],
+        biskiL: ['Biski', 'sans-serif'],
       },
     },
   },
