@@ -51,9 +51,9 @@ const Home = () => {
 
       <section className="relative w-full overflow-hidden py-40 px-8 bg-cream">
         <div className="flex flex-col lg:flex-row w-full gap-8">
-          <div className="pl-20 w-full lg:w-1/2 font-teachers text-fog">
-            <h1 className="text-5xl font-bold mb-12">Frequently Asked Questions</h1>
-            <div className= "w-1/2 border-laurel border-2 scale-125 rounded-full">
+          <div className="pl-20 w-full lg:w-1/2 font-teachers">
+            <h1 className="text-5xl font-bold mb-12 text-fog">Frequently Asked Questions</h1>
+            <div className="inline-block border-2 border-laurel text-laurel rounded-full px-4 py-2">
               <ExploreButton to="/faqs" label="all FAQs" />
             </div>
           </div>
