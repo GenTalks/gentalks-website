@@ -1,9 +1,8 @@
 import gtLogoTp from '../assets/icons/gt_steam_tp.png';
 import DiscordBanner from '../components/DiscordBanner';
-import LearnMoreButton from '../components/LearnMore';
 import MentorCarousel from '../components/MentorCarousel';
 import ExploreButton from '../components/ExploreButton';
-
+import FAQComp from '../components/FAQComp';
 const Home = () => {
   return (
     <div className="relative w-full overflow-hidden">
@@ -23,9 +22,6 @@ const Home = () => {
           <h3 className="text-md sm:text-2xl md:text-3xl lg:text-6xl text-right self-end mr-[6rem] lg:mr-[15rem]">
             Grow with us
           </h3>
-          <div className="self-end mr-[8rem] lg:mr-[20rem] lg:pt-4 sm:scale-75 scale-80 lg:scale-125">
-            <LearnMoreButton to="/ourstory" />
-          </div>
         </div>
       </div>
 
@@ -37,7 +33,7 @@ const Home = () => {
               Innovation Meets Impact
             </h2>
 
-            <div className="border-laurel border-2 bg-creaam text-laurel rounded-full scale-125 ">
+            <div className="border-laurel border-2 bg-creaam text-laurel rounded-full scale-125 hover:bg-laurel hover:text-cream">
               <ExploreButton to="/community" label="GenTalks" />
             </div>
           </div>
@@ -53,14 +49,22 @@ const Home = () => {
         <MentorCarousel />
       </section>
 
-      <section className="relative w-full overflow-hidden py-20 px-8 bg-cream">
-      {// FAQ
-      }
-      </section>
       <section className="relative w-full overflow-hidden py-40 px-8 bg-cream">
-        {// Community preview
-        }
+        <div className="flex flex-col lg:flex-row w-full gap-8">
+          <div className="pl-20 w-full lg:w-1/2 font-teachers">
+            <h1 className="text-5xl font-bold mb-12 text-fog">Frequently Asked Questions</h1>
+            <div className= "w-1/2 border-laurel border-2 scale-125 text-laurel rounded-full">
+              <ExploreButton to="/faqs" label="all FAQs" />
+            </div>
+          </div>
+
+          <div className="w-full lg:w-1/2 flex flex-col space-y-4">
+            <FAQComp question="What is GenTalks?" answer="A student-led initiative..." />
+            <FAQComp question="How do I join?" answer="You can join through our Discord." />
+          </div>
+        </div>
       </section>
+
 
       <section className="relative w-full overflow-hidden py-20 px-8 bg-laurel">
         <DiscordBanner />
