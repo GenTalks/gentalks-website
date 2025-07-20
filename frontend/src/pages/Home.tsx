@@ -57,10 +57,6 @@ const Home = () => {
       {// FAQ
       }
       </section>
-      <section className="relative w-full overflow-hidden py-40 px-8 bg-cream">
-        {// Community preview
-        }
-      </section>
 
       <section className="relative w-full overflow-hidden py-20 px-8 bg-laurel">
         <DiscordBanner />
