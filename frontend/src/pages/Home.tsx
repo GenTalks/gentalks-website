@@ -3,6 +3,7 @@ import DiscordBanner from '../components/DiscordBanner';
 import MentorCarousel from '../components/MentorCarousel';
 import ExploreButton from '../components/ExploreButton';
 import FAQComp from '../components/FAQComp';
+
 const Home = () => {
   return (
     <div className="relative w-full overflow-hidden">
