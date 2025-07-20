@@ -14,7 +14,7 @@ const JoinDiscordSection = () => {
 
       <div className="flex flex-col items-center lg:items-start gap-6 max-w-3xl text-center lg:text-left">
         <h2 className="text-4xl md:text-5xl font-bosk">Join Gentalks!</h2>
-        <p className="text-lg md:text-xl leading-relaxed">
+        <p className="text-lg md:text-xl leading-relaxed font-teachers">
           An online space for growth, where members uplift each other and share valuable insights on careers and life.
         </p>
         <DiscordButton />

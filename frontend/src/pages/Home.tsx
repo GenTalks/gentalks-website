@@ -53,7 +53,7 @@ const Home = () => {
         <MentorCarousel />
       </section>
 
-      <section className="relative w-full overflow-hidden py-20 px-8">
+      <section className="relative w-full overflow-hidden py-20 px-8 bg-cream">
       {// FAQ
       }
       </section>
