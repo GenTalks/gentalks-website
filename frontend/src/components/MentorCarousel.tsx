@@ -62,6 +62,11 @@ const MentorCarousel = () => {
       name: "Raiden Shogun",
       title: "Philosophy Student - University of Tokyo",
     },
+    {
+      image: "https://i.pinimg.com/originals/8c/1c/f6/8c1cf65f7d700e8a4fbe0cbb32c4b996.jpg",
+      name: "Kaedehara Kazuha",
+      title: "Environmental Studies & World Literature Student - Reed College",
+    },
   ];
 
   const extendedMentors = [...mentors, ...mentors];

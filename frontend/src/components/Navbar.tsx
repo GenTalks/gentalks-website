@@ -63,7 +63,7 @@ export default function Navbar() {
       {open && (
         <div className="absolute top-full left-0 right-0 bg-cream flex flex-col items-center space-y-4 p-6 shadow-md 2xl:hidden z-50 text-fog">
           <NavButton
-            to="/ourstory"
+            to="/our-story"
             label="Our Story"
             onClick={() => setOpen(false)}
           />
