@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const TermsConditions: React.FC = () => {
   return (
     <section className="max-w-4xl mx-auto p-6 prose text-cream tracking-wide">
-        <section className="text-center text-4xl font-bosk">
-            <h1 className="text-center text-4xl font-bosk">Terms & Conditions</h1>
+        <section className="text-center text-4xl">
+            <h1 className="text-center text-4xl font-teachers">TERMS & CONDITIONS</h1>
         <p className="text-center text-2xl font-teachers mt-4">
             Welcome to GenTalks! By using our mentorship platform, you agree to these terms and conditions. Please read them carefully.
         </p>
