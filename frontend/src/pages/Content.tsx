@@ -1,15 +1,51 @@
+import DiscordBanner from '../components/DiscordBanner';
+
 const Media = () => {
   return (
     <div>
-      <div className="w-full flex flex-col items-center py-8 font-teachers space-y-6 tracking-wide">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl transform">
-          GenContent!
+      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-laurel text-cream">
+        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-bosk">
+          GenContent
         </h1>
-        <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          renegade renegade jk im old, this page will have gt content & recent posts from socials
-        </h3>
+        <p className="text-xl font-teachers">
+          Making life a little sweeter one sprout at a time.
+        </p>
+      </section>
 
-      </div>
+      <section className="w-full flex flex-col items-center py-8 space-y-6 track-wide bg-cream text-laurel mt-4">
+        <div className="text-xl font-teachers">
+          <h1>
+
+          </h1>
+        </div>
+      </section>
+
+      <section className="w-full flex flex-col items-center py-8 space-y-6 track-wide bg-laurel text-cream mt-4">
+        <div className="text-xl font-teachers">
+          <h1>
+
+          </h1>
+        </div>
+      </section>
+
+      <section className="w-full flex flex-col items-center py-8 space-y-6 track-wide bg-cream text-laurel mt-4">
+        <div className="text-xl font-teachers">
+          <h1>
+
+          </h1>
+        </div>
+      </section>
+
+      <section className="w-full flex flex-col items-center py-8 space-y-6 track-wide bg-laurel text-cream mt-4">
+        <div className="text-xl font-teachers">
+          <h1>
+
+          </h1>
+        </div>
+      </section>
+
+      <DiscordBanner />
+        
     </div>
   );
 };

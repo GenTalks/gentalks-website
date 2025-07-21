@@ -1,14 +1,20 @@
+import DiscordBanner from '../components/DiscordBanner';
+
 const FAQs = () => {
   return (
     <div>
-      <div className="w-full flex flex-col items-center py-8 font-teachers space-y-6 tracking-wide">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl transform">
+      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-cream text-laurel mb-12">
+        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-bosk">
           Frequently Asked Questions
         </h1>
-        <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          Here are some common questions we get asked about GenTalks. If you have any other questions, feel free to reach out to us!
-        </h3>
-      </div>
+        <p className="text-xl font-teachers">
+          the questions your pet asks when you're not home
+        </p>
+      </section>
+
+
+      <DiscordBanner />
+        
     </div>
   );
 };

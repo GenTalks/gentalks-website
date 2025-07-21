@@ -1,15 +1,51 @@
+import DiscordBanner from '../components/DiscordBanner';
+
 const About = () => {
   return (
     <div>
-      <div className="w-full flex flex-col items-center py-8 font-teachers space-y-6 tracking-wide">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl transform">
-          About
+      <section className="flex flex-col items-center py-8 space-y-6 tracking-wide bg-laurel text-cream">
+        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-bosk">
+          GenTalks Community
         </h1>
-        <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          how did the capybara start drinking matcha and how did a sprout grow out of its head? idk. read more to find out (tooootallly not clickbait) "i stil cant get over that capybara, chat. it's so cute. why is it so cute?"
-        </h3>
+        <p className="w-2/3 text-xl font-teachers text-center">
+          how did the capybara start drinking matcha and how did a sprout grow out of its head? idk. read more to find out (tooootallly not clickbait) why did the capybara cross the road? we're just as clueless as you
+        </p>
+      </section>
 
-      </div>
+      <section className="w-full flex flex-col items-center py-8 space-y-6 track-wide bg-cream text-laurel mt-4">
+        <div className="text-xl font-teachers">
+          <h1>
+
+          </h1>
+        </div>
+      </section>
+
+      <section className="w-full flex flex-col items-center py-8 space-y-6 track-wide bg-laurel text-cream mt-4">
+        <div className="text-xl font-teachers">
+          <h1>
+
+          </h1>
+        </div>
+      </section>
+
+      <section className="w-full flex flex-col items-center py-8 space-y-6 track-wide bg-cream text-laurel mt-4">
+        <div className="text-xl font-teachers">
+          <h1>
+
+          </h1>
+        </div>
+      </section>
+
+      <section className="w-full flex flex-col items-center py-8 space-y-6 track-wide bg-laurel text-cream mt-4">
+        <div className="text-xl font-teachers">
+          <h1>
+
+          </h1>
+        </div>
+      </section>
+
+      <DiscordBanner />
+        
     </div>
   );
 };

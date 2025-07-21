@@ -1,15 +1,20 @@
+import DiscordBanner from '../components/DiscordBanner';
+
 const Mentors = () => {
   return (
     <div>
-      <div className="w-full flex flex-col items-center py-8 font-teachers space-y-6 tracking-wide">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl transform">
-          Book a mentor!
+      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-cream text-laurel mb-12">
+        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-bosk">
+          Book a mentor
         </h1>
-        <h3 className="text-md sm:text-xl md:text-2xl lg:text-3xl transform mx-6 lg:mx-12">
-          u get a mentor! AND u get a mentor! buy zero get one free! (bt code of conduct)
-        </h3>
+        <p className="text-xl font-teachers">
+          u get a mentor! AND u get a mentor! buy zero get one free! (legally ofc)
+        </p>
+      </section>
 
-      </div>
+
+      <DiscordBanner />
+        
     </div>
   );
 };
