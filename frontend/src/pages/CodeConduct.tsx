@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 
-
-const TermsConditions: React.FC = () => {
+const CodeConduct: React.FC = () => {
   return (
     <section className="max-w-4xl mx-auto p-6 prose text-cream">
         <section className="text-center text-4xl font-bosk">
@@ -16,7 +14,7 @@ const TermsConditions: React.FC = () => {
             <section>
                 <h2 className="font-semibold text-2xl">1. GenTalks Overview</h2>
                 <p className="p-4 text-lg">
-                GenTalks is a student-led online community dedicated to generational empowerment through supportive and 
+                Gentalks is a student-led online community dedicated to generational empowerment through supportive and 
                 nurturing conversations, primarily serving high school students but open to all users.
                 </p>
             </section>
@@ -24,9 +22,9 @@ const TermsConditions: React.FC = () => {
             <section className="mt-4">
                 <h2 className="font-semibold text-2xl">2. Eligibility and Online Safety Advisory</h2>
                 <p className="p-4 text-lg">
-                GenTalks is intended for high school students who meet the minimum age requirements outlined in Discord’s 
-                Terms & Conditions. Users must be at least 13 years old to access the platform. 
-                While GenTalks is designed to be a safe and supportive space, users under the age of 18 are advised that it remains an online environment and may involve risks such as cyberbullying, cyberattacks, and other safety concerns. 
+                Gentalks is intended for high school students who meet the minimum age requirements outlined in Discord’s 
+                Terms of Service. Users must be at least 13 years old to access the platform. 
+                While Gentalks is designed to be a safe and supportive space, users under the age of 18 are advised that it remains an online environment and may involve risks such as cyberbullying, cyberattacks, and other safety concerns. 
                 Minors are strongly encouraged to participate under the supervision or guidance of a trusted adult.
                 </p>
             </section>
@@ -34,7 +32,7 @@ const TermsConditions: React.FC = () => {
             <section>
                 <h2 className="font-semibold text-2xl">3. User Registration and Accounts</h2>
                 <p className="p-4 text-lg">
-                GenTalks operates without requiring user registration or account creation, ensuring ease of access and privacy for all users.
+                Gentalks operates without requiring user registration or account creation, ensuring ease of access and privacy for all users.
                 </p>
             </section>
 
@@ -60,56 +58,49 @@ const TermsConditions: React.FC = () => {
                     <li><strong>No Solicitation</strong>: Mentors are here to guide, not to provide job referrals, internships, or employment opportunities. Avoid asking for these during sessions.</li>
                     <li><strong>Be Prepared</strong>: Research your mentor, come with questions, and make your sessions purposeful.</li>
                     <li><strong>Engage Respectfully</strong>: Treat mentors and other users with kindness and professionalism.</li>
-                    Failure to follow these guidelines may result in suspension or termination of your access to GenTalks. <br />
-                    View the full Code of Conduct <Link to="/code-of-conduct" className="underline">here</Link>.
+                    Failure to follow these guidelines may result in suspension or termination of your access to Gentalks.
                 </p>
             </section>
 
             <section>
                 <h2 className="font-semibold text-2xl">6. Reporting Concerns and Safety Measures</h2>
                 <p className="p-4 text-lg">
-                GenTalks prioritizes the safety and well-being of its users. 
-                If you experience or witness any form of sexual assault, self-harm, harassment, or other inappropriate behavior, 
-                you are urged to report the incident immediately to our moderation team at 
-                <a href="mailto:contact.gentalks@gmail.com">contact.gentalks@gmail.com</a>.
+                Gentalks prioritizes the safety and well-being of its users. If you experience or witness any form of sexual assault, self-harm, harassment, or other inappropriate behavior, you are urged to report the incident immediately to our moderation team at <a href="mailto:contact@gentalks.org">contact@gentalks.org</a>.
                 </p>
             </section>
 
             <section>
                 <h2 className="font-semibold text-2xl">7. Intellectual Property Rights</h2>
                 <p className="p-4 text-lg">
-                All content and materials provided on GenTalks are owned or licensed by Gentalks. 
-                Unauthorized copying, distribution, or use of such content is prohibited.
+                All content and materials provided on Gentalks are owned or licensed by Gentalks. Unauthorized copying, distribution, or use of such content is prohibited.
                 </p>
             </section>
 
             <section>
                 <h2 className="font-semibold text-2xl">8. Disclaimer of Professional Advice</h2>
                 <p className="p-4 text-lg">
-                GenTalks is a peer support platform and does not provide professional counseling, medical, legal, or mental health advice. 
-                Users seeking such services should consult qualified professionals.
+                Gentalks is a peer support platform and does not provide professional counseling, medical, legal, or mental health advice. Users seeking such services should consult qualified professionals.
                 </p>
             </section>
 
             <section>
                 <h2 className="font-semibold text-2xl">9. Limitation of Liability</h2>
                 <p className="p-4 text-lg">
-                GenTalks shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the platform.
+                Gentalks shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the platform.
                 </p>
             </section>
 
             <section>
                 <h2 className="font-semibold text-2xl">10. Modifications to Terms</h2>
                 <p className="p-4 text-lg">
-                GenTalks reserves the right to modify these Terms & Conditions at any time. 
-                Continued use of the platform constitutes acceptance of any updated terms.
+                Gentalks reserves the right to modify these Terms of Service at any time. Continued use of the platform constitutes acceptance of any updated terms.
                 </p>
             </section>
 
             <section>
                 <h2 className="font-semibold text-2xl">11. Contact Information</h2>
                 <p className="p-4 text-lg">
-                For any questions or concerns regarding these terms and conditions, please contact us at: <a href="mailto:contact.gentalks@gmail.com">contact.gentalks@gmail.com</a>.
+                For any questions or concerns regarding these Terms, please contact us at: <a href="mailto:contact@gentalks.org">contact@gentalks.org</a>.
                 </p>
             </section>
         </section>
@@ -117,4 +108,4 @@ const TermsConditions: React.FC = () => {
   );
 };
 
-export default TermsConditions;
+export default CodeConduct;
