@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Navigation links */}
           <div className="text-cream hover:text-white flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 text-sm text-center lg:text-left order-3 lg:order-2">
             <NavButton to="/community" label="Community" />
-            <NavButton to="/our-story" label="Our Story" />
+            <NavButton to="/about" label="About" />
             <NavButton to="/content" label="Content" />
             <NavButton to="/resources" label="Resources" />
             <NavButton to="/faqs" label="FAQs" />

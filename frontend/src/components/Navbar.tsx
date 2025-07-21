@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="text-lg hidden 2xl:flex gap-4 items-center flex-shrink-0">
         <div className="text-fog hover:text-laurel">
           <NavButton to="/community" label="Community" />
-          <NavButton to="/our-story" label="Our Story" />
+          <NavButton to="/about" label="About" />
           <NavButton to="/content" label="Content" />
           <NavButton to="/resources" label="Resources" />
           <NavButton to="/faqs" label="FAQs" />
@@ -68,8 +68,8 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
           />
           <NavButton
-            to="/our-story"
-            label="Our Story"
+            to="/about"
+            label="About"
             onClick={() => setOpen(false)}
           />
           <NavButton
