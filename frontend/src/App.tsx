@@ -11,6 +11,7 @@ import Resources from './pages/Resources';
 import FAQs from './pages/FAQs';
 import TermsConditions from './pages/TermsConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import CodeConduct from './pages/CodeConduct';
 
 function App() {
   return (
@@ -21,15 +22,16 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/ourstory" element={<Story />} />
+            <Route path="/our-story" element={<Story />} />
             <Route path="/community" element={<Community />} />
             <Route path="/content" element={<Content />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mentors" element={<Mentors />} />
-            <Route path="/termsconditions" element={<TermsConditions />} />
-            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/code-of-conduct" element={<CodeConduct />} />
           </Routes>
         </main>
 

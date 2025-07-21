@@ -12,7 +12,7 @@ const Footer = () => {
 
           {/* Navigation links */}
           <div className="text-cream hover:text-white flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 text-sm text-center lg:text-left order-3 lg:order-2">
-            <NavButton to="/ourstory" label="Our Story" />
+            <NavButton to="/our-story" label="Our Story" />
             <NavButton to="/community" label="Community" />
             <NavButton to="/content" label="Content" />
             <NavButton to="/resources" label="Resources" />
@@ -78,8 +78,9 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-6 text-center lg:text-right">
-              <NavButton to="/termsconditions" label="Terms & Conditions" />
-              <NavButton to="/privacypolicy" label="Privacy Policy" />
+              <NavButton to="/terms-and-conditions" label="Terms & Conditions" />
+              <NavButton to="/privacy-policy" label="Privacy Policy" />
+              <NavButton to="/code-of-conduct" label="Code of Conduct" />
             </div>
           </div>
         </div>
