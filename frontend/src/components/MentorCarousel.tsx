@@ -62,7 +62,7 @@ const MentorCarousel = () => {
 
   return (
     <div className="relative w-full mb-[1.5rem]">
-      <h2 className="text-4xl lg:text-6xl text-center mb-16 font-teachers text-cream">
+      <h2 className="text-4xl lg:text-6xl text-center mb-16 font-teachers text-cream tracking-wide">
         Our Mentors
       </h2>
 

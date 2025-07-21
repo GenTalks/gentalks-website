@@ -9,7 +9,7 @@ interface NavButtonProps {
 const NavButton = ({ to, label, onClick }: NavButtonProps) => {
   return (
     <Link to={to} onClick={onClick}>
-      <button className="py-4 font-teachers">
+      <button className="py-4 font-teachers tracking-wide">
         {label}
       </button>
     </Link>

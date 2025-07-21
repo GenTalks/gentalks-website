@@ -9,7 +9,7 @@ interface MentorButtonProps {
 const MentorButton = ({ to, label, onClick }: MentorButtonProps) => {
   return (
     <Link to={to} onClick={onClick}>
-      <button className="bg-laurel text-cream text-lg px-6 py-4 rounded-[30px] hover:opacity-90 font-teachers">
+      <button className="bg-laurel text-cream text-lg px-6 py-4 rounded-[30px] hover:opacity-90 font-teachers tracking-wide">
         {label}
       </button>
     </Link>

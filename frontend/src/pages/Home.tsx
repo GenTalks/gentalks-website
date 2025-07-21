@@ -26,7 +26,7 @@ const Home = () => {
         </div>
       </div>
 
-      <section className="bg-cream text-fog py-20 px-8 font-teachers tracking-wide">
+      <section className="bg-cream text-fog py-20 px-8 font-teachers">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <h2 className="text-4xl lg:text-6xl font-bold">
@@ -48,7 +48,7 @@ const Home = () => {
         <div className="w-3/4 border-b border-laurel py-4 pt-20 mx-auto" />
       </section>
 
-      <section className="bg-cream py-12 px-8 font-teachers tracking-wide">
+      <section className="bg-cream py-12 px-8 font-teachers">
         <div className="flex justify-center text-fog">
           <h2 className="text-2xl lg:text-4xl font-bold text-center">
             GenStats

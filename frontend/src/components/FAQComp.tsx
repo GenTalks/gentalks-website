@@ -4,7 +4,7 @@ const FAQComp = ({ question, answer }: { question: string; answer: string }) => 
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-2/3 border-b border-sage py-4">
+    <div className="w-2/3 border-b border-sage py-4 tracking-wide">
       <button
         className="w-full flex justify-between items-center font-semibold text-2xl text-fog"
         onClick={() => setOpen(!open)}

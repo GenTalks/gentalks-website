@@ -6,7 +6,7 @@ interface MentorCardProps {
 
 const MentorCard = ({ image, name, title }: MentorCardProps) => {
   return (
-    <div className="bg-cream rounded-3xl p-8 shadow-deep min-w-[260px] h-[400px] flex-shrink-0 mx-3">
+    <div className="bg-cream rounded-3xl p-8 shadow-deep min-w-[260px] h-[400px] flex-shrink-0 mx-3 tracking-wide">
       <div className="flex flex-col items-center space-y-6">
         <img
           src={image}

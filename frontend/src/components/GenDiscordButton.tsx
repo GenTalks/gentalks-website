@@ -8,7 +8,7 @@ interface GenDiscordProps {
 const GenDiscordButton = ({ onClick }: GenDiscordProps) => {
   return (
     <Link to="/" onClick={onClick}>
-      <div className="border-4 border-chocolate max-w-md mx-auto rounded-3xl bg-cream px-6 py-6 flex flex-row items-center space-x-6 hover:shadow-lg transition-all">
+      <div className="border-4 border-chocolate max-w-md mx-auto rounded-3xl bg-cream px-6 py-6 flex flex-row items-center space-x-6 hover:shadow-lg transition-all tracking-wide">
         <img
           src={gtLogo}
           alt="GenTalks Home"

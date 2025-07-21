@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
-    <div className="tracking-wide">
-      <div className="w-full flex flex-col items-center py-8 font-teachers space-y-6">
+    <div>
+      <div className="w-full flex flex-col items-center py-8 font-teachers space-y-6 tracking-wide">
         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl transform">
           Contact Us!
         </h1>
