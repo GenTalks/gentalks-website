@@ -11,7 +11,6 @@ import Resources from './pages/Resources';
 import FAQs from './pages/FAQs';
 import TermsConditions from './pages/TermsConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import CodeConduct from './pages/CodeConduct';
 
 function App() {
   return (
@@ -31,7 +30,6 @@ function App() {
             <Route path="/mentors" element={<Mentors />} />
             <Route path="/terms-and-conditions" element={<TermsConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/code-of-conduct" element={<CodeConduct />} />
           </Routes>
         </main>
 

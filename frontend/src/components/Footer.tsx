@@ -80,7 +80,6 @@ const Footer = () => {
             <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-6 text-center lg:text-right">
               <NavButton to="/terms-and-conditions" label="Terms & Conditions" />
               <NavButton to="/privacy-policy" label="Privacy Policy" />
-              <NavButton to="/code-of-conduct" label="Code of Conduct" />
             </div>
           </div>
         </div>
