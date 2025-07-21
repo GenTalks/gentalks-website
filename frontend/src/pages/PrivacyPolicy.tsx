@@ -2,7 +2,7 @@ import React from "react";
 
 const PrivacyPolicy: React.FC = () => {
   return (
-    <section className="max-w-4xl mx-auto p-6 prose text-cream">
+    <section className="max-w-4xl mx-auto p-6 prose text-cream tracking-wide">
       <section className="text-center text-4xl font-bosk">
         <h1 className="text-center text-4xl font-bosk">Privacy Policy</h1>
         <p className="text-center text-2xl font-teachers mt-4">
