@@ -2,7 +2,7 @@ import NavButton from '../components/NavButton';
 
 const Footer = () => {
   return (
-    <footer className="bg-laurel text-cream font-teachers">
+    <footer className="bg-laurel text-cream font-teachers tracking-wide">
       <div className="px-[4rem] py-16">
         {/* Main footer */}
         <div className="flex flex-col lg:flex-row justify-between items-center mb-12 space-y-8 lg:space-y-0">
