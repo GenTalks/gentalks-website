@@ -4,14 +4,17 @@ interface NavButtonProps {
   to: string;
   label: string;
   onClick?: () => void;
+  className?: string;
 }
 
-const NavButton = ({ to, label, onClick }: NavButtonProps) => {
+const NavButton = ({ to, label, onClick, className }: NavButtonProps) => {
   return (
-    <Link to={to} onClick={onClick}>
-      <button className="py-4 font-teachers tracking-wide">
-        {label}
-      </button>
+    <Link
+      to={to}
+      onClick={onClick}
+      className={`py-4 px-6 rounded-full font-teachers tracking-wide transition-colors duration-300 ${className ?? ''}`}
+    >
+      {label}
     </Link>
   );
 };

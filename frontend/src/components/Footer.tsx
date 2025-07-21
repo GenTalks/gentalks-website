@@ -17,8 +17,8 @@ const Footer = () => {
             <NavButton to="/content" label="Content" />
             <NavButton to="/resources" label="Resources" />
             <NavButton to="/faqs" label="FAQs" />
-            <NavButton to="/contact" label="Contact" />
-            <NavButton to="/mentors" label="Book a mentor" />
+            <NavButton to="/contact-us" label="Contact" />
+            <NavButton to="/book-a-mentor" label="Book a mentor" />
           </div>
 
           {/* Social Media */}

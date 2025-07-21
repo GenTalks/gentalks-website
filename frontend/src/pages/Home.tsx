@@ -86,7 +86,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 flex flex-col space-y-4">
+          <div className="w-full lg:w-1/2 flex flex-col space-y-4 font-teachers">
             <FAQComp
               question="What am I able to get mentored on?"
               answer="At GenTalks, we foster a positive environment designed to empower the academic community."

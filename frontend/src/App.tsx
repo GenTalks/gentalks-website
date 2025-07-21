@@ -26,8 +26,8 @@ function App() {
             <Route path="/content" element={<Content />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/faqs" element={<FAQs />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/mentors" element={<Mentors />} />
+            <Route path="/contact-us" element={<Contact />} />
+            <Route path="/book-a-mentor" element={<Mentors />} />
             <Route path="/terms-and-conditions" element={<TermsConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>

@@ -2,7 +2,6 @@ import { useState } from "react";
 import HomeButton from "./HomeButton";
 import NavButton from "./NavButton";
 import { Link } from "react-router-dom";
-import MentorButton from "./MentorButton";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,15 +20,25 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className="text-fog hover:text-laurel text-lg hidden 2xl:flex gap-4 items-center flex-shrink-0">
-        <NavButton to="/our-story" label="Our Story" />
-        <NavButton to="/community" label="Community" />
-        <NavButton to="/content" label="Content" />
-        <NavButton to="/resources" label="Resources" />
-        <NavButton to="/faqs" label="FAQs" />
-        <NavButton to="/contact" label="Contact" />
-        <MentorButton to="/mentors" label="Book a mentor" />
+      <div className="text-lg hidden 2xl:flex gap-4 items-center flex-shrink-0">
+        <div className="text-fog hover:text-laurel">
+          <NavButton to="/our-story" label="Our Story" />
+          <NavButton to="/community" label="Community" />
+          <NavButton to="/content" label="Content" />
+          <NavButton to="/resources" label="Resources" />
+          <NavButton to="/faqs" label="FAQs" />
+          <NavButton to="/contact-us" label="Contact" />
+        </div>
+
+        <div>
+          <NavButton
+            to="/book-a-mentor"
+            label="Book a mentor"
+            className="bg-laurel text-cream px-6 py-2 rounded-full hover:opacity-90"
+          />
+        </div>
       </div>
+
 
       <button
         className="2xl:hidden p-2 rounded-md focus:outline-none"
@@ -75,14 +84,15 @@ export default function Navbar() {
           />
           <NavButton to="/faqs" label="FAQs" onClick={() => setOpen(false)} />
           <NavButton
-            to="/contact"
+            to="/contact-us"
             label="Contact"
             onClick={() => setOpen(false)}
           />
-          <MentorButton
-            to="/mentors"
+          <NavButton
+            to="/book-a-mentor"
             label="Book a mentor"
             onClick={() => setOpen(false)}
+            className="bg-laurel text-cream px-6 py-2 rounded-full hover:opacity-90"
           />
         </div>
       )}
