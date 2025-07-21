@@ -21,7 +21,7 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className="hidden 2xl:flex gap-4 items-center flex-shrink-0">
+      <div className="text-fog hover:text-laurel text-lg hidden 2xl:flex gap-4 items-center flex-shrink-0">
         <NavButton to="/ourstory" label="Our Story" />
         <NavButton to="/community" label="Community" />
         <NavButton to="/content" label="Content" />

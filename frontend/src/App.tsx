@@ -9,6 +9,8 @@ import Home from './pages/Home';
 import Mentors from './pages/Mentors';
 import Resources from './pages/Resources';
 import FAQs from './pages/FAQs';
+import TermsConditions from './pages/TermsConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mentors" element={<Mentors />} />
+            <Route path="/termsconditions" element={<TermsConditions />} />
+            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
 

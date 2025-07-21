@@ -1,3 +1,5 @@
+import NavButton from '../components/NavButton';
+
 const Footer = () => {
   return (
     <footer className="bg-laurel text-cream font-teachers">
@@ -9,43 +11,14 @@ const Footer = () => {
           </div>
 
           {/* Navigation links */}
-          <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 text-sm text-center lg:text-left order-3 lg:order-2">
-            <a
-              href="/ourstory"
-              className="hover:text-sage transition-colors"
-            >
-              Our Story
-            </a>
-            <a
-              href="/community"
-              className="hover:text-sage transition-colors"
-            >
-              Community
-            </a>
-            <a
-              href="/content"
-              className="hover:text-sage transition-colors"
-            >
-              Content
-            </a>
-            <a
-              href="/resources"
-              className="hover:text-sage transition-colors"
-            >
-              Resources
-            </a>
-            <a href="/faqs" className="hover:text-sage transition-colors">
-              FAQs
-            </a>
-            <a
-              href="/contact"
-              className="hover:text-sage transition-colors"
-            >
-              Contact
-            </a>
-            <a href="/mentor" className="hover:text-sage transition-colors">
-              Book a Mentor
-            </a>
+          <div className="text-cream hover:text-white flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 text-sm text-center lg:text-left order-3 lg:order-2">
+            <NavButton to="/ourstory" label="Our Story" />
+            <NavButton to="/community" label="Community" />
+            <NavButton to="/content" label="Content" />
+            <NavButton to="/resources" label="Resources" />
+            <NavButton to="/faqs" label="FAQs" />
+            <NavButton to="/contact" label="Contact" />
+            <NavButton to="/mentors" label="Book a mentor" />
           </div>
 
           {/* Social Media */}
@@ -101,22 +74,12 @@ const Footer = () => {
         <div className="border-t border-white border-opacity-20 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center text-sm space-y-4 lg:space-y-0">
             <div className="text-center lg:text-left">
-              © 2025 GenTalks. All rights reserved.
+              Copyright © 2025 GenTalks. All rights reserved.
             </div>
 
             <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-6 text-center lg:text-right">
-              <a
-                href="/terms"
-                className="hover:text-gray-200 transition-colors"
-              >
-                Terms & Conditions
-              </a>
-              <a
-                href="/privacy"
-                className="hover:text-gray-200 transition-colors"
-              >
-                Privacy Policy
-              </a>
+              <NavButton to="/termsconditions" label="Terms & Conditions" />
+              <NavButton to="/privacypolicy" label="Privacy Policy" />
             </div>
           </div>
         </div>

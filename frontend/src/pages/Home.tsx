@@ -81,7 +81,7 @@ const Home = () => {
         <div className="flex flex-col lg:flex-row w-full gap-10">
           <div className="pl-20 w-full lg:w-1/2 font-teachers">
             <h1 className="text-5xl font-bold mb-12 text-fog">Frequently Asked Questions</h1>
-            <div className="inline-block border-2 border-laurel text-laurel rounded-full px-4 py-2">
+            <div className="ml-8 inline-block border-laurel border-2 bg-creaam text-laurel rounded-full scale-125 hover:bg-laurel hover:text-cream">
               <ExploreButton to="/faqs" label="all FAQs" />
             </div>
           </div>
