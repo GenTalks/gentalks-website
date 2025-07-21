@@ -44,14 +44,41 @@ const Home = () => {
           </p>
 
         </div>
+
+        <div className="w-3/4 border-b border-laurel py-4 pt-20 mx-auto" />
       </section>
+
+      <section className="bg-cream py-12 px-8 font-teachers">
+        <div className="flex justify-center text-fog">
+          <h2 className="text-2xl lg:text-4xl font-bold text-center">
+            GenStats
+          </h2>
+        </div>
+
+
+        <div className="flex justify-between text-center text-laurel items-center text-4xl font-bosk pt-16">
+          <div className="w-1/3 py-8">
+            5+ <br />
+            <span className="text-lg font-teachers">Mentors</span>
+          </div>
+          <div className="w-1/3 py-8">
+            0+ <br />
+            <span className="text-lg font-teachers">GenTalks booked</span>
+          </div>
+          <div className="w-1/3 py-8">
+            80+ <br />
+            <span className="text-lg font-teachers">Community members</span>
+          </div>
+        </div>
+      </section>
+
       
-      <section className="relative w-full overflow-hidden py-20">
+      <section className="relative w-full overflow-hidden py-20 bg-laurel">
         <MentorCarousel />
       </section>
 
       <section className="relative w-full overflow-hidden py-40 px-8 bg-cream">
-        <div className="flex flex-col lg:flex-row w-full gap-8">
+        <div className="flex flex-col lg:flex-row w-full gap-10">
           <div className="pl-20 w-full lg:w-1/2 font-teachers">
             <h1 className="text-5xl font-bold mb-12 text-fog">Frequently Asked Questions</h1>
             <div className="inline-block border-2 border-laurel text-laurel rounded-full px-4 py-2">
@@ -60,8 +87,9 @@ const Home = () => {
           </div>
 
           <div className="w-full lg:w-1/2 flex flex-col space-y-4">
-            <FAQComp question="What is GenTalks?" answer="A student-led initiative..." />
-            <FAQComp question="How do I join?" answer="You can join through our Discord." />
+            <FAQComp question="What am I able to get mentored on?" answer="At GenTalks, we foster a positive environment designed to empower the academic community." />
+            <FAQComp question="Do I have to pay for GenTalks' services?" answer="Never. Our program will always be free." />
+            <FAQComp question="How can I join the community?" answer="Our Discord community is linked right below." />
           </div>
         </div>
       </section>
