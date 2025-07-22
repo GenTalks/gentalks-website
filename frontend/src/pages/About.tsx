@@ -1,9 +1,12 @@
 import DiscordBanner from '../components/DiscordBanner';
+import { RiCommunityLine } from "react-icons/ri";
+import { IoAccessibility } from "react-icons/io5";
+import { FaHandHoldingHeart } from "react-icons/fa";
 
 const About = () => {
   return (
     <div className="bg-laurel text-cream">
-      <section className="flex flex-col items-center py-8 space-y-6 tracking-wide bg-laurel text-cream">
+      <section className="flex flex-col items-center py-8 space-y-6 tracking-wide bg-cream text-fog">
         <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-bosk">
           Our Philosophy
         </h1>
@@ -13,6 +16,36 @@ const About = () => {
           or thinking about your career plans, GenTalks will be there for you.
         </p>
       </section>
+
+      <section className="flex flex-col py-12 tracking-wide bg-laurel text-cream px-6">
+        <div className="max-w-6xl mx-auto w-full">
+          <div className="mb-16">
+            <h1 className="text-4xl font-bosk text-center">Our values</h1>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 tracking-widest">
+            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-xl font-teachers font-semibold pl-4 shadow-md w-full md:w-1/3">
+              <RiCommunityLine size={40} />
+              <h1 className="mt-8">
+                Community
+              </h1>
+            </div>
+            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-xl font-teachers font-semibold pl-4 shadow-md w-full md:w-1/3">
+              <IoAccessibility size={40} />
+              <h1 className="mt-8">
+                Accessibility
+              </h1>
+            </div>
+            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-xl font-teachers font-semibold pl-4 shadow-md w-full md:w-1/3">
+              <FaHandHoldingHeart size={40} />
+              <h1 className="mt-8">
+                Empathy
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <section className="flex flex-col items-center py-8 space-y-6 tracking-wide bg-cream text-fog">
         <div className="text-center max-w-3xl px-4 text-2xl sm:text-2xl md:text-3xl lg:text-5xl font-bosk">
