@@ -75,18 +75,18 @@ const Home = () => {
         <MentorCarousel />
       </section>
 
-      <section className="relative w-full overflow-hidden py-40 px-8 bg-cream">
+      <section className="relative w-full overflow-hidden py-40 px-4 sm:px-8 bg-cream">
         <div className="flex flex-col lg:flex-row w-full gap-10">
-          <div className="pl-20 w-full lg:w-1/2 font-teachers">
+          <div className="w-full lg:w-1/2 font-teachers flex flex-col items-center lg:items-start text-center lg:text-left pl-0 lg:pl-20">
             <h1 className="text-5xl font-bold mb-12 text-fog">
               Frequently Asked Questions
             </h1>
-            <div className="ml-8 inline-block border-laurel border-2 bg-creaam text-laurel rounded-full scale-125 hover:bg-laurel hover:text-cream">
+            <div className="inline-block border-laurel border-2 bg-creaam text-laurel rounded-full scale-125 hover:bg-laurel hover:text-cream lg:ml-6">
               <ExploreButton to="/faqs" label="all FAQs" />
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 flex flex-col space-y-4 font-teachers">
+          <div className="w-full lg:w-1/2 flex flex-col space-y-4 font-teachers items-center">
             <FAQComp
               question="What am I able to get mentored on?"
               answer="At GenTalks, we foster a positive environment designed to empower the academic community."
