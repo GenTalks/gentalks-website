@@ -31,12 +31,21 @@ export default {
         myrtle: '3px 5px 1px rgba(14, 46, 3, 0.8)',
       },
       boxShadow: {
-        'deep': '0 1px 18px rgba(0, 0, 0, 0.3)', // <-- 120px blur
+        'deep': '0 1px 18px rgba(0, 0, 0, 0.3)',
       },
       fontFamily: {
         teachers: ['Teachers', 'cursive'],
         bosk: ['Bosk', 'sans-serif'],
         biskiL: ['Biski', 'sans-serif'],
+      },
+      keyframes: {
+        grow: {
+          '0%': { height: '0%' },
+          '100%': { height: '85%' }, // or whatever final height matches your layout
+        },
+      },
+      animation: {
+        'grow-stalk': 'grow 2s ease-out forwards',
       },
     },
   },
