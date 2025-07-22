@@ -44,8 +44,8 @@ const About = () => {
                 It taught us how to start again.
               </h1>
               <img
-                src="https://tse1.mm.bing.net/th/id/OIP.l1iQkzkw033225LP_kTjPAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
-                alt="aespa"
+                src="https://m.media-amazon.com/images/I/51Sbg8+GByL._UXNaN_FMjpg_QL85_.jpg"
+                alt="fiftyfifty"
                 className="w-full lg:w-1/2 rounded-xl shadow-lg"
               />
             </div>
