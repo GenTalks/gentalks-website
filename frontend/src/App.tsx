@@ -15,7 +15,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-laurel text-cream">
+      <div className="min-h-screen flex flex-col bg-cream">
         <Navbar />
 
         <main className="flex-grow">

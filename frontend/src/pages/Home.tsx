@@ -6,7 +6,7 @@ import FAQComp from "../components/FAQComp";
 
 const Home = () => {
   return (
-    <div className="relative w-full overflow-hidden tracking-wide">
+    <div className="relative w-full overflow-hidden tracking-wide bg-laurel text-laurel">
       <div className="relative w-full h-[100vh">
         <img
           src={gtLogoTp}

@@ -2,7 +2,7 @@ import DiscordBanner from '../components/DiscordBanner';
 
 const About = () => {
   return (
-    <div>
+    <div className="bg-laurel text-cream">
       <section className="flex flex-col items-center py-8 space-y-6 tracking-wide bg-laurel text-cream">
         <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-bosk">
           Our Philosophy
