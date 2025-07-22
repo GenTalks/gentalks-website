@@ -20,7 +20,7 @@ const About = () => {
       <section className="flex flex-col py-12 tracking-wide bg-laurel text-cream px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16">
-            <h1 className="text-4xl font-bosk text-center">Our values</h1>
+            <h1 className="text-5xl font-bosk text-center">Our values</h1>
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 tracking-widest">
