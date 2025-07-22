@@ -2,6 +2,7 @@ import React from "react";
 
 const PrivacyPolicy: React.FC = () => {
   return (
+    <div className="bg-laurel text-cream">
     <section className="max-w-4xl mx-auto p-6 prose text-cream tracking-wide">
       <section className="text-center text-4xl font-bosk">
         <h1 className="text-center text-4xl font-teachers">PRIVACY POLICY</h1>
@@ -68,6 +69,7 @@ const PrivacyPolicy: React.FC = () => {
         </section>
       </section>
     </section>
+    </div>
   );
 };
 
