@@ -1,4 +1,3 @@
-import { FaQ } from 'react-icons/fa6';
 import DiscordBanner from '../components/DiscordBanner';
 import FAQComp from '../components/FAQComp';
 
@@ -15,7 +14,7 @@ const FAQs = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-4 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left">
+        <h1 className="font-teachers font-bold text-5xl text-left underline">
           General Questions
         </h1>
 
@@ -28,7 +27,7 @@ const FAQs = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-4 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left">
+        <h1 className="font-teachers font-bold text-5xl text-left underline">
           Students
         </h1>
 
@@ -44,7 +43,7 @@ const FAQs = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-16 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left">
+        <h1 className="font-teachers font-bold text-5xl text-left underline">
           Mentors
         </h1>
 
@@ -59,7 +58,7 @@ const FAQs = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-16 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left">
+        <h1 className="font-teachers font-bold text-5xl text-left underline">
           Meeting Code of Conduct
         </h1>
 
