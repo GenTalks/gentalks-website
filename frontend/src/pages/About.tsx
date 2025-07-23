@@ -75,8 +75,8 @@ const About = () => {
                 The storm came but it didn’t break us.
               </h1>
               <img
-                src="https://a-static.besthdwallpaper.com/ive-s-wonyoung-in-either-way-mv-i-ve-mine-album-shoot-wallpaper-3554x1999-123576_53.jpg"
-                alt="ive"
+                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+                alt="matcha"
                 className="w-full lg:w-1/2 rounded-xl shadow-lg"
               />
             </div>
@@ -86,8 +86,8 @@ const About = () => {
                 It taught us how to start again.
               </h1>
               <img
-                src="https://m.media-amazon.com/images/I/51Sbg8+GByL._UXNaN_FMjpg_QL85_.jpg"
-                alt="fiftyfifty"
+                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+                alt="matcha"
                 className="w-full lg:w-1/2 rounded-xl shadow-lg"
               />
             </div>
@@ -97,8 +97,8 @@ const About = () => {
                 We replanted – not in spite of the rain, but because of it.
               </h1>
               <img
-                src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5e/b7/12/5eb712b8-331f-bb2d-d628-cb1d965f869f/196922581403_Cover.jpg/1200x1200bf-60.jpg"
-                alt="v"
+                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+                alt="matcha"
                 className="w-full lg:w-1/2 rounded-xl shadow-lg"
               />
             </div>
@@ -108,19 +108,24 @@ const About = () => {
                 We grew.
               </h1>
               <img
-                src="https://i1.sndcdn.com/artworks-000528107493-n92tbz-t500x500.jpg"
-                alt="bts"
+                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+                alt="matcha"
                 className="w-full lg:w-1/2 rounded-xl shadow-lg"
               />
             </div>
 
-            <div className="text-center py-16">
+            <div className="text-center mt-auto">
               <h1 className="text-4xl font-bold flex justify-center items-center gap-2 text-fog">
                 And now we invite you to join us. Grow with us.
                 <span className="text-matcha">
                   <LuSprout size={40} />
                 </span>
               </h1>
+              <img
+              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              alt="matcha"
+              className="w-full rounded-xl shadow-lg scale-75"
+            /> 
             </div>
           </div>
         </section>

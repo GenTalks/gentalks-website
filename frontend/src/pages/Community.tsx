@@ -3,6 +3,7 @@ import { TfiAnnouncement } from "react-icons/tfi";
 import { LuSprout } from "react-icons/lu";
 import { RiNotification4Line } from "react-icons/ri";
 import { FaChalkboardTeacher } from "react-icons/fa";
+import DiscordButton from "../components/DiscordButton"
 
 const Community = () => {
   return (
@@ -37,10 +38,14 @@ const Community = () => {
       
       <section className="flex flex-col py-12 tracking-wide bg-laurel text-cream px-6">
         <div className="max-w-6xl mx-auto w-full">
-          <div className="mb-16">
+          <div className="mb-16 flex flex-col items-center gap-6">
             <h1 className="text-4xl font-bosk text-center">
               Grow with us 
             </h1>
+            <p className="w-2/3 font-teachers text-xl text-center">
+              Our Discord community is a vibrant online space for growth, where members uplift each other and share valuable insights on careers and life.
+            </p>
+            <DiscordButton />
           </div>
 
           <div className="grid gap-8 tracking-wide grid-cols-1 md:grid-cols-3">
@@ -51,7 +56,7 @@ const Community = () => {
               <p className="pt-6">
                Access unique tools and a supportive community available only at GenTalks
               </p>
-              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-9 tracking-wide">
+              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-8 tracking-wide">
                 <a href="/resources">
                   View resources
                 </a>
@@ -66,11 +71,6 @@ const Community = () => {
               <p className="pt-6">
                 Get exclusive updates and be the first to hear about upcoming events!
               </p>
-              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-16 tracking-wide">
-                <a href="https://discord.gg/dXBPVHgwaq">
-                  Join Discord
-                </a>
-              </div>
             </div>
 
             {/* Mentorship */}
@@ -92,11 +92,38 @@ const Community = () => {
       </section>
 
       
-      <section className="w-full flex flex-col items-center py-8 space-y-6 track-wide mb-4">
-        <div className="text-xl font-teachers">
-          <h1>
+      <section className="bg-cream text-fog w-full flex flex-col items-center py-8 space-y-6 track-wide mb-4">
+       <div className="flex flex-col lg:flex-row items-center justify-between mt-auto">
+          <div className="pl-8 w-full lg:w-1/2">
+            <h1 className="text-4xl font-bosk text-center">
+              Student Ambassador Program
+            </h1>
+            <p className="font-teachers font-normal text-center text-xl mt-2">
+              Our student ambassador program
+            </p>
+          </div>
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+            alt="matcha"
+            className="pr-8 w-full lg:w-1/2 rounded-xl shadow-lg mt-4 lg:mt-0"
+          />
+        </div>
 
-          </h1>
+
+        <div className="flex flex-col lg:flex-row-reverse items-center justify-between mt-auto">
+          <div className="pr-8 w-full lg:w-1/2">
+            <h1 className="text-4xl font-bosk text-center">
+              Mentor Program
+            </h1>
+            <p className="font-teachers font-normal text-center text-xl mt-2">
+              Our mentorship program
+            </p>
+          </div>
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+            alt="matcha"
+            className="pl-8 w-full lg:w-1/2 rounded-xl shadow-lg mt-4 lg:mt-0"
+          />
         </div>
       </section>
 

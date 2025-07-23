@@ -59,14 +59,29 @@ const Home = () => {
           <div className="w-full md:w-1/3 py-8">
             5+ <br />
             <span className="text-lg font-teachers">Mentors</span>
+            <img
+                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+                alt="matcha"
+                className="w-full rounded-xl shadow-lg scale-75"
+              /> 
           </div>
           <div className="w-full md:w-1/3 py-8">
             0+ <br />
             <span className="text-lg font-teachers">GenTalks booked</span>
+            <img
+                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+                alt="matcha"
+                className="w-full rounded-xl shadow-lg scale-75"
+              /> 
           </div>
           <div className="w-full md:w-1/3 py-8">
             80+ <br />
             <span className="text-lg font-teachers">Community members</span>
+            <img
+                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+                alt="matcha"
+                className="w-full rounded-xl shadow-lg scale-75"
+              /> 
           </div>
         </div>
       </section>
