@@ -20,7 +20,7 @@ const FAQs = () => {
 
         <div className="font-teachers font-normal text-2xl text-left transform -translate-x-40">
           <FAQComp question="What is GenTalks?" answer="GenTalks is a nonprofit organization committed to empowering the high school community with nurturing conversations about personal and academic growth. Through virtual mentorship calls, we help students get in touch with mentors." />
-          <FAQComp question="Is GenTalks free?" answer="um *looks both ways* yes your honor *gulp* GenTalks will NEVER charge for our services. EVER. Pinky promise." />
+          <FAQComp question="Is GenTalks free?" answer="GenTalks will NEVER charge for our services. EVER. Pinky promise." />
           <FAQComp question="Can I still be a community member even if I'm not in high school?" answer="erm i actually dunno im just the web dev chat" />
           <FAQComp question="Does GenTalks have any open positions right now?" answer="As of right now, GenTalks does not have any openings. For the most accurate information, check our community page for the latest update."/>
         </div>
@@ -32,7 +32,7 @@ const FAQs = () => {
         </h1>
 
         <div className="font-teachers font-normal text-2xl text-left transform -translate-x-40">
-          <FAQComp question="Do I have to pay to be mentored at GenTalks?" answer="Never! We pinky promised earlier, remember?" />
+          <FAQComp question="Do I have to pay to be mentored at GenTalks?" answer="Never! Not now not ever." />
           <FAQComp question="What am I able to get mentored on?" answer="At GenTalks, our goal is to foster discussions focused on both personal and academic growth. We aim to blend professional insights with genuine conversations." />
           <FAQComp question="I don't know what mentor to pick. How can I decide on one?" answer="The Web Development Team is currently working on a feature that will streamline choosing a mentor. Here's some questions to consider: 'Is this mentor in a position I want more insight about?', 'Do they align in a field I'm interested in?' Feel free to try out different mentors -- you can always change your mind after completing a session!" />
           <FAQComp question="What if the mentor I want isn't available?" answer="We have amazing mentors all around who try their best to make themselves available and accessible to students. However, all mentorship is done on a volutneer basis so if a mentor is not available, we recommend finding someone that is available or joining our Discord." />
@@ -53,7 +53,7 @@ const FAQs = () => {
           <FAQComp question="How is GenTalks different from other mentorship programs?" answer="GenTalks is completely free, as we do not monetize in any way. We heavily prioritize convenience and flexibility for our mentorship program. Unlike our older sibling, BobaTalks, our mentorship program specifically focuses on supporting the high school community." />
           <FAQComp question="I don't have any prior experience mentoring. Can I still apply?" answer="Absolutely! Many mentors are eager to help but aren't sure how to begin. Our laid-back approach is perfect for those who want to make an impact without the pressure of formal commitments. It offers a way for mentors to give back while keeping things flexible and enjoyable." />
           <FAQComp question="What does GenTalks look for in a mentor?" answer="i trully duno." />
-          <FAQComp question="Does GenTalks monetize my time mentoring students?" answer="Never. Pinky promise to the mentors too." />
+          <FAQComp question="Does GenTalks monetize my time mentoring students?" answer="Never. We pinky promise the mentors too." />
         </div>
       </section>
 
