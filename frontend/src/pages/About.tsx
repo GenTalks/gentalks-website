@@ -122,10 +122,10 @@ const About = () => {
                 </span>
               </h1>
               <img
-              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
-              alt="matcha"
-              className="w-full rounded-xl shadow-lg scale-75"
-            /> 
+                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+                alt="matcha"
+                className="w-full rounded-xl shadow-lg scale-75"
+              /> 
             </div>
           </div>
         </section>
