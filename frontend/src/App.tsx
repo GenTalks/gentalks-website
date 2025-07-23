@@ -6,7 +6,7 @@ import Community from './pages/Community';
 import Contact from './pages/Contact';
 import Content from './pages/Content';
 import Home from './pages/Home';
-import Mentors from './pages/Mentors';
+import BookAMentor from './pages/BookAMentor';
 import Resources from './pages/Resources';
 import FAQs from './pages/FAQs';
 import TermsConditions from './pages/TermsConditions';
@@ -27,7 +27,7 @@ function App() {
             <Route path="/resources" element={<Resources />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/contact-us" element={<Contact />} />
-            <Route path="/book-a-mentor" element={<Mentors />} />
+            <Route path="/book-a-mentor" element={<BookAMentor />} />
             <Route path="/terms-and-conditions" element={<TermsConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>

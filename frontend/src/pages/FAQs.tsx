@@ -12,8 +12,10 @@ const FAQs = () => {
         </p>
       </section>
 
-
-      <DiscordBanner />
+      <section className="w-full flex flex-col items-center pt-12 space-y-6 tracking-wide bg-laurel">
+        <DiscordBanner />
+      </section>
+      
         
     </div>
   );

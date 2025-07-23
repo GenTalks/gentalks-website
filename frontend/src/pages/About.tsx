@@ -1,7 +1,8 @@
 import DiscordBanner from '../components/DiscordBanner';
 import { RiCommunityLine } from "react-icons/ri";
 import { IoAccessibility } from "react-icons/io5";
-import { FaHandHoldingHeart } from "react-icons/fa";
+import { LuHeartHandshake } from "react-icons/lu";
+import { LuSprout } from "react-icons/lu";
 
 const About = () => {
   return (
@@ -20,29 +21,39 @@ const About = () => {
       <section className="flex flex-col py-12 tracking-wide bg-laurel text-cream px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16">
-            <h1 className="text-5xl font-bosk text-center">Our values</h1>
+            <h1 className="text-5xl font-bosk text-center">Our Values</h1>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 tracking-widest">
-            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-xl font-teachers font-semibold pl-4 shadow-md w-full md:w-1/3">
-              <RiCommunityLine size={40} />
-              <h1 className="mt-8">
-                Community
-              </h1>
-            </div>
-            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-xl font-teachers font-semibold pl-4 shadow-md w-full md:w-1/3">
-              <IoAccessibility size={40} />
-              <h1 className="mt-8">
-                Accessibility
-              </h1>
-            </div>
-            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-xl font-teachers font-semibold pl-4 shadow-md w-full md:w-1/3">
-              <FaHandHoldingHeart size={40} />
-              <h1 className="mt-8">
-                Empathy
-              </h1>
-            </div>
-          </div>
+          <div className="flex flex-col md:flex-row items-stretch justify-between gap-8 tracking-wide">
+  {/* Community */}
+  <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers w-full md:w-1/3 flex flex-col items-start">
+    <RiCommunityLine size={48} />
+    <h1 className="mt-4 text-xl font-semibold">Community</h1>
+    <p className="mt-auto pt-6">
+      We are committed to being a safe space where students feel supported and valued.
+    </p>
+  </div>
+
+  {/* Empathy */}
+  <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers w-full md:w-1/3 flex flex-col items-start">
+    <LuHeartHandshake size={48} />
+    <h1 className="mt-4 text-xl font-semibold">Empathy</h1>
+    <p className="pt-6">
+      We are committed to lead with compassion and understanding.
+    </p>
+  </div>
+
+  {/* Accessibility */}
+  <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers w-full md:w-1/3 flex flex-col items-start">
+    <IoAccessibility size={48} />
+    <h1 className="mt-4 text-xl font-semibold">Accessibility</h1>
+    <p className="mt-auto pt-6">
+      We are committed to providing help to all, regardless of background or circumstance.
+    </p>
+  </div>
+</div>
+
+
         </div>
       </section>
 
@@ -105,20 +116,17 @@ const About = () => {
               />
             </div>
 
-            <div className="text-center pt-16">
-              <h1 className="text-4xl font-bold">
+            <div className="text-center py-16">
+              <h1 className="text-4xl font-bold flex justify-center items-center gap-2 text-fog">
                 And now we invite you to join us. Grow with us.
+                <span className="text-matcha">
+                  <LuSprout size={40} />
+                </span>
               </h1>
             </div>
-
           </div>
         </section>
 
-
-
-
-
-      
       <section className="bg-laurel mt-12">
         <DiscordBanner />
       </section>
