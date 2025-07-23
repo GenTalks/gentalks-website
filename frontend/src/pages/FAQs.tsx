@@ -52,19 +52,6 @@ const FAQs = () => {
         </div>
       </section>
 
-      <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-16 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left">
-          General Questions
-        </h1>
-
-        <div className="font-teachers font-normal text-2xl text-left transform -translate-x-40">
-          <FAQComp question="What is GenTalks?" answer="GenTalks is a nonprofit organization committed to empowering the high school community with nurturing conversations about personal and academic growth. Through virtual mentorship calls, we help students get in touch with mentors." />
-          <FAQComp question="Is GenTalks free?" answer="um *looks both ways* yes your honor *gulp*" />
-          <FAQComp question="What is GenTalks?" answer="idk i swear i just told ya but my memory has been erm escaping a little faster today" />
-
-        </div>
-      </section>
-
       <section className="w-full flex flex-col items-center pt-12 space-y-6 tracking-wide bg-laurel">
         <DiscordBanner />
       </section>
