@@ -14,7 +14,7 @@ const FAQs = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-4 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left underline">
+        <h1 className="font-teachers font-bold text-5xl text-left">
           General Questions
         </h1>
 
@@ -27,7 +27,7 @@ const FAQs = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-4 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left underline">
+        <h1 className="font-teachers font-bold text-5xl text-left">
           Students
         </h1>
 
@@ -43,7 +43,7 @@ const FAQs = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-16 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left underline">
+        <h1 className="font-teachers font-bold text-5xl text-left">
           Mentors
         </h1>
 
@@ -58,7 +58,7 @@ const FAQs = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-16 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left underline">
+        <h1 className="font-teachers font-bold text-5xl text-left">
           Meeting Code of Conduct
         </h1>
 
