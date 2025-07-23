@@ -24,34 +24,35 @@ const About = () => {
             <h1 className="text-5xl font-bosk text-center">Our Values</h1>
           </div>
 
-          <div className="flex flex-col md:flex-row items-stretch justify-between gap-8 tracking-wide">
-  {/* Community */}
-  <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers w-full md:w-1/3 flex flex-col items-start">
-    <RiCommunityLine size={48} />
-    <h1 className="mt-4 text-xl font-semibold">Community</h1>
-    <p className="mt-auto pt-6">
-      We are committed to being a safe space where students feel supported and valued.
-    </p>
-  </div>
+          <div className="grid gap-8 tracking-wide grid-cols-1 md:grid-cols-3">
+            {/* Community */}
+            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
+              <RiCommunityLine size={48} />
+              <h1 className="mt-4 text-xl font-semibold">Community</h1>
+              <p className="mt-auto pt-6">
+                We are committed to being a safe space where students feel supported and valued.
+              </p>
+            </div>
 
-  {/* Empathy */}
-  <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers w-full md:w-1/3 flex flex-col items-start">
-    <LuHeartHandshake size={48} />
-    <h1 className="mt-4 text-xl font-semibold">Empathy</h1>
-    <p className="pt-6">
-      We are committed to lead with compassion and understanding.
-    </p>
-  </div>
+            {/* Empathy */}
+            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
+              <LuHeartHandshake size={48} />
+              <h1 className="mt-4 text-xl font-semibold">Empathy</h1>
+              <p className="pt-6">
+                We are committed to lead with compassion and understanding.
+              </p>
+            </div>
 
-  {/* Accessibility */}
-  <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers w-full md:w-1/3 flex flex-col items-start">
-    <IoAccessibility size={48} />
-    <h1 className="mt-4 text-xl font-semibold">Accessibility</h1>
-    <p className="mt-auto pt-6">
-      We are committed to providing help to all, regardless of background or circumstance.
-    </p>
-  </div>
-</div>
+            {/* Accessibility */}
+            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
+              <IoAccessibility size={48} />
+              <h1 className="mt-4 text-xl font-semibold">Accessibility</h1>
+              <p className="mt-auto pt-6">
+                We are committed to providing help to all, regardless of background or circumstance.
+              </p>
+            </div>
+          </div>
+
 
 
         </div>

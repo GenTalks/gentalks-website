@@ -1,5 +1,10 @@
 import DiscordBanner from "../components/DiscordBanner";
 import { TfiAnnouncement } from "react-icons/tfi";
+import { LuSprout } from "react-icons/lu";
+import { RiNotification4Line } from "react-icons/ri";
+import { FaChalkboardTeacher } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import { FaDiscord } from "react-icons/fa";
 
 const Community = () => {
   return (
@@ -32,13 +37,60 @@ const Community = () => {
             </div>
       </section>
       
-      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-laurel text-cream">
-        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-bosk">
-          GenTalks Community
-        </h1>
-        <p className="text-xl font-teachers">
-          Moment makers make moments.
-        </p>
+      <section className="flex flex-col py-12 tracking-wide bg-laurel text-cream px-6">
+        <div className="max-w-6xl mx-auto w-full">
+          <div className="mb-16">
+            <h1 className="text-4xl font-bosk text-center">
+              Grow with us 
+            </h1>
+          </div>
+
+          <div className="grid gap-8 tracking-wide grid-cols-1 md:grid-cols-3">
+            {/* Resources */}
+            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
+              <LuSprout size={48} />
+              <h1 className="mt-4 text-xl font-semibold">Exclusive resources</h1>
+              <p className="mt-auto pt-6">
+               Access unique tools and a supportive community available only at GenTalks
+              </p>
+              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-6 tracking-wide">
+                <a href="/resources">
+                  View resources
+                </a>
+              </div>
+            </div>
+            
+
+            {/* Notification */}
+            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
+              <RiNotification4Line size={48} />
+              <h1 className="mt-4 text-xl font-semibold">Early event access</h1>
+              <p className="pt-6">
+                Get exclusive updates and be the first to hear about upcoming events!
+              </p>
+              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-16 tracking-wide">
+                <a href="https://discord.gg/dXBPVHgwaq">
+                  Join Discord
+                </a>
+              </div>
+            </div>
+
+            {/* Mentorship */}
+            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
+              <FaChalkboardTeacher size={48} />
+              <h1 className="mt-4 text-xl font-semibold">Mentorship program</h1>
+              <p className="mt-auto pt-6">
+                Access exclusive insight and guidance from industry professionals through our mentorship program.
+              </p>
+              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-6 tracking-wide">
+                <a href="/book-a-mentor">
+                  Book a mentor
+                </a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
       </section>
 
       
