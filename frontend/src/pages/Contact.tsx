@@ -41,7 +41,7 @@ const Contact = () => {
           </h1>
 
           <h1 className="text-xl font-teachers text-left py-4">
-            Follow our page{" "}
+            Follow our {" "}
             <a
               href="https://www.linkedin.com/company/gentalks/"
               target="_blank"
@@ -50,7 +50,7 @@ const Contact = () => {
             >
               LinkedIn
             </a>{" "}
-            for the latest news and position openings
+            page for the latest news and position openings
           </h1>
         </section>
 
