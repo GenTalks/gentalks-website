@@ -30,7 +30,7 @@ const Media = () => {
       <section className="py-16 px-6 space-y-24 tracking-wide">
           {/*Featured Announcement*/}
           <div className="max-w-6xl mx-auto">
-            <div className="flex items-center gap-4 justify-center mt-12">
+            <div className="flex items-center gap-4 justify-center">
               <TfiAnnouncement size={36} className="text-cream" />
               <h2 className="text-4xl font-bosk text-center">Featured Announcement</h2>
             </div>
@@ -73,7 +73,7 @@ const Media = () => {
                 ></iframe>
               </div>
                 {/* Instagram Post Card MIDDLE*/}
-              <div className="bg-white rounded-xl overflow-hidden shadow-md border-sage border-8">
+              <div className="bg-cream rounded-xl overflow-hidden shadow-md border-sage border-8">
                 <iframe
                   src="https://www.instagram.com/p/DJK1CieyYmv/embed"
                   width="100%"
@@ -110,7 +110,7 @@ const Media = () => {
               {/* TikTok Embed NEWEST*/}
               <div className="w-full max-w-md mx-auto my-8">
                 <blockquote
-                  className="tiktok-embed"
+                  className="tiktok-embed border-sage border-8 rounded-xl"
                   cite="https://www.tiktok.com/@misojenkitchen/video/7504397042979065118"
                   data-video-id="7504397042979065118"
                   style={{ maxWidth: "605px", minWidth: "325px" }}
@@ -122,7 +122,7 @@ const Media = () => {
               {/* TikTok Embed MIDDLE*/}
               <div className="w-full max-w-md mx-auto my-8">
                 <blockquote
-                  className="tiktok-embed"
+                  className="tiktok-embed border-sage border-8 rounded-xl"
                   cite="https://www.tiktok.com/@misojenkitchen/video/7419092191965924639"
                   data-video-id="7419092191965924639"
                   style={{ maxWidth: "605px", minWidth: "325px" }}
@@ -134,7 +134,7 @@ const Media = () => {
               {/* TikTok Embed OLDEST*/}
               <div className="w-full max-w-md mx-auto my-8">
                 <blockquote
-                  className="tiktok-embed"
+                  className="tiktok-embed border-sage border-8 rounded-xl"
                   cite="https://www.tiktok.com/@misojenkitchen/video/7255096163118992682"
                   data-video-id="7255096163118992682"
                   style={{ maxWidth: "605px", minWidth: "325px" }}
