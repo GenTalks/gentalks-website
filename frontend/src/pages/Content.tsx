@@ -42,14 +42,15 @@ const Media = () => {
               <hr className="my-4 border-t-2 border-cream" />
 
               <div className="px-4 text-left tracking-wide">
-                Testing
+                Content page is now ready for launch!
               </div>
 
-              <div className="px-4 py-2 inline-block rounded-full border-cream border-2 bg-laurel text-cream hover:border-laurel hover:bg-cream hover:text-laurel mt-6 tracking-wide">
+              {/*Button*/}
+              {/*<div className="px-4 py-2 inline-block rounded-full border-cream border-2 bg-laurel text-cream hover:border-laurel hover:bg-cream hover:text-laurel mt-6 tracking-wide">
                 <a href="/apply">
                   Apply here
                 </a>
-              </div>
+              </div>*/}
             </div>
           </div>
 
@@ -60,7 +61,7 @@ const Media = () => {
               <h2 className="text-4xl font-bosk text-center">Latest Instagram Posts</h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {/* Instagram Post Card NEWEST*/}
+              {/* Instagram Post Card Slot 1*/}
               <div className="bg-white rounded-xl overflow-hidden shadow-md border-sage border-8">
                 <iframe
                   src="https://www.instagram.com/p/DJ-P14pymAr/embed"
@@ -72,7 +73,7 @@ const Media = () => {
                   title="Instagram Embed"
                 ></iframe>
               </div>
-                {/* Instagram Post Card MIDDLE*/}
+                {/* Instagram Post Card Slot 2*/}
               <div className="bg-cream rounded-xl overflow-hidden shadow-md border-sage border-8">
                 <iframe
                   src="https://www.instagram.com/p/DJK1CieyYmv/embed"
@@ -84,7 +85,7 @@ const Media = () => {
                   title="Instagram Embed"
                 ></iframe>
               </div>
-              {/* Instagram Post Card OLDEST*/}
+              {/* Instagram Post Card Slot 3*/}
               <div className="bg-white rounded-xl overflow-hidden shadow-md border-sage border-8">
                 <iframe
                   src="https://www.instagram.com/reel/C-RN1VAunGf/embed"
@@ -107,7 +108,7 @@ const Media = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {/* TikTok Embed NEWEST*/}
+              {/* TikTok Embed Slot 1*/}
               <div className="w-full max-w-md mx-auto my-8">
                 <blockquote
                   className="tiktok-embed border-sage border-8 rounded-xl"
@@ -119,7 +120,7 @@ const Media = () => {
                 </blockquote>
               </div>
 
-              {/* TikTok Embed MIDDLE*/}
+              {/* TikTok Embed Slot 2*/}
               <div className="w-full max-w-md mx-auto my-8">
                 <blockquote
                   className="tiktok-embed border-sage border-8 rounded-xl"
@@ -131,7 +132,7 @@ const Media = () => {
                 </blockquote>
               </div>
 
-              {/* TikTok Embed OLDEST*/}
+              {/* TikTok Embed Slot 3*/}
               <div className="w-full max-w-md mx-auto my-8">
                 <blockquote
                   className="tiktok-embed border-sage border-8 rounded-xl"
