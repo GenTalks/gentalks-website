@@ -1,5 +1,4 @@
 import DiscordBanner from '../components/DiscordBanner';
-import { TfiAnnouncement } from "react-icons/tfi";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { useEffect } from "react";
@@ -28,32 +27,6 @@ const Media = () => {
       </section>
 
       <section className="py-16 px-6 space-y-24 tracking-wide">
-          {/*Featured Announcement*/}
-          <div className="max-w-6xl mx-auto">
-            <div className="flex items-center gap-4 justify-center">
-              <TfiAnnouncement size={36} className="text-cream" />
-              <h2 className="text-4xl font-bosk text-center">Featured Announcement</h2>
-            </div>
-            <div className="border-cream border-2 bg-laurel text-cream p-8 rounded-xl shadow-lg font-teachers text-lg leading-relaxed mt-8">
-              <div className="text-left px-4 font-semibold tracking-widest">
-                Date posted: July 22, 2025
-              </div>
-
-              <hr className="my-4 border-t-2 border-cream" />
-
-              <div className="px-4 text-left tracking-wide">
-                Content page is now ready for launch!
-              </div>
-
-              {/*Button*/}
-              {/*<div className="px-4 py-2 inline-block rounded-full border-cream border-2 bg-laurel text-cream hover:border-laurel hover:bg-cream hover:text-laurel mt-6 tracking-wide">
-                <a href="/apply">
-                  Apply here
-                </a>
-              </div>*/}
-            </div>
-          </div>
-
           {/*Instagram Feed*/}
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-4 justify-center py-6 mb-12">
