@@ -3,8 +3,6 @@ import { TfiAnnouncement } from "react-icons/tfi";
 import { LuSprout } from "react-icons/lu";
 import { RiNotification4Line } from "react-icons/ri";
 import { FaChalkboardTeacher } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import { FaDiscord } from "react-icons/fa";
 
 const Community = () => {
   return (
@@ -50,10 +48,10 @@ const Community = () => {
             <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <LuSprout size={48} />
               <h1 className="mt-4 text-xl font-semibold">Exclusive resources</h1>
-              <p className="mt-auto pt-6">
+              <p className="pt-6">
                Access unique tools and a supportive community available only at GenTalks
               </p>
-              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-6 tracking-wide">
+              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-9 tracking-wide">
                 <a href="/resources">
                   View resources
                 </a>
@@ -79,10 +77,10 @@ const Community = () => {
             <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <FaChalkboardTeacher size={48} />
               <h1 className="mt-4 text-xl font-semibold">Mentorship program</h1>
-              <p className="mt-auto pt-6">
+              <p className="mt-4">
                 Access exclusive insight and guidance from industry professionals through our mentorship program.
               </p>
-              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-6 tracking-wide">
+              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-10 tracking-wide">
                 <a href="/book-a-mentor">
                   Book a mentor
                 </a>
