@@ -37,7 +37,7 @@ function App() {
             <Route path="/book-a-mentor" element={<BookAMentor />} />
             <Route path="/terms-and-conditions" element={<TermsConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/adulting" element={<Adulting />} />
+            <Route path="/how-to-adult" element={<Adulting />} />
             <Route path="/college-prep" element={<CollegePrep />} />
             <Route path="/financial-aid" element={<FinancialAid />} />
             <Route path="/internships" element={<Internships />} />
