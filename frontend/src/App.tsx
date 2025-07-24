@@ -11,6 +11,13 @@ import Resources from './pages/Resources';
 import FAQs from './pages/FAQs';
 import TermsConditions from './pages/TermsConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Adulting from './pages/Adulting';
+import CollegePrep from './pages/CollegePrep';
+import FinancialAid from './pages/FinancialAid';
+import Internships from './pages/Internships';
+import NavHS from './pages/NavHS';
+import Scholarships from './pages/Scholarships';
+
 
 function App() {
   return (
@@ -30,6 +37,12 @@ function App() {
             <Route path="/book-a-mentor" element={<BookAMentor />} />
             <Route path="/terms-and-conditions" element={<TermsConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/adulting" element={<Adulting />} />
+            <Route path="/college-prep" element={<CollegePrep />} />
+            <Route path="/financial-aid" element={<FinancialAid />} />
+            <Route path="/internships" element={<Internships />} />
+            <Route path="/navigating-high-school" element={<NavHS />} />
+            <Route path="/scholarships" element={<Scholarships />} />
           </Routes>
         </main>
 
