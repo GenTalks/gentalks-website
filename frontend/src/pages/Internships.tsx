@@ -33,7 +33,7 @@ const internshipsQuery = `
     pros,
     cons,
     applicationUrl,
-    datePosted  // <-- add here
+    datePosted 
   }
 `;
 
@@ -44,7 +44,10 @@ const Internships: React.FC = () => {
   useEffect(() => {
     sanityClient
         .fetch(internshipsQuery)
-        .then((data: Internship[]) => setInternships(data))
+        .then((data: Internship[]) => {
+          console.log('Fetched internships:', data)
+          setInternships(data)
+        })
         .catch(console.error);
     }, []);
 
@@ -62,24 +65,54 @@ const Internships: React.FC = () => {
 
       <h1 className="text-4xl font-bold mb-6 font-bosk">Categories</h1>
 
+      {/* Category buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <Link to="/financial-aid" className="category-link">
-          <FaMoneyCheckAlt size={18} /> Financial Aid
+        <Link
+          to="/financial-aid"
+          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
+        >
+          <FaMoneyCheckAlt size={18} />
+          Financial Aid
         </Link>
-        <Link to="/internships" className="category-link">
-          <RiSuitcaseLine size={20} /> Internships
+
+        <Link
+          to="/internships"
+          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
+        >
+          <RiSuitcaseLine size={20} />
+          Internships
         </Link>
-        <Link to="/scholarships" className="category-link">
-          <FaUserGraduate size={20} /> Scholarships
+
+        <Link
+          to="/scholarships"
+          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
+        >
+          <FaUserGraduate size={20} />
+          Scholarships
         </Link>
-        <Link to="/navigating-high-school" className="category-link">
-          <MdOutlinePsychology size={20} /> Navigating High School
+
+        <Link
+          to="/navigating-high-school"
+          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
+        >
+          <MdOutlinePsychology size={20} />
+          Navigating High School
         </Link>
-        <Link to="/college-prep" className="category-link">
-          <IoSchoolOutline size={20} /> College Prep
+
+        <Link
+          to="/college-prep"
+          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
+        >
+          <IoSchoolOutline size={20} />
+          College Prep
         </Link>
-        <Link to="/how-to-adult" className="category-link">
-          <GiHeartWings size={20} /> How to Adult
+
+        <Link
+          to="/how-to-adult"
+          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
+        >
+          <GiHeartWings size={20} />
+          How to Adult
         </Link>
       </div>
 
@@ -87,12 +120,14 @@ const Internships: React.FC = () => {
         Internships
       </h2>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-cream text-fog">
         {internships.map((item) => (
           <InternshipCard
             key={item._id}
             title={item.title}
             company={item.company}
+            location={item.location}            
+            datePosted={item.datePosted}       
             compensation={item.compensation}
             industries={item.industries}
             pros={item.pros}

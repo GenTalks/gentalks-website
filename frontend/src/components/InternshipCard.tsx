@@ -24,6 +24,7 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
   applicationUrl,
   datePosted,
 }) => {
+  
   return (
     <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream shadow hover:shadow-md transition">
       <h3 className="text-xl font-semibold">{title}</h3>
