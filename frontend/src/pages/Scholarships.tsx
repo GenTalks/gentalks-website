@@ -68,7 +68,9 @@ const Scholarships = () => {
           <GiHeartWings size={20} />
           How to Adult
         </Link>
-      </div>
+      </div>            
+      <h2 className="text-5xl font-teachers font-semibold pl-16 mt-12">Scholarships</h2>
+
     </section>
   );
 };

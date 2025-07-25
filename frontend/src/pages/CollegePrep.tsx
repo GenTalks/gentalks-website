@@ -69,6 +69,8 @@ const CollegePrep = () => {
           How to Adult
         </Link>
       </div>
+      <h2 className="text-5xl font-teachers font-semibold pl-16 mt-12">Preparing for college</h2>
+
     </section>
   );
 };

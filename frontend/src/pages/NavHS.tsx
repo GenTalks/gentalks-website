@@ -69,6 +69,7 @@ const NavHS = () => {
           How to Adult
         </Link>
       </div>
+      <h2 className="text-5xl font-teachers font-semibold pl-16 mt-12">Navigating high school</h2>
     </section>
   );
 };
