@@ -1,5 +1,6 @@
 import { defineField } from 'sanity'
 
+
 const InternshipsSchema = {
   name: 'internship',
   title: 'Internship',
@@ -41,7 +42,7 @@ const InternshipsSchema = {
         type: 'array',
         of: [{ type: 'string' }],
         options: {
-            layout: 'tags', 
+          layout: 'checkbox',
             list: [
             { title: 'Software', value: 'software' },
             { title: 'Healthcare', value: 'healthcare' },
@@ -63,10 +64,18 @@ const InternshipsSchema = {
         type: 'array',
         of: [{ type: 'string' }],
         options: {
-            layout: 'tags',
+            layout: 'checkbox',
             list: [
-            { title: 'Paid', value: 'paid' },
-            { title: 'Unpaid', value: 'unpaid' },
+            { title: 'Hourly stipends', value: 'hourly stipends' },
+            { title: 'High-return internship', value: 'high-return internship' },
+            { title: 'Conversion offer', value: 'conversion offer' },
+            { title: 'Pre-placement offer (PPO)', value: 'pre-placement offer (PPO)' },
+            { title: 'Equity compensation', value: 'equity compensation' },
+            { title: 'Access to DevTools', value: 'devTools' },
+            { title: 'Large network', value: 'large network' },
+            { title: 'Mentorship', value: 'mentorship' },
+            { title: 'Exclusive event access', value: 'exclusive event access' },
+            { title: 'Creative freedom', value: 'creative freedom' },
             ],
         },
         validation: Rule => Rule.required()
@@ -77,7 +86,15 @@ const InternshipsSchema = {
         type: 'array',
         of: [{ type: 'string' }],
         options: {
-            layout: 'tags',
+            layout: 'checkbox',
+            list:[
+              {title: 'Challenging WLB', value: 'challenging WLB' },
+              {title: 'Independent work', value: 'independent work' },
+              {title: 'Fast-paced environment', value: 'fast-paced environment' },
+              {title: 'Intense workplace culture', value: 'intense workplace culture' },
+              {title: 'Commitment length', value: 'commitment length' },
+              {title: 'Startup environment', value: 'startup environment' },
+            ],
         },
         validation: Rule => Rule.required()
     }),
@@ -95,5 +112,6 @@ const InternshipsSchema = {
     }),
   ]
 }
+
 
 export default InternshipsSchema;

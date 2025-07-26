@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { sanityClient } from "../lib/sanityClient";
 import InternshipCard from "../components/InternshipCard";
 
+
 import { RiSuitcaseLine } from "react-icons/ri";
 import { IoSchoolOutline } from "react-icons/io5";
 import { FaMoneyCheckAlt, FaUserGraduate } from "react-icons/fa";
 import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
+
 
 export interface Internship {
   _id: string;
@@ -22,6 +24,7 @@ export interface Internship {
   datePosted: string;
 }
 
+
 const internshipsQuery = `
   *[_type == "internship"] | order(_createdAt desc) {
     _id,
@@ -33,23 +36,32 @@ const internshipsQuery = `
     pros,
     cons,
     applicationUrl,
-    datePosted 
+    datePosted
   }
 `;
+
+
 
 
 const Internships: React.FC = () => {
   const [internships, setInternships] = useState<Internship[]>([])
 
+
   useEffect(() => {
     sanityClient
         .fetch(internshipsQuery)
         .then((data: Internship[]) => {
-          console.log('Fetched internships:', data)
-          setInternships(data)
+          const sortedData = data
+            .filter((item) => !!item.datePosted) // optional: skip items without date
+            .sort((a, b) => new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime());
+           
+          console.log('Sorted internships:', sortedData);
+          setInternships(sortedData);
         })
         .catch(console.error);
     }, []);
+
+
 
 
   return (
@@ -63,7 +75,9 @@ const Internships: React.FC = () => {
         </Link>
       </div>
 
-      <h1 className="text-4xl font-bold mb-6 font-bosk">Categories</h1>
+
+      <h1 className="text-4xl font-bold mb-6 font-teachers">Categories</h1>
+
 
       {/* Category buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -75,6 +89,7 @@ const Internships: React.FC = () => {
           Financial Aid
         </Link>
 
+
         <Link
           to="/internships"
           className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
@@ -82,6 +97,7 @@ const Internships: React.FC = () => {
           <RiSuitcaseLine size={20} />
           Internships
         </Link>
+
 
         <Link
           to="/scholarships"
@@ -91,6 +107,7 @@ const Internships: React.FC = () => {
           Scholarships
         </Link>
 
+
         <Link
           to="/navigating-high-school"
           className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
@@ -99,6 +116,7 @@ const Internships: React.FC = () => {
           Navigating High School
         </Link>
 
+
         <Link
           to="/college-prep"
           className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
@@ -106,6 +124,7 @@ const Internships: React.FC = () => {
           <IoSchoolOutline size={20} />
           College Prep
         </Link>
+
 
         <Link
           to="/how-to-adult"
@@ -116,9 +135,11 @@ const Internships: React.FC = () => {
         </Link>
       </div>
 
+
       <h2 className="text-5xl font-teachers font-semibold pl-2 mt-12 mb-4">
         Internships
       </h2>
+
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-cream text-fog">
         {internships.map((item) => (
@@ -127,7 +148,7 @@ const Internships: React.FC = () => {
             title={item.title}
             company={item.company}
             location={item.location}            
-            datePosted={item.datePosted}       
+            datePosted={item.datePosted}      
             compensation={item.compensation}
             industries={item.industries}
             pros={item.pros}
@@ -139,5 +160,6 @@ const Internships: React.FC = () => {
     </section>
   );
 };
+
 
 export default Internships;
