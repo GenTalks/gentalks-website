@@ -1,22 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import About from './pages/About';
-import Community from './pages/Community';
-import Contact from './pages/Contact';
-import Content from './pages/Content';
-import Home from './pages/Home';
-import BookAMentor from './pages/BookAMentor';
-import Resources from './pages/Resources';
-import FAQs from './pages/FAQs';
-import TermsConditions from './pages/TermsConditions';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import Adulting from './pages/Adulting';
-import CollegePrep from './pages/CollegePrep';
-import FinancialAid from './pages/FinancialAid';
-import Internships from './pages/Internships';
-import NavHS from './pages/NavHS';
-import Scholarships from './pages/Scholarships';
+import Navbar from './src/components/Navbar';
+import Footer from './src/components/Footer';
+import About from './src/pages/About';
+import Community from './src/pages/Community';
+import Contact from './src/pages/Contact';
+import Content from './src/pages/Content';
+import Home from './src/pages/Home';
+import BookAMentor from './src/pages/BookAMentor';
+import Resources from './src/pages/Resources';
+import FAQs from './src/pages/FAQs';
+import TermsConditions from './src/pages/TermsConditions';
+import PrivacyPolicy from './src/pages/PrivacyPolicy';
+import Adulting from './src/pages/Adulting';
+import CollegePrep from './src/pages/CollegePrep';
+import FinancialAid from './src/pages/FinancialAid';
+import Internships from './src/pages/Internships';
+import NavHS from './src/pages/NavHS';
+import Scholarships from './src/pages/Scholarships';
+
 
 
 function App() {
