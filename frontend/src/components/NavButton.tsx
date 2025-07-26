@@ -12,7 +12,7 @@ const NavButton = ({ to, label, onClick, className }: NavButtonProps) => {
     <Link
       to={to}
       onClick={onClick}
-      className={`py-4 px-6 rounded-full font-teachers tracking-wide transition-colors duration-300 ${className ?? ''}`}
+      className={`py-4 px-6 rounded-full font-teachers tracking-wide transition-colors duration-300 hover:text-laurel ${className ?? ''}`}
     >
       {label}
     </Link>
