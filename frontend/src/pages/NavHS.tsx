@@ -29,7 +29,7 @@ const navhsQuery = `
   }
 `;
 
-const NavHS : React.FC = () => {
+const NavHS: React.FC = () => {
 
   const [navhs, setNavHS] = useState<NavHS[]>([])
 
@@ -124,8 +124,6 @@ const NavHS : React.FC = () => {
             resourceUrl={item.resourceUrl}
             tags={item.tags}
             datePosted={item.datePosted}
-
-
           />
         ))}
       </div>

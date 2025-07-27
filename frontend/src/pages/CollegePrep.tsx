@@ -29,23 +29,23 @@ const collegeprepQuery = `
   }
 `;
 
-const CollegePrep : React.FC = () => {
+const CollegePrep: React.FC = () => {
   const [collegeprep, setCollegePrep] = useState<CollegePrep[]>([])
-  
-  
-    useEffect(() => {
-      sanityClient
-        .fetch(collegeprepQuery)
-        .then((data: CollegePrep[]) => {
-          const sortedData = data
-            .filter((item) => !!item.datePosted) // optional: skip items without date
-            .sort((a, b) => new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime());
-  
-          console.log('Sorted resources:', sortedData);
-          setCollegePrep(sortedData);
-        })
-        .catch(console.error);
-    }, []);
+
+
+  useEffect(() => {
+    sanityClient
+      .fetch(collegeprepQuery)
+      .then((data: CollegePrep[]) => {
+        const sortedData = data
+          .filter((item) => !!item.datePosted) // optional: skip items without date
+          .sort((a, b) => new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime());
+
+        console.log('Sorted resources:', sortedData);
+        setCollegePrep(sortedData);
+      })
+      .catch(console.error);
+  }, []);
 
   return (
     <section className="min-h-screen bg-cream text-fog px-6 py-10">
@@ -64,11 +64,11 @@ const CollegePrep : React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <Link
           to="/study-resources"
-                    className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-                  >
-                    <FaMoneyCheckAlt size={20} />
-                    Study Resources
-                  </Link>
+          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
+        >
+          <FaMoneyCheckAlt size={20} />
+          Study Resources
+        </Link>
 
         <Link
           to="/internships"

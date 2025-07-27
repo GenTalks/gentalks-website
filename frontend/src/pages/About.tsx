@@ -12,8 +12,8 @@ const About = () => {
           Our Philosophy
         </h1>
         <p className="w-2/3 text-xl font-teachers text-center">
-          GenTalks connects students with resources, mentors, and community to form the Golden Honmoon. 
-          Whether you’re navigating personal growth, seeking advice on how to adult, 
+          GenTalks connects students with resources, mentors, and community to form the Golden Honmoon.
+          Whether you’re navigating personal growth, seeking advice on how to adult,
           or thinking about your career plans, GenTalks will be there for you.
         </p>
       </section>
@@ -68,72 +68,72 @@ const About = () => {
       </section>
 
       <section className="flex flex-col py-12 tracking-wide bg-cream text-fog relative font-teachers space-y-24 px-6">
-          <div className="max-w-6xl mx-auto space-y-24">
-            
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-              <h1 className="text-3xl font-semibold text-left w-full lg:w-1/2">
-                The storm came but it didn’t break us.
-              </h1>
-              <img
-                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
-                alt="matcha"
-                className="w-full lg:w-1/2 rounded-xl shadow-lg"
-              />
-            </div>
+        <div className="max-w-6xl mx-auto space-y-24">
 
-            <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10">
-              <h1 className="text-3xl font-semibold text-right w-full lg:w-1/2">
-                It taught us how to start again.
-              </h1>
-              <img
-                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
-                alt="matcha"
-                className="w-full lg:w-1/2 rounded-xl shadow-lg"
-              />
-            </div>
-
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-              <h1 className="text-3xl font-semibold text-left w-full lg:w-1/2">
-                We replanted – not in spite of the rain, but because of it.
-              </h1>
-              <img
-                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
-                alt="matcha"
-                className="w-full lg:w-1/2 rounded-xl shadow-lg"
-              />
-            </div>
-
-            <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10">
-              <h1 className="text-3xl font-semibold text-right w-full lg:w-1/2">
-                We grew.
-              </h1>
-              <img
-                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
-                alt="matcha"
-                className="w-full lg:w-1/2 rounded-xl shadow-lg"
-              />
-            </div>
-
-            <div className="text-center mt-auto">
-              <h1 className="text-4xl font-bold flex justify-center items-center gap-2 text-fog">
-                And now we invite you to join us. Grow with us.
-                <span className="text-matcha">
-                  <LuSprout size={40} />
-                </span>
-              </h1>
-              <img
-                src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
-                alt="matcha"
-                className="w-full rounded-xl shadow-lg scale-75"
-              /> 
-            </div>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+            <h1 className="text-3xl font-semibold text-left w-full lg:w-1/2">
+              The storm came but it didn’t break us.
+            </h1>
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              alt="matcha"
+              className="w-full lg:w-1/2 rounded-xl shadow-lg"
+            />
           </div>
-        </section>
+
+          <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10">
+            <h1 className="text-3xl font-semibold text-right w-full lg:w-1/2">
+              It taught us how to start again.
+            </h1>
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              alt="matcha"
+              className="w-full lg:w-1/2 rounded-xl shadow-lg"
+            />
+          </div>
+
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+            <h1 className="text-3xl font-semibold text-left w-full lg:w-1/2">
+              We replanted – not in spite of the rain, but because of it.
+            </h1>
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              alt="matcha"
+              className="w-full lg:w-1/2 rounded-xl shadow-lg"
+            />
+          </div>
+
+          <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10">
+            <h1 className="text-3xl font-semibold text-right w-full lg:w-1/2">
+              We grew.
+            </h1>
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              alt="matcha"
+              className="w-full lg:w-1/2 rounded-xl shadow-lg"
+            />
+          </div>
+
+          <div className="text-center mt-auto">
+            <h1 className="text-4xl font-bold flex justify-center items-center gap-2 text-fog">
+              And now we invite you to join us. Grow with us.
+              <span className="text-matcha">
+                <LuSprout size={40} />
+              </span>
+            </h1>
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              alt="matcha"
+              className="w-full rounded-xl shadow-lg scale-75"
+            />
+          </div>
+        </div>
+      </section>
 
       <section className="bg-laurel mt-12">
         <DiscordBanner />
       </section>
-      
+
     </div>
   );
 };

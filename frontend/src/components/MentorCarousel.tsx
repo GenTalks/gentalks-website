@@ -5,7 +5,7 @@ import NavButton from './NavButton';
 const MentorCarousel = () => {
   const [translateX, setTranslateX] = useState(0);
   const animationRef = useRef<number | null>(null);
-  
+
   const mentors = [
     {
       image: "https://staticg.sportskeeda.com/editor/2021/11/c8fcd-16372673354076-1920.jpg",

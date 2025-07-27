@@ -8,9 +8,9 @@ import collegeprep from './CollegePrepSchema'
 import mentorpage from './MentorPageSchema'
 
 export const schemaTypes: SchemaTypeDefinition[] = [
-    internship, 
-    adulting, 
-    scholarship, 
+    internship,
+    adulting,
+    scholarship,
     studyresource,
     navhs,
     collegeprep,

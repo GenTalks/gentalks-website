@@ -49,17 +49,17 @@ const Internships: React.FC = () => {
 
   useEffect(() => {
     sanityClient
-        .fetch(internshipsQuery)
-        .then((data: Internship[]) => {
-          const sortedData = data
-            .filter((item) => !!item.datePosted) // optional: skip items without date
-            .sort((a, b) => new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime());
-           
-          console.log('Sorted internships:', sortedData);
-          setInternships(sortedData);
-        })
-        .catch(console.error);
-    }, []);
+      .fetch(internshipsQuery)
+      .then((data: Internship[]) => {
+        const sortedData = data
+          .filter((item) => !!item.datePosted) // optional: skip items without date
+          .sort((a, b) => new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime());
+
+        console.log('Sorted internships:', sortedData);
+        setInternships(sortedData);
+      })
+      .catch(console.error);
+  }, []);
 
 
 
@@ -83,11 +83,11 @@ const Internships: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <Link
           to="/study-resources"
-                    className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-                  >
-                    <FaMoneyCheckAlt size={20} />
-                    Study Resources
-                  </Link>
+          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
+        >
+          <FaMoneyCheckAlt size={20} />
+          Study Resources
+        </Link>
 
 
         <Link
@@ -146,8 +146,8 @@ const Internships: React.FC = () => {
             key={item._id}
             title={item.title}
             company={item.company}
-            location={item.location}            
-            datePosted={item.datePosted}      
+            location={item.location}
+            datePosted={item.datePosted}
             compensation={item.compensation}
             industries={item.industries}
             pros={item.pros}

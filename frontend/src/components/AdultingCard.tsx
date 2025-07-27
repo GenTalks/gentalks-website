@@ -6,7 +6,7 @@ interface AdultingCardProps {
   author?: string;
   tags?: string[];
   resourceUrl?: string;
-  datePosted?: string;    
+  datePosted?: string;
 }
 
 const AdultingCard: React.FC<AdultingCardProps> = ({
@@ -20,10 +20,10 @@ const AdultingCard: React.FC<AdultingCardProps> = ({
     <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream shadow hover:shadow-md transition">
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="italic">{author || 'Unknown author'}</p>
-     
+
       {/* Add Date Posted*/}
       <p><strong>Date Posted:</strong> {datePosted ? new Date(datePosted).toLocaleDateString() : 'N/A'}</p>
-     
+
       <p>
         <strong>Tags:</strong>{' '}
         {tags?.length

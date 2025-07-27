@@ -19,21 +19,21 @@ const NavHSSchema = {
       validation: Rule => Rule.required()
     }),
     defineField({
-        name: 'tags',
-        title: 'Tags',
-        type: 'array',
-        of: [{ type: 'string' }],
-        options: {
-          layout: 'checkbox',
-            list: [
-            { title: 'General advice', value: 'general advice' },
-            { title: 'Academics', value: 'academics'},
-            { title: 'School involvement', value: 'school involvement' },
-            { title: 'Athletics', value: 'athletics' },
-            { title: 'Social & emotional support', value: 'social & emotional support' },
-            ],
-        },
-        validation: Rule => Rule.required()
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'checkbox',
+        list: [
+          { title: 'General advice', value: 'general advice' },
+          { title: 'Academics', value: 'academics' },
+          { title: 'School involvement', value: 'school involvement' },
+          { title: 'Athletics', value: 'athletics' },
+          { title: 'Social & emotional support', value: 'social & emotional support' },
+        ],
+      },
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'resourceUrl',

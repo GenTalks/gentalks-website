@@ -6,7 +6,7 @@ interface NavHSCardProps {
   author?: string;
   tags?: string[];
   resourceUrl?: string;
-  datePosted?: string;    
+  datePosted?: string;
 }
 
 
@@ -22,9 +22,9 @@ const NavHSCard: React.FC<NavHSCardProps> = ({
   return (
     <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream shadow hover:shadow-md transition">
       <h3 className="text-xl font-semibold">{title}</h3>
-     
+
       <p><strong>by:</strong> {author || 'N/A'}</p>
-     
+
       {/* Add Date Posted*/}
       <p>Date Posted: {datePosted ? new Date(datePosted).toLocaleDateString() : 'N/A'}</p>
 

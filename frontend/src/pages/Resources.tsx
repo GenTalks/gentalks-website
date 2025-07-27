@@ -32,7 +32,7 @@ const Resources = () => {
             <p className="px-12 py-8 font-teachers font-normal text-center text-xl mt-2">
               Want advice on tackling the UC essay prompts?
             </p>
-            
+
           </div>
           <img
             src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
@@ -58,7 +58,7 @@ const Resources = () => {
         </div>
       </section>
 
-      
+
       <section className="flex flex-col py-12 tracking-wide bg-laurel text-cream px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16 flex flex-col items-center gap-6">
@@ -70,68 +70,68 @@ const Resources = () => {
 
           <div className="grid gap-8 tracking-wide grid-cols-1 md:grid-cols-3">
             {/* Study Sets */}
-              <Link
-                to="/study-resources"
-                className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
-              >
-                <FaMoneyCheckAlt size={48} />
-                <h1 className="mt-4 text-xl font-semibold">Study Resources</h1>
-                <p className="pt-6">All your SAT, ACT, AP exam prep essentials.</p>
-              </Link>
+            <Link
+              to="/study-resources"
+              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+            >
+              <FaMoneyCheckAlt size={48} />
+              <h1 className="mt-4 text-xl font-semibold">Study Resources</h1>
+              <p className="pt-6">All your SAT, ACT, AP exam prep essentials.</p>
+            </Link>
 
-              {/* Internships */}
-              <Link
-                to="/internships"
-                className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
-              >
-                <RiSuitcaseLine size={48} />
-                <h1 className="mt-4 text-xl font-semibold">Internships</h1>
-                <p className="pt-6">Learn how to find internships, write resumes, and apply with confidence.</p>
-              </Link>
+            {/* Internships */}
+            <Link
+              to="/internships"
+              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+            >
+              <RiSuitcaseLine size={48} />
+              <h1 className="mt-4 text-xl font-semibold">Internships</h1>
+              <p className="pt-6">Learn how to find internships, write resumes, and apply with confidence.</p>
+            </Link>
 
-              {/* Scholarships */}
-              <Link
-                to="/scholarships"
-                className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
-              >
-                <FaUserGraduate size={48} />
-                <h1 className="mt-4 text-xl font-semibold">Scholarships</h1>
-                <p className="pt-6">Discover merit-based and identity-based scholarships, and how to win them.</p>
-              </Link>
+            {/* Scholarships */}
+            <Link
+              to="/scholarships"
+              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+            >
+              <FaUserGraduate size={48} />
+              <h1 className="mt-4 text-xl font-semibold">Scholarships</h1>
+              <p className="pt-6">Discover merit-based and identity-based scholarships, and how to win them.</p>
+            </Link>
 
-              {/* Navigating High School */}
-              <Link
-                to="/navigating-high-school"
-                className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
-              >
-                <IoSchoolOutline size={48} />
-                <h1 className="mt-4 text-xl font-semibold">Navigating High School</h1>
-                <p className="pt-6">Course selection, time management, and how to survive & thrive in high school.</p>
-              </Link>
+            {/* Navigating High School */}
+            <Link
+              to="/navigating-high-school"
+              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+            >
+              <IoSchoolOutline size={48} />
+              <h1 className="mt-4 text-xl font-semibold">Navigating High School</h1>
+              <p className="pt-6">Course selection, time management, and how to survive & thrive in high school.</p>
+            </Link>
 
-              {/* College Prep */}
-              <Link
-                to="/college-prep"
-                className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
-              >
-                <LuSprout size={48} />
-                <h1 className="mt-4 text-xl font-semibold">College Prep</h1>
-                <p className="pt-6">All things college: applications, essays, choosing the right school, and more.</p>
-              </Link>
+            {/* College Prep */}
+            <Link
+              to="/college-prep"
+              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+            >
+              <LuSprout size={48} />
+              <h1 className="mt-4 text-xl font-semibold">College Prep</h1>
+              <p className="pt-6">All things college: applications, essays, choosing the right school, and more.</p>
+            </Link>
 
-              {/* How to Adult */}
-              <Link
-                to="/how-to-adult"
-                className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
-              >
-                <RiGuideLine size={48} />
-                <h1 className="mt-4 text-xl font-semibold">How to Adult</h1>
-                <p className="pt-6">Learn about taxes, jobs, health care, cooking, and real-world life skills.</p>
-              </Link>
-        </div>
+            {/* How to Adult */}
+            <Link
+              to="/how-to-adult"
+              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+            >
+              <RiGuideLine size={48} />
+              <h1 className="mt-4 text-xl font-semibold">How to Adult</h1>
+              <p className="pt-6">Learn about taxes, jobs, health care, cooking, and real-world life skills.</p>
+            </Link>
+          </div>
         </div>
       </section>
-      <DiscordBanner />  
+      <DiscordBanner />
     </section>
   );
 };

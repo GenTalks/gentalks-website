@@ -4,13 +4,13 @@ import React from 'react'
 interface InternshipCardProps {
   title: string;
   company?: string;
-  location?: string;          
+  location?: string;
   compensation?: string;
   industries?: string[];
   pros?: string[];
   cons?: string[];
   applicationUrl?: string;
-  datePosted?: string;    
+  datePosted?: string;
 }
 
 
@@ -31,13 +31,13 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
     <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream shadow hover:shadow-md transition">
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="italic">{company || 'Unknown company'}</p>
-     
+
       {/* Add Location */}
       <p><strong>Location:</strong> {location || 'N/A'}</p>
-     
+
       {/* Add Date Posted*/}
       <p><strong>Date Posted:</strong> {datePosted ? new Date(datePosted).toLocaleDateString() : 'N/A'}</p>
-     
+
       <p>
         <strong>Compensation:</strong>{' '}
         {compensation ? compensation.charAt(0).toUpperCase() + compensation.slice(1) : 'N/A'}
@@ -75,7 +75,7 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
             {cons.map((con, idx) => (
               <li key={idx}>
                 {con.charAt(0).toUpperCase() + con.slice(1)}
-                </li>
+              </li>
             ))}
           </ul>
         </div>

@@ -19,23 +19,23 @@ const AdultingSchema = {
       validation: Rule => Rule.required()
     }),
     defineField({
-        name: 'tags',
-        title: 'Tags',
-        type: 'array',
-        of: [{ type: 'string' }],
-        options: {
-          layout: 'checkbox',
-            list: [
-            { title: 'Finance', value: 'finance' },
-            { title: 'Life skills', value: 'life skills' },
-            { title: 'Mental/Emotional Health', value: 'mental/Emotional Health' },
-            { title: 'Legal/Admin', value: 'legal/Admin' },
-            { title: 'Career Prep', value: 'career Prep' },
-            { title: 'Digital Literacy', value: 'digital Literacy' },
-            { title: 'Social/Relationships', value: 'social/Relationships' },
-            ],
-        },
-        validation: Rule => Rule.required()
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'checkbox',
+        list: [
+          { title: 'Finance', value: 'finance' },
+          { title: 'Life skills', value: 'life skills' },
+          { title: 'Mental/Emotional Health', value: 'mental/Emotional Health' },
+          { title: 'Legal/Admin', value: 'legal/Admin' },
+          { title: 'Career Prep', value: 'career Prep' },
+          { title: 'Digital Literacy', value: 'digital Literacy' },
+          { title: 'Social/Relationships', value: 'social/Relationships' },
+        ],
+      },
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'resourceUrl',
