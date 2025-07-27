@@ -9,9 +9,6 @@ interface AdultingCardProps {
   datePosted?: string;    
 }
 
-
-
-
 const AdultingCard: React.FC<AdultingCardProps> = ({
   title,
   author,

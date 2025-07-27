@@ -20,7 +20,7 @@ export interface Adulting {
 
 
 const adultingQuery = `
-  *[_type == "internship"] | order(_createdAt desc) {
+  *[_type == "adulting"] | order(_createdAt desc) {
     _id,
     title,
     author,
@@ -110,7 +110,8 @@ const Adulting : React.FC = () => {
                 How to Adult
                 </Link>
             </div>
-            <h2 className="text-5xl font-teachers font-semibold pl-16 mt-12">
+            
+            <h2 className="text-5xl font-teachers font-semibold pl-2 mt-12 mb-4">
               How to Adult
             </h2>
 
@@ -122,6 +123,7 @@ const Adulting : React.FC = () => {
                   author={item.author}
                   tags={item.tags}
                   resourceUrl={item.resourceUrl}
+                  datePosted={item.datePosted}
                 />
               ))}
             </div>
