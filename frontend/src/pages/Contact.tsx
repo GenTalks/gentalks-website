@@ -4,8 +4,8 @@ const Contact = () => {
   return (
     <div className="text-cream bg-laurel">
       <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-laurel text-cream">
-        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-bosk">
-          Contact Us!
+        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-teachers">
+          contact us!
         </h1>
         <p className="text-xl font-teachers">
           We're always available to talk and will respond as fast as possible! Feel free to join our community, and connect with us on our socials!

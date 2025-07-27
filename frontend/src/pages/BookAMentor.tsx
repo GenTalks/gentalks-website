@@ -54,7 +54,7 @@ const Internships: React.FC = () => {
 
   return (
     <section className="min-h-screen bg-cream text-fog px-6 py-10 flex">
-      <h1 className="text-4xl font-bosk pl-16">book a mentor</h1>
+      <h1 className="text-4xl font-teachers pl-16">book a mentor</h1>
       <div className="flex-1"></div>
 
       {/* Right side for cards */}

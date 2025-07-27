@@ -89,7 +89,7 @@ const MentorPageSchema = {
             title: 'Description',
             type: 'text',
             validation: Rule => Rule.required(),
-            validation: Rule => Rule.max(300).warning('Reached 300 characters.'),
+            validation: Rule => Rule.max(1000).warning('Reached 1000 characters.'),
         }),
     ]
 }

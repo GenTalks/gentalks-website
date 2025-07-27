@@ -13,7 +13,7 @@ const Community = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 justify-center">
             <TfiAnnouncement size={36} className="text-cream" />
-            <h2 className="text-4xl font-bosk text-center">Community Announcements</h2>
+            <h2 className="text-4xl font-teachers text-center">Community Announcements</h2>
           </div>
           <div className="border-cream border-2 bg-laurel text-cream p-8 rounded-xl shadow-lg font-teachers text-lg leading-relaxed mt-8">
             <div className="text-left px-4 font-semibold tracking-widest">
@@ -39,8 +39,8 @@ const Community = () => {
       <section className="flex flex-col py-12 tracking-wide bg-laurel text-cream px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16 flex flex-col items-center gap-6">
-            <h1 className="text-4xl font-bosk text-center">
-              Grow with us
+            <h1 className="text-4xl font-teachers text-center">
+              grow with us
             </h1>
             <p className="w-2/3 font-teachers text-xl text-center">
               our discord community is a vibrant online space for growth, where members uplift each other and share valuable insights on careers and life.

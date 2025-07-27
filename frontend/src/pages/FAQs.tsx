@@ -4,9 +4,9 @@ import FAQComp from '../components/FAQComp';
 const FAQs = () => {
   return (
     <div>
-      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-cream text-fog mb-4">
-        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-bosk">
-          Frequently Asked Questions
+      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-cream text-fog mt-8 mb-4">
+        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-teachers">
+          frequently asked questions
         </h1>
         <p className="text-xl font-teachers p-4">
           the questions your dog thinks about in the shower when you're not home
@@ -14,7 +14,7 @@ const FAQs = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-4 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left">
+        <h1 className="font-teachers text-5xl text-left">
           General Questions
         </h1>
 
@@ -27,7 +27,7 @@ const FAQs = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-4 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left">
+        <h1 className="font-teachers text-5xl text-left">
           Students
         </h1>
 
@@ -43,7 +43,7 @@ const FAQs = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-16 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left">
+        <h1 className="font-teachers text-5xl text-left">
           Mentors
         </h1>
 
@@ -58,7 +58,7 @@ const FAQs = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 tracking-wide bg-cream text-fog mb-16 mx-auto">
-        <h1 className="font-teachers font-bold text-5xl text-left">
+        <h1 className="font-teachers text-5xl text-left">
           Meeting Code of Conduct
         </h1>
 
