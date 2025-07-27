@@ -21,7 +21,7 @@ export default function Navbar() {
       </div>
 
       <div className="text-lg hidden 2xl:flex gap-4 items-center flex-shrink-0">
-        <div className="text-fog hover:text-laurel">
+        <div className="text-fog">
           <NavButton to="/community" label="Community" />
           <NavButton to="/about" label="About" />
           <NavButton to="/content" label="Content" />
@@ -34,7 +34,7 @@ export default function Navbar() {
           <NavButton
             to="/book-a-mentor"
             label="Book a mentor"
-            className="bg-laurel text-cream px-6 py-2 rounded-full hover:opacity-90"
+            className="bg-laurel text-cream px-6 py-2 rounded-full hover:opacity-90 hover:text-white"
           />
         </div>
       </div>
