@@ -13,7 +13,7 @@ import TermsConditions from './src/pages/TermsConditions';
 import PrivacyPolicy from './src/pages/PrivacyPolicy';
 import Adulting from './src/pages/Adulting';
 import CollegePrep from './src/pages/CollegePrep';
-import StudySets from './src/pages/StudyResources';
+import StudyResources from './src/pages/StudyResources';
 import Internships from './src/pages/Internships';
 import NavHS from './src/pages/NavHS';
 import Scholarships from './src/pages/Scholarships';
@@ -40,7 +40,7 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/how-to-adult" element={<Adulting />} />
             <Route path="/college-prep" element={<CollegePrep />} />
-            <Route path="/study-sets" element={<StudySets />} />
+            <Route path="/study-resources" element={<StudyResources />} />
             <Route path="/internships" element={<Internships />} />
             <Route path="/navigating-high-school" element={<NavHS />} />
             <Route path="/scholarships" element={<Scholarships />} />

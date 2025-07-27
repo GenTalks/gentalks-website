@@ -12,7 +12,7 @@ import { MdOutlinePsychology } from "react-icons/md";
 export interface StudyResource {
   _id: string;
   title: string;
-  subject: string[];
+  subject: string;
   resourceUrl: string;
   dateCreated: string;
 }
@@ -28,24 +28,24 @@ const studyResourceQuery = `
   }
 `;
 
-const StudySets : React.FC = () => {
+const StudyResources: React.FC = () => {
 
   const [studyResources, setStudyResource] = useState<StudyResource[]>([])
-  
-  
-    useEffect(() => {
-      sanityClient
-          .fetch(studyResourceQuery)
-          .then((data: StudyResource[]) => {
-            const sortedData = data
-              .filter((item) => !!item.dateCreated) // optional: skip items without date
-              .sort((a, b) => new Date(b.dateCreated).getTime() - new Date(a.dateCreated).getTime());
-             
-            console.log('Sorted internships:', sortedData);
-            setStudyResource(sortedData);
-          })
-          .catch(console.error);
-      }, []);
+
+
+  useEffect(() => {
+    sanityClient
+      .fetch(studyResourceQuery)
+      .then((data: StudyResource[]) => {
+        const sortedData = data
+          .filter((item) => !!item.dateCreated) // optional: skip items without date
+          .sort((a, b) => new Date(b.dateCreated).getTime() - new Date(a.dateCreated).getTime());
+
+        console.log('Sorted resources:', sortedData);
+        setStudyResource(sortedData);
+      })
+      .catch(console.error);
+  }, []);
 
   return (
     <section className="min-h-screen bg-cream text-fog px-6 py-10">
@@ -64,12 +64,11 @@ const StudySets : React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <Link
           to="/study-resources"
-                className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
-              >
-                <FaMoneyCheckAlt size={48} />
-                <h1 className="mt-4 text-xl font-semibold">Study Resources</h1>
-                <p className="pt-6">All your SAT, ACT, AP exam prep essentials.</p>
-              </Link>
+          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
+        >
+          <FaMoneyCheckAlt size={20} />
+          Study Resources
+        </Link>
 
         <Link
           to="/internships"
@@ -111,6 +110,7 @@ const StudySets : React.FC = () => {
           How to Adult
         </Link>
       </div>
+
       <h2 className="text-5xl font-teachers font-semibold pl-2 mt-12 mb-4">
         Study Resources
       </h2>
@@ -121,7 +121,7 @@ const StudySets : React.FC = () => {
             key={item._id}
             title={item.title}
             subject={item.subject}
-            dateCreated={item.dateCreated}      
+            dateCreated={item.dateCreated}
             resourceUrl={item.resourceUrl}
           />
         ))}
@@ -131,4 +131,4 @@ const StudySets : React.FC = () => {
   );
 };
 
-export default StudySets;
+export default StudyResources;

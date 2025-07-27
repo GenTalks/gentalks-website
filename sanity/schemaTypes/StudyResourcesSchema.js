@@ -2,8 +2,8 @@ import { defineField } from 'sanity'
 
 
 const StudyResourcesSchema = {
-  name: 'studyResources',
-  title: 'StudyResources',
+  name: 'studyresource',
+  title: 'StudyResource',
   type: 'document',
   fields: [
     defineField({
@@ -15,10 +15,8 @@ const StudyResourcesSchema = {
     defineField({
         name: 'subject',
         title: 'Subject',
-        type: 'array',
-        of: [{ type: 'string' }],
+        type: 'string',
         options: {
-          layout: 'checkbox',
             list: [
             { title: 'SAT', value: 'sAT' },
             { title: 'ACT', value: 'aCT' },
