@@ -36,7 +36,7 @@ const internshipsQuery = `
 `;
 
 
-const Scholarships = () => {
+const Scholarships : React.FC = () => {
 
   const [scholarships, setScholarships] = useState<Scholarship[]>([])
 
