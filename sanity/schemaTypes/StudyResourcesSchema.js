@@ -70,6 +70,7 @@ const StudyResourcesSchema = {
       name: 'resourceUrl',
       title: 'Resource Link',
       type: 'url',
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'dateCreated',

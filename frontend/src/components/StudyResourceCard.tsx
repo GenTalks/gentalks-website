@@ -35,10 +35,10 @@ const StudyResourceCard: React.FC<StudyResourceCardProps> = ({
           rel="noopener noreferrer"
           className="inline-block mt-4 px-4 py-2 bg-laurel text-cream rounded hover:bg-darkLaurel transition"
         >
-          Apply Now
+          View resource
         </a>
       ) : (
-        <p className="mt-4 italic">No application link available</p>
+        <p className="mt-4 italic">No link available</p>
       )}
     </div>
   )
