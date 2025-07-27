@@ -1,11 +1,52 @@
 import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { sanityClient } from "../lib/sanityClient";
+import StudyResourceCard from "../components/StudyResourceCard";
+
 import { RiSuitcaseLine } from "react-icons/ri";
 import { IoSchoolOutline } from "react-icons/io5";
 import { FaMoneyCheckAlt, FaUserGraduate } from "react-icons/fa";
 import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
 
-const FinancialAid = () => {
+export interface StudyResource {
+  _id: string;
+  title: string;
+  subject: string;
+  resourceUrl: string;
+  dateCreated: string;
+}
+
+
+const studyResourceQuery = `
+  *[_type == "studyresource"] | order(_createdAt desc) {
+    _id,
+    title,
+    subject,
+    resourceUrl,
+    dateCreated,
+  }
+`;
+
+const StudyResources: React.FC = () => {
+
+  const [studyResources, setStudyResource] = useState<StudyResource[]>([])
+
+
+  useEffect(() => {
+    sanityClient
+      .fetch(studyResourceQuery)
+      .then((data: StudyResource[]) => {
+        const sortedData = data
+          .filter((item) => !!item.dateCreated) // optional: skip items without date
+          .sort((a, b) => new Date(b.dateCreated).getTime() - new Date(a.dateCreated).getTime());
+
+        console.log('Sorted resources:', sortedData);
+        setStudyResource(sortedData);
+      })
+      .catch(console.error);
+  }, []);
+
   return (
     <section className="min-h-screen bg-cream text-fog px-6 py-10">
       <div className="mb-8">
@@ -22,11 +63,11 @@ const FinancialAid = () => {
       {/* Category buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <Link
-          to="/financial-aid"
+          to="/study-resources"
           className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
         >
-          <FaMoneyCheckAlt size={18} />
-          Financial Aid
+          <FaMoneyCheckAlt size={20} />
+          Study Resources
         </Link>
 
         <Link
@@ -69,10 +110,25 @@ const FinancialAid = () => {
           How to Adult
         </Link>
       </div>
-      <h2 className="text-5xl font-teachers font-semibold pl-16 mt-12">Financial aid</h2>
+
+      <h2 className="text-5xl font-teachers font-semibold pl-2 mt-12 mb-4">
+        Study Resources
+      </h2>
+
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-cream text-fog">
+        {studyResources.map((item) => (
+          <StudyResourceCard
+            key={item._id}
+            title={item.title}
+            subject={item.subject}
+            dateCreated={item.dateCreated}
+            resourceUrl={item.resourceUrl}
+          />
+        ))}
+      </div>
 
     </section>
   );
 };
 
-export default FinancialAid;
+export default StudyResources;

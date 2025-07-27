@@ -22,7 +22,7 @@ const FAQs = () => {
           <FAQComp question="What is GenTalks?" answer="GenTalks is a nonprofit organization committed to empowering the high school community with nurturing conversations about personal and academic growth. Through virtual mentorship calls, we help students get in touch with mentors." />
           <FAQComp question="Is GenTalks free?" answer="GenTalks will NEVER charge for our services. EVER. Pinky promise." />
           <FAQComp question="Can I still be a community member even if I'm not in high school?" answer="erm i actually dunno im just the web dev chat" />
-          <FAQComp question="Does GenTalks have any open positions right now?" answer="As of right now, GenTalks does not have any openings. For the most accurate information, check our community page for the latest update."/>
+          <FAQComp question="Does GenTalks have any open positions right now?" answer="As of right now, GenTalks does not have any openings. For the most accurate information, check our community page for the latest update." />
         </div>
       </section>
 
@@ -73,8 +73,8 @@ const FAQs = () => {
       <section className="w-full flex flex-col items-center pt-12 space-y-6 tracking-wide bg-laurel">
         <DiscordBanner />
       </section>
-      
-        
+
+
     </div>
   );
 };

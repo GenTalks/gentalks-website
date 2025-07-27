@@ -1,22 +1,82 @@
-import DiscordBanner from '../components/DiscordBanner';
+import React, { useEffect, useState } from "react";
+import { sanityClient } from "../lib/sanityClient";
+import MentorBooking from "../components/MentorBooking";
 
-const Mentors = () => {
+
+export interface BookAMentor {
+  _id: string;
+  mentorImage: string;
+  mentorname: string;
+  linkedin: string;
+  calendly: string;
+  role: string;
+  categories: string[];
+  topics: string[];
+  desc: string;
+}
+
+
+const mentorQuery = `
+  *[_type == "mentorpage"] | order(_createdAt desc) {
+    _id,
+    mentorImage,
+    mentorname,
+    linkedin,
+    calendly,
+    role,
+    categories,
+    topics,
+    desc,
+  }
+`;
+
+
+const Internships: React.FC = () => {
+  const [mentors, setMentors] = useState<BookAMentor[]>([])
+
+
+  useEffect(() => {
+    sanityClient
+      .fetch(mentorQuery)
+      .then((data: BookAMentor[]) => {
+        const sortedData = data
+          .filter((item) => !!item.mentorname)
+          .sort((a, b) => new Date(b.mentorname).getTime() - new Date(a.mentorname).getTime());
+
+        console.log('Sorted internships:', sortedData);
+        setMentors(sortedData);
+      })
+      .catch(console.error);
+  }, []);
+
+
+
+
   return (
-    <div>
-      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-cream text-laurel mb-12">
-        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-bosk">
-          Book a mentor
-        </h1>
-        <p className="text-xl font-teachers">
-          u get a mentor! AND u get a mentor! buy zero get one free! (legally ofc)
-        </p>
-      </section>
+    <section className="min-h-screen bg-cream text-fog px-6 py-10">
 
+      <h2 className="text-5xl font-teachers font-semibold pl-2 mt-12 mb-4">
+        Book a mentor
+      </h2>
 
-      <DiscordBanner />
-        
-    </div>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-cream text-fog">
+        {mentors.map((item) => (
+          <MentorBooking
+            key={item._id}
+            mentorImage={item.mentorImage}
+            mentorname={item.mentorname}
+            linkedin={item.linkedin}
+            calendly={item.calendly}
+            role={item.role}
+            categories={item.categories}
+            topics={item.topics}
+            desc={item.desc}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
 
-export default Mentors;
+
+export default Internships;

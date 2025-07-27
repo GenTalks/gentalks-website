@@ -27,7 +27,7 @@ export default {
         cream: '#FFFBF8',
       },
       dropShadow: {
-        evergreen: '3px 5px 4px rgba(51, 85, 52, 0.8)', 
+        evergreen: '3px 5px 4px rgba(51, 85, 52, 0.8)',
         myrtle: '3px 5px 1px rgba(14, 46, 3, 0.8)',
       },
       boxShadow: {

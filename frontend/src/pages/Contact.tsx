@@ -16,43 +16,43 @@ const Contact = () => {
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 items-center mx-auto tracking-wide">
-          <h1 className="text-xl font-teachers py-4">
-            Follow us on{" "}
-            <a
-              href="https://instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold"
-            >
-              Instagram
-            </a>{" "}
-          </h1>
+        <h1 className="text-xl font-teachers py-4">
+          Follow us on{" "}
+          <a
+            href="https://instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold"
+          >
+            Instagram
+          </a>{" "}
+        </h1>
 
-          <h1 className="text-xl font-teachers py-4">
-            Follow us on{" "}
-            <a
-              href="https://tiktok.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold"
-            >
-              TikTok
-            </a>{" "}
-          </h1>
+        <h1 className="text-xl font-teachers py-4">
+          Follow us on{" "}
+          <a
+            href="https://tiktok.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold"
+          >
+            TikTok
+          </a>{" "}
+        </h1>
 
-          <h1 className="text-xl font-teachers text-left py-4">
-            Follow our {" "}
-            <a
-              href="https://www.linkedin.com/company/gentalks/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold"
-            >
-              LinkedIn
-            </a>{" "}
-            page for the latest news and position openings
-          </h1>
-        </section>
+        <h1 className="text-xl font-teachers text-left py-4">
+          Follow our {" "}
+          <a
+            href="https://www.linkedin.com/company/gentalks/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold"
+          >
+            LinkedIn
+          </a>{" "}
+          page for the latest news and position openings
+        </h1>
+      </section>
 
       <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-laurel text-cream">
         <p className="text-xl font-teachers mt-8">
@@ -61,7 +61,7 @@ const Contact = () => {
       </section>
 
       <DiscordBanner />
-        
+
     </div>
   );
 };
