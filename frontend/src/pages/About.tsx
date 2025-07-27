@@ -60,9 +60,9 @@ const About = () => {
         <div className="text-center max-w-3xl px-4 text-2xl sm:text-2xl md:text-3xl lg:text-5xl font-bosk">
           <h1 className="mb-4">Our Journey</h1>
           <p className="text-lg lg:text-xl font-teachers">
-            From the outside, GenTalks is a cozy community aiming to empower students through nurturing conversations.
-            It looks like we’ve got everything together – a tight-knit community of future leaders and future makers working together to build a brighter future.
-            But it wasn’t always like that.
+            from the outside, GenTalks is a cozy community aiming to empower students through nurturing conversations.
+            it looks like we’ve got everything together – a tight-knit community of future leaders and future makers working together to build a brighter future.
+            but it wasn’t always like that.
           </p>
         </div>
       </section>
@@ -72,7 +72,7 @@ const About = () => {
 
           <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
             <h1 className="text-3xl font-semibold text-left w-full lg:w-1/2">
-              The storm came but it didn’t break us.
+              the storm came but it didn’t break us.
             </h1>
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
@@ -83,7 +83,7 @@ const About = () => {
 
           <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10">
             <h1 className="text-3xl font-semibold text-right w-full lg:w-1/2">
-              It taught us how to start again.
+              it taught us how to start again.
             </h1>
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
@@ -94,7 +94,7 @@ const About = () => {
 
           <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
             <h1 className="text-3xl font-semibold text-left w-full lg:w-1/2">
-              We replanted – not in spite of the rain, but because of it.
+              we replanted – not in spite of the rain, but because of it.
             </h1>
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
@@ -105,7 +105,7 @@ const About = () => {
 
           <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10">
             <h1 className="text-3xl font-semibold text-right w-full lg:w-1/2">
-              We grew.
+              we grew.
             </h1>
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
@@ -116,7 +116,7 @@ const About = () => {
 
           <div className="text-center mt-auto">
             <h1 className="text-4xl font-bold flex justify-center items-center gap-2 text-fog">
-              And now we invite you to join us. Grow with us.
+              and now we invite you to join us. grow with us.
               <span className="text-matcha">
                 <LuSprout size={40} />
               </span>

@@ -30,7 +30,7 @@ const Home = () => {
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <h2 className="text-4xl lg:text-6xl font-bold">
-              Innovation Meets Impact
+              innovation meets impact
             </h2>
 
             <div className="border-laurel border-2 bg-creaam text-laurel rounded-full scale-125 hover:bg-laurel hover:text-cream">
@@ -94,7 +94,7 @@ const Home = () => {
         <div className="flex flex-col lg:flex-row w-full gap-10">
           <div className="w-full lg:w-1/2 font-teachers flex flex-col items-center lg:items-start text-center lg:text-left pl-0 lg:pl-20">
             <h1 className="text-5xl font-bold mb-12 text-fog">
-              Frequently Asked Questions
+              frequently asked questions
             </h1>
             <div className="inline-block border-laurel border-2 bg-creaam text-laurel rounded-full scale-125 hover:bg-laurel hover:text-cream lg:ml-6">
               <ExploreButton to="/faqs" label="all FAQs" />

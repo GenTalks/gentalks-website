@@ -28,11 +28,11 @@ const AdultingSchema = {
         list: [
           { title: 'Finance', value: 'finance' },
           { title: 'Life skills', value: 'life skills' },
-          { title: 'Mental/Emotional Health', value: 'mental/Emotional Health' },
-          { title: 'Legal/Admin', value: 'legal/Admin' },
-          { title: 'Career Prep', value: 'career Prep' },
-          { title: 'Digital Literacy', value: 'digital Literacy' },
-          { title: 'Social/Relationships', value: 'social/Relationships' },
+          { title: 'Mental/Emotional Health', value: 'mental & emotional health' },
+          { title: 'Legal/Admin', value: 'legal & admin' },
+          { title: 'Career Prep', value: 'career prep' },
+          { title: 'Digital Literacy', value: 'digital literacy' },
+          { title: 'Social/Relationships', value: 'social & relationships' },
         ],
       },
       validation: Rule => Rule.required()

@@ -10,18 +10,18 @@ const Resources = () => {
   return (
     <section className="bg-laurel text-cream">
       <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide">
-        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-bosk">
-          GenTalks Resources
+        <h1 className="font-teachers text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform">
+          gentalks resources
         </h1>
         <p className="w-1/2 text-xl text-center font-teachers">
-          Discover tools and guidance tailored to support your journey. From academic insights to career resources, explore resources that meet your needs.
+          discover tools and guidance tailored to support your journey. From academic insights to career resources, explore resources that meet your needs.
         </p>
       </section>
 
-      <section className="w-full flex flex-col py-12 space-y-6 fon-teachers bg-cream text-fog track-wide mb-16">
+      <section className="w-full flex flex-col py-12 space-y-6 fon-teachers bg-cream text-fog track-wide mb-16 font-teachers">
         <div className="items-left">
           <h1 className="w-full pl-48 text-left text-5xl font-semibold mt-8">
-            Featured Resources
+            featured resources
           </h1>
         </div>
 
@@ -60,12 +60,12 @@ const Resources = () => {
       </section>
 
 
-      <section className="flex flex-col py-12 tracking-wide bg-laurel text-cream px-6">
+      <section className="font-teachers flex flex-col py-12 tracking-wide bg-laurel text-cream px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16 flex flex-col items-center gap-6">
-            <h1 className="text-4xl font-bosk text-center">Resources for Every Step</h1>
+            <h1 className="text-4xl text-center">resources for every step</h1>
             <p className="w-2/3 font-teachers text-xl text-center">
-              Wherever you're at, we've got something for you. From school to scholarships to adulting, explore tools made just for you.
+              wherever you're at, we've got something for you. from academics to scholarships to learning how to adult, explore tools made just for you.
             </p>
           </div>
 

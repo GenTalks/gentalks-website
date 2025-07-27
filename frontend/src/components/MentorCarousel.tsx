@@ -94,13 +94,13 @@ const MentorCarousel = () => {
   return (
     <div className="relative w-full mb-[1.5rem]">
       <h2 className="text-4xl lg:text-6xl text-center mb-16 font-teachers text-cream tracking-wide">
-        Our Mentors
+        our mentors
       </h2>
 
       <div className="scale-150 text-center">
         <NavButton
           to="/book-a-mentor"
-          label="Book a mentor"
+          label="book a mentor"
           className="border-laurel border-2 bg-cream text-laurel px-6 py-2 rounded-full hover:text-cream hover:bg-laurel hover:border-cream hover:border-2"
         />
       </div>

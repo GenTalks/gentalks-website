@@ -17,13 +17,13 @@ const Community = () => {
           </div>
           <div className="border-cream border-2 bg-laurel text-cream p-8 rounded-xl shadow-lg font-teachers text-lg leading-relaxed mt-8">
             <div className="text-left px-4 font-semibold tracking-widest">
-              Date posted: July 22, 2025
+              date posted: July 22, 2025
             </div>
 
             <hr className="my-4 border-t-2 border-cream" />
 
             <div className="px-4 text-left tracking-wide">
-              Content page is now ready for launch!
+              content page is now ready for launch!
             </div>
 
             {/*Button*/}
@@ -43,7 +43,7 @@ const Community = () => {
               Grow with us
             </h1>
             <p className="w-2/3 font-teachers text-xl text-center">
-              Our Discord community is a vibrant online space for growth, where members uplift each other and share valuable insights on careers and life.
+              our discord community is a vibrant online space for growth, where members uplift each other and share valuable insights on careers and life.
             </p>
             <DiscordButton />
           </div>
@@ -52,13 +52,13 @@ const Community = () => {
             {/* Resources */}
             <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <LuSprout size={48} />
-              <h1 className="mt-4 text-xl font-semibold">Exclusive resources</h1>
+              <h1 className="mt-4 text-xl font-semibold">exclusive resources</h1>
               <p className="pt-6">
-                Access unique tools and a supportive community available only at GenTalks
+                access unique tools and a supportive community available only at GenTalks
               </p>
               <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-8 tracking-wide">
                 <a href="/resources">
-                  View resources
+                  view resources
                 </a>
               </div>
             </div>
@@ -67,22 +67,22 @@ const Community = () => {
             {/* Notification */}
             <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <RiNotification4Line size={48} />
-              <h1 className="mt-4 text-xl font-semibold">Early event access</h1>
+              <h1 className="mt-4 text-xl font-semibold">early event access</h1>
               <p className="pt-6">
-                Get exclusive updates and be the first to hear about upcoming events!
+                get exclusive updates and be the first to hear about upcoming events!
               </p>
             </div>
 
             {/* Mentorship */}
             <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <FaChalkboardTeacher size={48} />
-              <h1 className="mt-4 text-xl font-semibold">Mentorship program</h1>
+              <h1 className="mt-4 text-xl font-semibold">mentorship program</h1>
               <p className="mt-4">
-                Access exclusive insight and guidance from industry professionals through our mentorship program.
+                access exclusive insight and guidance from industry professionals through our mentorship program.
               </p>
               <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-10 tracking-wide">
                 <a href="/book-a-mentor">
-                  Book a mentor
+                  book a mentor
                 </a>
               </div>
             </div>
@@ -95,11 +95,11 @@ const Community = () => {
       <section className="bg-cream text-fog w-full flex flex-col items-center py-8 space-y-6 track-wide mb-4">
         <div className="flex flex-col lg:flex-row items-center justify-between mt-auto">
           <div className="pl-8 w-full lg:w-1/2">
-            <h1 className="text-4xl font-bosk text-center">
-              Student Ambassador Program
+            <h1 className="font-semibold font-teachers text-4xl text-center">
+              student ambassador program
             </h1>
-            <p className="font-teachers font-normal text-center text-xl mt-2">
-              Our student ambassador program
+            <p className="font-teachers font-normal text-center text-xl mt-4">
+              our student ambassador program
             </p>
           </div>
           <img
@@ -112,11 +112,11 @@ const Community = () => {
 
         <div className="flex flex-col lg:flex-row-reverse items-center justify-between mt-auto">
           <div className="pr-8 w-full lg:w-1/2">
-            <h1 className="text-4xl font-bosk text-center">
-              Mentor Program
+            <h1 className="text-4xl font-semibold font-teachers text-center">
+              mentor program
             </h1>
             <p className="font-teachers font-normal text-center text-xl mt-2">
-              Our mentorship program
+              our mentorship program
             </p>
           </div>
           <img

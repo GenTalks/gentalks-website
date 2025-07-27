@@ -20,10 +20,17 @@ const StudyResourceCard: React.FC<StudyResourceCardProps> = ({
       {/* Add Date Posted*/}
       <p><strong>Date Created:</strong> {dateCreated ? new Date(dateCreated).toLocaleDateString() : 'N/A'}</p>
 
-      <p>
+      <p className="mt-2 leading-[2.5rem]">
         <strong>Subject:</strong>{' '}
-        {subject ? subject.charAt(0).toUpperCase() + subject.slice(1) : 'N/A'}
+        {subject ? (
+          <span className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1">
+            {subject}
+          </span>
+        ) : (
+          'N/A'
+        )}
       </p>
+
 
       {/* Application Link Button */}
       {resourceUrl ? (

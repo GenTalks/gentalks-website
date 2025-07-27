@@ -24,10 +24,18 @@ const AdultingCard: React.FC<AdultingCardProps> = ({
       {/* Add Date Posted*/}
       <p><strong>Date Posted:</strong> {datePosted ? new Date(datePosted).toLocaleDateString() : 'N/A'}</p>
 
-      <p>
+
+      <p className="mt-2 leading-[2.5rem]">
         <strong>Tags:</strong>{' '}
         {tags?.length
-          ? tags.map(ind => ind.charAt(0).toUpperCase() + ind.slice(1)).join(', ')
+          ? tags.map((tags, i) => (
+            <span
+              key={i}
+              className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
+            >
+              {tags}
+            </span>
+          ))
           : 'N/A'}
       </p>
 

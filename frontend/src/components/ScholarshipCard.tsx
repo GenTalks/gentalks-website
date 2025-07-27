@@ -34,17 +34,31 @@ const ScholarshipCard: React.FC<ScholarshipCardProps> = ({
         {amount ? amount.charAt(0).toUpperCase() + amount.slice(1) : 'N/A'}
       </p>
 
-      <p>
+      <p className="mt-2 leading-[2.5rem]">
         <strong>Eligibility:</strong>{' '}
         {eligibility?.length
-          ? eligibility.map((ind) => ind.charAt(0).toUpperCase() + ind.slice(1)).join(', ')
+          ? eligibility.map((eligibility, i) => (
+            <span
+              key={i}
+              className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
+            >
+              {eligibility}
+            </span>
+          ))
           : 'N/A'}
       </p>
 
-      <p>
+      <p className="mt-2 leading-[2.5rem]">
         <strong>Application Type:</strong>{' '}
         {applicationtype?.length
-          ? applicationtype.map((ind) => ind.charAt(0).toUpperCase() + ind.slice(1)).join(', ')
+          ? applicationtype.map((applicationtype, i) => (
+            <span
+              key={i}
+              className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
+            >
+              {applicationtype}
+            </span>
+          ))
           : 'N/A'}
       </p>
 

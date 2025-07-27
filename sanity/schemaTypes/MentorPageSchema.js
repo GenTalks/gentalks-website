@@ -77,9 +77,9 @@ const MentorPageSchema = {
                     { title: 'Personal growth', value: 'personal growth' },
                     { title: 'Long-term mentorship', value: 'long-term mentorship' },
                     { title: 'Networking', value: 'networking' },
-                    { title: 'SAT prep', value: 'sAT prep' },
-                    { title: 'ACT prep', value: 'aCT prep' },
-                    { title: 'AP exam prep', value: 'aP exam prep' },
+                    { title: 'SAT prep', value: 'sat prep' },
+                    { title: 'ACT prep', value: 'act prep' },
+                    { title: 'AP exam prep', value: 'ap exam prep' },
                 ],
             },
             validation: Rule => Rule.required()

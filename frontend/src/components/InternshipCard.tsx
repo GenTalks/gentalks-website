@@ -44,10 +44,17 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
       </p>
 
 
-      <p>
+      <p className="mt-2 leading-[2.5rem]">
         <strong>Industries:</strong>{' '}
         {industries?.length
-          ? industries.map(ind => ind.charAt(0).toUpperCase() + ind.slice(1)).join(', ')
+          ? industries.map((industries, i) => (
+            <span
+              key={i}
+              className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
+            >
+              {industries}
+            </span>
+          ))
           : 'N/A'}
       </p>
 
