@@ -87,8 +87,9 @@ const MentorPageSchema = {
         defineField({
             name: 'desc',
             title: 'Description',
-            type: 'string',
-            validation: Rule => Rule.required()
+            type: 'text',
+            validation: Rule => Rule.required(),
+            validation: Rule => Rule.max(300).warning('Reached 300 characters.'),
         }),
     ]
 }

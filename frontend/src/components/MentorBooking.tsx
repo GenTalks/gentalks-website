@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { FaLinkedin } from 'react-icons/fa';
-import { IoVideocamOutline } from "react-icons/io5";
+import { IoVideocamOutline } from 'react-icons/io5';
 
 interface MentorBookingCardProps {
     mentorImage: string;
@@ -13,9 +13,6 @@ interface MentorBookingCardProps {
     desc?: string;
 }
 
-
-
-
 const MentorBooking: React.FC<MentorBookingCardProps> = ({
     mentorImage,
     mentorname,
@@ -27,60 +24,86 @@ const MentorBooking: React.FC<MentorBookingCardProps> = ({
     desc,
 }) => {
     return (
-        <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream shadow hover:shadow-md transition">
-            <div className="flex flex-col items-center space-y-6">
-                <img
-                    src={mentorImage}
-                    className="w-32 h-32 rounded-xl object-cover"
-                />
+        <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream hover:border-cream hover:shadow-lg transition w-[650px]">
+            <div className="flex flex-col md:flex-row gap-6">
+                {/* Image */}
+                <div className="flex-shrink-0 flex justify-center">
+                    <img
+                        src={mentorImage}
+                        alt={mentorname}
+                        className="w-32 h-32 rounded-xl object-cover"
+                    />
+                </div>
+
+                {/* Info section */}
+                <div className="flex-1 space-y-2">
+                    <div className="flex justify-between items-start">
+                        {/* Name + LinkedIn */}
+                        <div className="flex flex-col">
+                            <div className="flex items-center gap-3">
+                                <h2 className="text-3xl font-bold">{mentorname}</h2>
+                                {linkedin && (
+                                    <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                                        <FaLinkedin size={28} className="text-laurel rounded-md" />
+                                    </a>
+                                )}
+                            </div>
+                            <p className="text-xl pl-1 mt-3">{role}</p>
+                        </div>
+
+                        {/* Book button (Calendly) */}
+                        {calendly && (
+                            <a
+                                href={calendly}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-1 bg-capybara text-cream py-3 px-4 rounded-full"
+                            >
+                                <IoVideocamOutline size={24} />
+                                <span className="text-md font-semibold">Book</span>
+                            </a>
+                        )}
+                    </div>
+
+
+                    {/* Tags */}
+                    <div>
+                        <p className="mt-2 leading-loose">
+                            <strong>Categories:</strong>{' '}
+                            {categories?.length
+                                ? categories.map((cat, i) => (
+                                    <span
+                                        key={i}
+                                        className="inline-block bg-laurel text-cream px-2 py-1 rounded-md text-sm mr-1"
+                                    >
+                                        {cat}
+                                    </span>
+                                ))
+                                : 'N/A'}
+                        </p>
+                        <p className="mt-2 leading-[2.5rem]">
+                            <strong>Topics:</strong>{' '}
+                            {topics?.length
+                                ? topics.map((topic, i) => (
+                                    <span
+                                        key={i}
+                                        className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
+                                    >
+                                        {topic}
+                                    </span>
+                                ))
+                                : 'N/A'}
+                        </p>
+                    </div>
+                </div>
+
             </div>
-            <h1 className="text-xl font-semibold flex justify-center items-center gap-2 text-fog">
-                {mentorname}
-            </h1>
-            <span className="text-fog">
-                <a href={linkedin}>
-                    <FaLinkedin size={24} />
-                </a>
-            </span>
-            <span className="text-fog text-right pr-8">
-                <a href={calendly}>
-                    <IoVideocamOutline size={24} />
-                    <p className="text-fog font-semibold text-lg">
-                        Book
-                    </p>
-                </a>
-            </span>
-
-            <p className="text-lg text-fog">
-                {role}
-            </p>
-            <div className="p-4">
-
-                <p>
-                    <strong>Categories:</strong>{' '}
-                    {categories?.length
-                        ? categories.map(ind => ind.charAt(0).toUpperCase() + ind.slice(1)).join(', ')
-                        : 'N/A'}
-                </p>
+            {/* Description */}
+            <div>
+                <p className="text-md p-4">{desc || 'No description provided.'}</p>
             </div>
-            <div className="p-4">
-                <p >
-                    <strong>Topics:</strong>{' '}
-                    {topics?.length
-                        ? topics.map(ind => ind.charAt(0).toUpperCase() + ind.slice(1)).join(', ')
-                        : 'N/A'}
-                </p>
-            </div>
-
-
-            <div className="p-8">
-                <p className="text-md">
-                    {desc || 'No description'}
-                </p>
-            </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default MentorBooking
+export default MentorBooking;
