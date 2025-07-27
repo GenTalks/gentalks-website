@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { sanityClient } from "../lib/sanityClient";
-import MentorBooking from "../components/MentorBooking";
+import MentorBookingCard from "../components/MentorBookingCard";
 
 
 export interface BookAMentor {
@@ -53,28 +53,31 @@ const Internships: React.FC = () => {
 
 
   return (
-    <section className="min-h-screen bg-cream text-fog px-6 py-10">
+    <section className="min-h-screen bg-cream text-fog px-6 py-10 flex">
+      {/* Left side could be empty or something else */}
+      <div className="flex-1"></div>
 
-      <h2 className="text-5xl font-teachers font-semibold pl-2 mt-12 mb-4">
-        Book a mentor
-      </h2>
-
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-cream text-fog">
-        {mentors.map((item) => (
-          <MentorBooking
-            key={item._id}
-            mentorImage={item.mentorImage}
-            mentorname={item.mentorname}
-            linkedin={item.linkedin}
-            calendly={item.calendly}
-            role={item.role}
-            categories={item.categories}
-            topics={item.topics}
-            desc={item.desc}
-          />
-        ))}
+      {/* Right side for cards */}
+      <div className="flex flex-col gap-6 w-1/2 overflow-y-auto max-h-screen">
+        {mentors
+          .slice()
+          .reverse() // so newest mentor is on top
+          .map((item) => (
+            <MentorBookingCard
+              key={item._id}
+              mentorImage={item.mentorImage}
+              mentorname={item.mentorname}
+              linkedin={item.linkedin}
+              calendly={item.calendly}
+              role={item.role}
+              categories={item.categories}
+              topics={item.topics}
+              desc={item.desc}
+            />
+          ))}
       </div>
     </section>
+
   );
 };
 

@@ -57,7 +57,7 @@ const MentorBooking: React.FC<MentorBookingCardProps> = ({
                                 href={calendly}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-1 bg-capybara text-cream py-3 px-4 rounded-full"
+                                className="flex items-center gap-1 bg-chocolate/80 text-cream py-3 px-4 rounded-full"
                             >
                                 <IoVideocamOutline size={24} />
                                 <span className="text-md font-semibold">Book</span>
