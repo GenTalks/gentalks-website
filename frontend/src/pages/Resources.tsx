@@ -1,5 +1,6 @@
 import DiscordBanner from '../components/DiscordBanner';
-import { FaMoneyCheckAlt, FaUserGraduate } from "react-icons/fa";
+import { FaUserGraduate } from "react-icons/fa";
+import { LuBookOpenText } from "react-icons/lu";
 import { LuSprout } from "react-icons/lu";
 import { RiSuitcaseLine, RiGuideLine } from "react-icons/ri";
 import { IoSchoolOutline } from "react-icons/io5";
@@ -74,7 +75,7 @@ const Resources = () => {
               to="/study-resources"
               className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
             >
-              <FaMoneyCheckAlt size={48} />
+              <LuBookOpenText size={48} />
               <h1 className="mt-4 text-xl font-semibold">Study Resources</h1>
               <p className="pt-6">All your SAT, ACT, AP exam prep essentials.</p>
             </Link>

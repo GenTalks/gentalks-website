@@ -5,8 +5,8 @@ import ScholarshipCard from "../components/ScholarshipCard";
 
 import { RiSuitcaseLine } from "react-icons/ri";
 import { IoSchoolOutline } from "react-icons/io5";
-import { FaMoneyCheckAlt, FaUserGraduate } from "react-icons/fa";
-import { GiHeartWings } from "react-icons/gi";
+import { FaUserGraduate } from "react-icons/fa";
+import { LuBookOpenText } from "react-icons/lu";import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
 
 
@@ -74,7 +74,7 @@ const Scholarships: React.FC = () => {
           to="/study-resources"
           className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
         >
-          <FaMoneyCheckAlt size={20} />
+          <LuBookOpenText size={20} />
           Study Resources
         </Link>
 
