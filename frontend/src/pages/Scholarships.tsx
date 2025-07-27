@@ -1,11 +1,60 @@
 import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { sanityClient } from "../lib/sanityClient";
+import ScholarshipCard from "../components/ScholarshipCard";
+
 import { RiSuitcaseLine } from "react-icons/ri";
 import { IoSchoolOutline } from "react-icons/io5";
 import { FaMoneyCheckAlt, FaUserGraduate } from "react-icons/fa";
 import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
 
+
+export interface Scholarship {
+  _id: string;
+  title: string;
+  organization: string;
+  deadline: string;
+  amount: string;
+  eligibility: string[];
+  applicationtype: string[];
+  applicationUrl: string;
+}
+
+
+const internshipsQuery = `
+  *[_type == "scholarship"] | order(_createdAt desc) {
+    _id,
+    title,
+    organization,
+    deadline,
+    amount,
+    eligibility,
+    applicationtype,
+    applicationUrl,
+  }
+`;
+
+
 const Scholarships = () => {
+
+  const [scholarships, setScholarships] = useState<Scholarship[]>([])
+
+
+  useEffect(() => {
+    sanityClient
+      .fetch(internshipsQuery)
+      .then((data: Scholarship[]) => {
+        const sortedData = data
+          .filter((item) => !!item.deadline) // optional: skip items without date
+          .sort((a, b) => new Date(a.deadline).getTime() - new Date(b.deadline).getTime());
+
+        console.log('Sorted internships by nearest deadline:', sortedData);
+        setScholarships(sortedData);
+      })
+      .catch(console.error);
+  }, []);
+
   return (
     <section className="min-h-screen bg-cream text-fog px-6 py-10">
       <div className="mb-8">
@@ -68,8 +117,25 @@ const Scholarships = () => {
           <GiHeartWings size={20} />
           How to Adult
         </Link>
-      </div>            
-      <h2 className="text-5xl font-teachers font-semibold pl-16 mt-12">Scholarships</h2>
+      </div>
+      <h2 className="text-5xl font-teachers font-semibold pl-2 mt-12 mb-4">
+        Internships
+      </h2>
+
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-cream text-fog">
+        {scholarships.map((item) => (
+          <ScholarshipCard
+            key={item._id}
+            title={item.title}
+            organization={item.organization}
+            deadline={item.deadline}
+            amount={item.amount}
+            eligibility={item.eligibility}
+            applicationtype={item.applicationtype}
+            applicationUrl={item.applicationUrl}
+          />
+        ))}
+      </div>
 
     </section>
   );
