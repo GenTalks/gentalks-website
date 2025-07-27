@@ -25,8 +25,8 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col bg-cream">
         <Navbar />
-        <ScrollToTop />
         <main className="flex-grow">
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/community" element={<Community />} />
