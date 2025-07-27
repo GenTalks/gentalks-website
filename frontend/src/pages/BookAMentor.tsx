@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { sanityClient } from "../lib/sanityClient";
-import InternshipCard from "../components/InternshipCard";
 import MentorBooking from "../components/MentorBooking";
 
 
