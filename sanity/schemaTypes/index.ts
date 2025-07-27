@@ -5,6 +5,7 @@ import scholarship from './ScholarshipsSchema'
 import studyresource from './StudyResourcesSchema'
 import navhs from './NavHSSchema'
 import collegeprep from './CollegePrepSchema'
+import mentorpage from './MentorPageSchema'
 
 export const schemaTypes: SchemaTypeDefinition[] = [
     internship, 
@@ -13,4 +14,5 @@ export const schemaTypes: SchemaTypeDefinition[] = [
     studyresource,
     navhs,
     collegeprep,
+    mentorpage,
 ]
