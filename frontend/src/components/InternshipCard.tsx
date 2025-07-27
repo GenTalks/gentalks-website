@@ -35,7 +35,7 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
       {/* Add Location */}
       <p><strong>Location:</strong> {location || 'N/A'}</p>
      
-      {/* Add Date Posted, nicely formatted */}
+      {/* Add Date Posted*/}
       <p><strong>Date Posted:</strong> {datePosted ? new Date(datePosted).toLocaleDateString() : 'N/A'}</p>
      
       <p>
