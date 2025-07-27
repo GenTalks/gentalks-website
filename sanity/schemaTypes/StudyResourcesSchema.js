@@ -2,8 +2,8 @@ import { defineField } from 'sanity'
 
 
 const StudyResourcesSchema = {
-  name: 'studysets',
-  title: 'StudySets',
+  name: 'studyResources',
+  title: 'StudyResources',
   type: 'document',
   fields: [
     defineField({
