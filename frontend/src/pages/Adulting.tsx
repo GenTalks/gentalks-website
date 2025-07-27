@@ -1,11 +1,51 @@
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { sanityClient } from "../lib/sanityClient";
+import AdultingCard from "../components/AdultingCard";
+
 import { RiSuitcaseLine } from "react-icons/ri";
 import { IoSchoolOutline } from "react-icons/io5";
 import { FaMoneyCheckAlt, FaUserGraduate } from "react-icons/fa";
 import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
 
-const Adulting = () => {
+export interface Adulting {
+  _id: string;
+  title: string;
+  author: string;
+  tags: string[];
+  resourceUrl: string;
+  datePosted: string;
+}
+
+
+const adultingQuery = `
+  *[_type == "internship"] | order(_createdAt desc) {
+    _id,
+    title,
+    author,
+    tags,
+    resourceUrl,
+    datePosted
+  }
+`;
+const Adulting : React.FC = () => {
+  const [adultings, setAdultings] = useState<Adulting[]>([])
+  
+  
+    useEffect(() => {
+      sanityClient
+          .fetch(adultingQuery)
+          .then((data: Adulting[]) => {
+            const sortedData = data
+              .filter((item) => !!item.datePosted) 
+              .sort((a, b) => new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime());
+            console.log('Sorted internships:', sortedData);
+            setAdultings(sortedData);
+          })
+          .catch(console.error);
+      }, []);
+      
   return (
     <section className="text-fog bg-cream">
         <section className="min-h-screen bg-cream text-fog px-6 py-10">
@@ -70,7 +110,21 @@ const Adulting = () => {
                 How to Adult
                 </Link>
             </div>
-            <h2 className="text-5xl font-teachers font-semibold pl-16 mt-12">How to Adult</h2>
+            <h2 className="text-5xl font-teachers font-semibold pl-16 mt-12">
+              How to Adult
+            </h2>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-cream text-fog">
+              {adultings.map((item) => (
+                <AdultingCard
+                  key={item._id}
+                  title={item.title}
+                  author={item.author}
+                  tags={item.tags}
+                  resourceUrl={item.resourceUrl}
+                />
+              ))}
+            </div>
         </section>
 
         
