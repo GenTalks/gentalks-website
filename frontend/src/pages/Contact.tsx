@@ -10,9 +10,6 @@ const Contact = () => {
         <p className="text-xl font-teachers">
           We're always available to talk and will respond as fast as possible! Feel free to join our community, and connect with us on our socials!
         </p>
-        <p className="text-xl font-teachers mt-8">
-          Email us at <strong>contact.gentalks@gmail.com</strong> or join our Discord community below!
-        </p>
       </section>
 
       <section className="w-2/3 flex flex-col py-8 space-y-6 items-center mx-auto tracking-wide">
@@ -56,7 +53,7 @@ const Contact = () => {
 
       <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-laurel text-cream">
         <p className="text-xl font-teachers mt-8">
-          Email us at <strong>contact.gentalks@gmail.com</strong> or join our Discord community below!
+          Email us at <strong>gentalks.official@gmail.com</strong> or join our Discord community below!
         </p>
       </section>
 
