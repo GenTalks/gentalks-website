@@ -69,14 +69,14 @@ const Resources = () => {
           </div>
 
           <div className="grid gap-8 tracking-wide grid-cols-1 md:grid-cols-3">
-            {/* Financial Aid */}
+            {/* Study Sets */}
               <Link
-                to="/financial-aid"
+                to="/study-resources"
                 className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
               >
                 <FaMoneyCheckAlt size={48} />
-                <h1 className="mt-4 text-xl font-semibold">Financial Aid</h1>
-                <p className="pt-6">Explore FAFSA, grants, and budgeting tips for students.</p>
+                <h1 className="mt-4 text-xl font-semibold">Study Resources</h1>
+                <p className="pt-6">All your SAT, ACT, AP exam prep essentials.</p>
               </Link>
 
               {/* Internships */}

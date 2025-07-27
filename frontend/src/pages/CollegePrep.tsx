@@ -22,12 +22,13 @@ const CollegePrep = () => {
       {/* Category buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <Link
-          to="/financial-aid"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <FaMoneyCheckAlt size={18} />
-          Financial Aid
-        </Link>
+          to="/study-resources"
+                className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+              >
+                <FaMoneyCheckAlt size={48} />
+                <h1 className="mt-4 text-xl font-semibold">Study Resources</h1>
+                <p className="pt-6">All your SAT, ACT, AP exam prep essentials.</p>
+              </Link>
 
         <Link
           to="/internships"
