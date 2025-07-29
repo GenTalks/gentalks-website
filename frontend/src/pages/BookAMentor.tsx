@@ -31,7 +31,7 @@ const mentorQuery = `
 `;
 
 
-const Internships: React.FC = () => {
+const BookAMentor: React.FC = () => {
   const [mentors, setMentors] = useState<BookAMentor[]>([])
 
 
@@ -82,4 +82,4 @@ const Internships: React.FC = () => {
 };
 
 
-export default Internships;
+export default BookAMentor;
