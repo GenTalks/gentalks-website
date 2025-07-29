@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 
 const Resources = () => {
   return (
-    <section className="bg-laurel text-cream">
-      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide">
+    <section className="bg-cream text-fog">
+      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-cream">
         <h1 className="font-teachers text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform">
           gentalks resources
         </h1>
@@ -18,7 +18,7 @@ const Resources = () => {
         </p>
       </section>
 
-      <section className="w-full flex flex-col py-12 space-y-6 fon-teachers bg-cream text-fog track-wide mb-16 font-teachers">
+      <section className="bg-cream w-full flex flex-col py-12 space-y-6 fon-teacherstext-fog track-wide py-16 font-teachers">
         <div className="items-left">
           <h1 className="w-full pl-48 text-left text-5xl font-semibold mt-8">
             featured resources
@@ -42,7 +42,7 @@ const Resources = () => {
           />
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between mt-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-between py-8">
           <div className="pl-8 w-full lg:w-1/2">
             <h1 className="font-semibold text-4xl text-center">
               FAFSA & CSS Profile, Simplified
@@ -60,7 +60,7 @@ const Resources = () => {
       </section>
 
 
-      <section className="font-teachers flex flex-col py-12 tracking-wide bg-laurel text-cream px-6">
+      <section className="font-teachers flex flex-col py-12 tracking-wide bg-caramel text-fog px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16 flex flex-col items-center gap-6">
             <h1 className="text-4xl text-center">resources for every step</h1>
@@ -132,7 +132,10 @@ const Resources = () => {
           </div>
         </div>
       </section>
+      <div className="py-16 bg-caramel">
       <DiscordBanner />
+
+      </div>
     </section>
   );
 };

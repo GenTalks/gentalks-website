@@ -24,7 +24,7 @@ const MentorBooking: React.FC<MentorBookingCardProps> = ({
     desc,
 }) => {
     return (
-        <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream hover:border-cream hover:shadow-lg transition w-[650px]">
+        <div className="rounded-lg p-4 shadow-md font-teachers text-fog bg-cream hover:border-cream hover:shadow-lg transition w-[650px]">
             <div className="flex flex-col md:flex-row gap-6">
                 {/* Image */}
                 <div className="flex-shrink-0 flex justify-center">

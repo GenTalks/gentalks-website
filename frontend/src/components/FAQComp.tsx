@@ -12,7 +12,7 @@ const FAQComp = ({
   return (
     <div className="w-full max-w-2xl mx-auto border-b border-sage py-4 tracking-wide text-center sm:text-left">
       <button
-        className="w-full flex flex-row justify-center sm:justify-between items-center text-2xl text-fog text-center sm:text-left gap-2"
+        className="py-2 w-full flex flex-row justify-center sm:justify-between items-center text-2xl text-fog text-center sm:text-left gap-2"
         onClick={() => setOpen(!open)}
       >
         <span className="flex-1 min-w-0 text-ellipsis overflow-hidden break-words text-center sm:text-left">

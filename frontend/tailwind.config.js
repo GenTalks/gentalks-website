@@ -15,6 +15,7 @@ export default {
         moss: '#84AB59',
         myrtle: '#0E2E03',
         laurel: '#8D9878',
+        basil: '#AFB49C',
         beaver: '#B1957D',
         chocolate: '#725036',
         capybara: '#B5855E',

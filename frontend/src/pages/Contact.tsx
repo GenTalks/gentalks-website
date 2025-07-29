@@ -2,8 +2,8 @@ import DiscordBanner from '../components/DiscordBanner';
 
 const Contact = () => {
   return (
-    <div className="text-cream bg-laurel">
-      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-laurel text-cream">
+    <div className="text-fog bg-cream">
+      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide ">
         <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-teachers">
           contact us!
         </h1>
@@ -51,13 +51,16 @@ const Contact = () => {
         </h1>
       </section>
 
-      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide bg-laurel text-cream">
+      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide mb-12">
         <p className="text-xl font-teachers mt-8">
           Email us at <strong>gentalks.official@gmail.com</strong> or join our Discord community below!
         </p>
       </section>
-
+      
+      <div className="py-16 bg-caramel">
       <DiscordBanner />
+
+      </div>
 
     </div>
   );

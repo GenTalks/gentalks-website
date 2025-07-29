@@ -60,8 +60,8 @@ const MentorCarousel = () => {
   }, [mentors]);
 
   return (
-    <div className="relative w-full mb-[1.5rem]">
-      <h2 className="text-4xl lg:text-6xl text-center mb-16 font-teachers text-cream tracking-wide">
+    <div className="bg-caramel relative w-full py-16">
+      <h2 className="text-4xl lg:text-6xl text-center mb-16 font-teachers text-fog tracking-wide">
         our mentors
       </h2>
 
@@ -69,7 +69,7 @@ const MentorCarousel = () => {
         <NavButton
           to="/book-a-mentor"
           label="book a mentor"
-          className="border-laurel border-2 bg-cream text-laurel px-6 py-2 rounded-full hover:text-cream hover:bg-laurel hover:border-cream hover:border-2"
+          className="border-cream border-2 bg-laurel text-cream px-6 py-2 rounded-full hover:text-laurel hover:bg-cream hover:border-laurel hover:border-2"
           disableHover
         />
       </div>

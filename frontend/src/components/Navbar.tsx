@@ -94,7 +94,7 @@ export default function Navbar() {
             to="/book-a-mentor"
             label="Book a mentor"
             onClick={() => setOpen(false)}
-            className="bg-laurel text-cream px-6 py-2 rounded-full hover:opacity-90"
+            className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil"
             disableHover
           />
         </div>

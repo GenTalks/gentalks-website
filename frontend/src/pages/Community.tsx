@@ -7,20 +7,20 @@ import DiscordButton from "../components/DiscordButton"
 
 const Community = () => {
   return (
-    <section className="text-cream bg-laurel">
+    <section className="text-fog bg-cream">
       <section className="py-16 px-6 space-y-24 tracking-wide">
         {/*Featured Announcement*/}
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 justify-center">
-            <TfiAnnouncement size={36} className="text-cream" />
+            <TfiAnnouncement size={36} className="text-fog" />
             <h2 className="text-4xl font-teachers text-center">Community Announcements</h2>
           </div>
-          <div className="border-cream border-2 bg-laurel text-cream p-8 rounded-xl shadow-lg font-teachers text-lg leading-relaxed mt-8">
+          <div className="border-fog border-2 bg-cream text-fog p-8 rounded-xl shadow-lg font-teachers text-lg leading-relaxed mt-8">
             <div className="text-left px-4 font-semibold tracking-widest">
               date posted: July 22, 2025
             </div>
 
-            <hr className="my-4 border-t-2 border-cream" />
+            <hr className="my-4 border-t-2 border-fog" />
 
             <div className="px-4 text-left tracking-wide">
               content page is now ready for launch!
@@ -36,7 +36,7 @@ const Community = () => {
         </div>
       </section>
 
-      <section className="flex flex-col py-12 tracking-wide bg-laurel text-cream px-6">
+      <section className="flex flex-col py-12 tracking-wide bg-caramel text-fog px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16 flex flex-col items-center gap-6">
             <h1 className="text-4xl font-teachers text-center">
@@ -50,13 +50,13 @@ const Community = () => {
 
           <div className="grid gap-8 tracking-wide grid-cols-1 md:grid-cols-3">
             {/* Resources */}
-            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
+            <div className="shadow-md mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <LuSprout size={48} />
               <h1 className="mt-4 text-xl font-semibold">exclusive resources</h1>
               <p className="pt-6">
                 access unique tools and a supportive community available only at GenTalks
               </p>
-              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-8 tracking-wide">
+              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-basil hover:text-cream mt-8 tracking-wide">
                 <a href="/resources">
                   view resources
                 </a>
@@ -65,7 +65,7 @@ const Community = () => {
 
 
             {/* Notification */}
-            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
+            <div className="shadow-md mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <RiNotification4Line size={48} />
               <h1 className="mt-4 text-xl font-semibold">early event access</h1>
               <p className="pt-6">
@@ -74,13 +74,13 @@ const Community = () => {
             </div>
 
             {/* Mentorship */}
-            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
+            <div className="shadow-md mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <FaChalkboardTeacher size={48} />
               <h1 className="mt-4 text-xl font-semibold">mentorship program</h1>
               <p className="mt-4">
                 access exclusive insight and guidance from industry professionals through our mentorship program.
               </p>
-              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-laurel hover:text-cream mt-10 tracking-wide">
+              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-basil hover:text-cream mt-10 tracking-wide">
                 <a href="/book-a-mentor">
                   book a mentor
                 </a>
@@ -92,7 +92,7 @@ const Community = () => {
       </section>
 
 
-      <section className="bg-cream text-fog w-full flex flex-col items-center py-8 space-y-6 track-wide mb-4">
+      <section className="bg-cream text-fog w-full flex flex-col items-center py-8 space-y-6 track-wide">
         <div className="flex flex-col lg:flex-row items-center justify-between mt-auto">
           <div className="pl-8 w-full lg:w-1/2">
             <h1 className="font-semibold font-teachers text-4xl text-center">
@@ -126,8 +126,10 @@ const Community = () => {
           />
         </div>
       </section>
-
-      <DiscordBanner />
+            
+            <section className="relative w-full overflow-hidden py-20 px-8 bg-caramel">
+        <DiscordBanner />
+      </section>
 
     </section>
   );

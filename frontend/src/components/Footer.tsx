@@ -2,7 +2,7 @@ import NavButton from '../components/NavButton';
 
 const Footer = () => {
   return (
-    <footer className="bg-cream text-fog font-teachers tracking-wide">
+    <footer className="bg-caramel text-fog font-teachers tracking-wide">
       <div className="px-[4rem] py-16">
         {/* Main footer */}
         <div className="flex flex-col lg:flex-row justify-between items-center mb-12 space-y-8 lg:space-y-0">
@@ -27,7 +27,7 @@ const Footer = () => {
             <a
               href="https://www.tiktok.com/"
               target="_blank"
-              className="w-6 h-6 text-white hover:text-gray-200 transition-colors"
+              className="w-6 h-6 text-fog hover:text-laurel transition-colors"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -42,7 +42,7 @@ const Footer = () => {
             <a
               href="https://www.instagram.com/"
               target="_blank"
-              className="w-6 h-6 text-white hover:text-gray-200 transition-colors"
+              className="w-6 h-6 text-fog hover:text-laurel transition-colors"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/company/gentalks/"
               target="_blank"
-              className="w-6 h-6 text-white hover:text-gray-200 transition-colors"
+              className="w-6 h-6 text-fog hover:text-laurel transition-colors"
             >
               <svg
                 viewBox="0 0 24 24"
