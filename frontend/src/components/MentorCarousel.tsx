@@ -1,9 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
-import MentorCard from './MentorCard';
-import NavButton from './NavButton';
-import { sanityClient } from '../lib/sanityClient';
+import { useState, useEffect, useRef } from "react";
+import MentorCard from "./MentorCard";
+import NavButton from "./NavButton";
+import { sanityClient } from "../lib/sanityClient";
 
-// Reuse the MentorCardProps type for consistency
 interface Mentor {
   image: string;
   name: string;
@@ -12,6 +11,7 @@ interface Mentor {
 
 const MentorCarousel = () => {
   const [mentors, setMentors] = useState<Mentor[]>([]);
+  const [originalMentorCount, setOriginalMentorCount] = useState(0);
   const [translateX, setTranslateX] = useState(0);
   const animationRef = useRef<number | null>(null);
   const cardWidth = 280;
@@ -32,7 +32,7 @@ const MentorCarousel = () => {
         title: m.role,
       }));
 
-      // ✅ This will no longer be underlined in red
+      setOriginalMentorCount(formatted.length);
       setMentors([...formatted, ...formatted]);
     };
 
@@ -40,12 +40,14 @@ const MentorCarousel = () => {
   }, []);
 
   useEffect(() => {
-    const totalExtendedWidth = mentors.length * cardWidth;
+    if (originalMentorCount === 0) return;
+
+    const oneSetWidth = originalMentorCount * cardWidth;
 
     const animate = () => {
-      setTranslateX(prev => {
+      setTranslateX((prev) => {
         const newX = prev - 1.5;
-        return newX <= -totalExtendedWidth ? 0 : newX;
+        return newX <= -oneSetWidth ? 0 : newX;
       });
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -57,7 +59,7 @@ const MentorCarousel = () => {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [mentors]);
+  }, [mentors, originalMentorCount]);
 
   return (
     <div className="bg-caramel relative w-full py-16">
