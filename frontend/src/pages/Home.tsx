@@ -6,7 +6,7 @@ import FAQComp from "../components/FAQComp";
 
 const Home = () => {
   return (
-    <div className="relative w-full overflow-hidden tracking-wide bg-laurel text-laurel">
+    <div className="relative w-full overflow-hidden tracking-wide bg-laurel text-cream">
       <div className="relative w-full h-[100vh">
         <img
           src={gtLogoTp}
@@ -51,14 +51,14 @@ const Home = () => {
       <section className="bg-cream py-12 px-8 font-teachers">
         <div className="flex justify-center text-fog">
           <h2 className="text-2xl lg:text-4xl font-bold text-center">
-            GenStats
+            our community at a glance
           </h2>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between text-center text-laurel items-center text-4xl font-bosk pt-16 gap-8 md:gap-0">
           <div className="w-full md:w-1/3 py-8">
             5+ <br />
-            <span className="text-lg font-teachers">Mentors</span>
+            <span className="text-lg font-teachers">mentors</span>
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
               alt="matcha"
@@ -67,7 +67,7 @@ const Home = () => {
           </div>
           <div className="w-full md:w-1/3 py-8">
             0+ <br />
-            <span className="text-lg font-teachers">GenTalks booked</span>
+            <span className="text-lg font-teachers">gentalks booked</span>
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
               alt="matcha"
@@ -76,7 +76,7 @@ const Home = () => {
           </div>
           <div className="w-full md:w-1/3 py-8">
             80+ <br />
-            <span className="text-lg font-teachers">Community members</span>
+            <span className="text-lg font-teachers">community members</span>
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
               alt="matcha"
@@ -118,7 +118,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="relative w-full overflow-hidden py-20 px-8 bg-laurel">
+      <section className="relative w-full overflow-hidden py-20 px-8 bg-caramel">
         <DiscordBanner />
       </section>
     </div>

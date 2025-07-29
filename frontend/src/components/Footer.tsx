@@ -2,7 +2,7 @@ import NavButton from '../components/NavButton';
 
 const Footer = () => {
   return (
-    <footer className="bg-laurel text-cream font-teachers tracking-wide">
+    <footer className="bg-cream text-fog font-teachers tracking-wide">
       <div className="px-[4rem] py-16">
         {/* Main footer */}
         <div className="flex flex-col lg:flex-row justify-between items-center mb-12 space-y-8 lg:space-y-0">
@@ -11,7 +11,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation links */}
-          <div className="text-cream hover:text-white flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 text-sm text-center lg:text-left order-3 lg:order-2">
+          <div className="text-fog flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 text-sm text-center lg:text-left order-3 lg:order-2">
             <NavButton to="/community" label="Community" disableHover/>
             <NavButton to="/about" label="About" disableHover/>
             <NavButton to="/content" label="Content" disableHover/>

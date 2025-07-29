@@ -6,10 +6,10 @@ import { LuSprout } from "react-icons/lu";
 
 const About = () => {
   return (
-    <div className="bg-laurel text-cream">
+    <div className="bg-caramel text-fog">
       <section className="flex flex-col items-center py-8 space-y-6 tracking-wide bg-cream text-fog">
-        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-bosk">
-          Our Philosophy
+        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-teachers">
+          our philosophy
         </h1>
         <p className="w-2/3 text-xl font-teachers text-center">
           GenTalks connects students with resources, mentors, and community to form the Golden Honmoon.
@@ -18,10 +18,10 @@ const About = () => {
         </p>
       </section>
 
-      <section className="flex flex-col py-12 tracking-wide bg-laurel text-cream px-6">
+      <section className="flex flex-col py-12 tracking-wide bg-caramel text-fog px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16">
-            <h1 className="text-5xl font-bosk text-center">Our Values</h1>
+            <h1 className="text-5xl font-teachers text-center">our values</h1>
           </div>
 
           <div className="grid gap-8 tracking-wide grid-cols-1 md:grid-cols-3">
@@ -57,8 +57,8 @@ const About = () => {
 
 
       <section className="flex flex-col items-center py-8 space-y-6 tracking-wide bg-cream text-fog">
-        <div className="text-center max-w-3xl px-4 text-2xl sm:text-2xl md:text-3xl lg:text-5xl font-bosk">
-          <h1 className="mb-4">Our Journey</h1>
+        <div className="text-center max-w-3xl px-4 text-2xl sm:text-2xl md:text-3xl lg:text-5xl font-teachers">
+          <h1 className="mb-4">our journey</h1>
           <p className="text-lg lg:text-xl font-teachers">
             from the outside, GenTalks is a cozy community aiming to empower students through nurturing conversations.
             it looks like we’ve got everything together – a tight-knit community of future leaders and future makers working together to build a brighter future.
@@ -130,7 +130,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="bg-laurel mt-12">
+      <section className="bg-caramel mt-12 pb-12">
         <DiscordBanner />
       </section>
 

@@ -70,6 +70,7 @@ const MentorCarousel = () => {
           to="/book-a-mentor"
           label="book a mentor"
           className="border-laurel border-2 bg-cream text-laurel px-6 py-2 rounded-full hover:text-cream hover:bg-laurel hover:border-cream hover:border-2"
+          disableHover
         />
       </div>
 
