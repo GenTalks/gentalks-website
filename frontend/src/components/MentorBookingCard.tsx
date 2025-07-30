@@ -8,7 +8,7 @@ interface MentorBookingCardProps {
     linkedin?: string;
     calendly?: string;
     role?: string;
-    categories?: string[];
+    growth?: string[];
     topics?: string[];
     desc?: string;
 }
@@ -19,7 +19,7 @@ const MentorBooking: React.FC<MentorBookingCardProps> = ({
     linkedin,
     calendly,
     role,
-    categories,
+    growth,
     topics,
     desc,
 }) => {
@@ -70,8 +70,8 @@ const MentorBooking: React.FC<MentorBookingCardProps> = ({
                     <div>
                         <p className="mt-2 leading-loose">
                             <strong>Categories:</strong>{' '}
-                            {categories?.length
-                                ? categories.map((cat, i) => (
+                            {growth?.length
+                                ? growth.map((cat, i) => (
                                     <span
                                         key={i}
                                         className="inline-block bg-laurel text-cream px-2 py-1 rounded-md text-sm mr-1"

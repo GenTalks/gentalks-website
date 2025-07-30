@@ -10,7 +10,7 @@ export interface BookAMentor {
   linkedin: string;
   calendly: string;
   role: string;
-  categories: string[];
+  growth: string[];
   topics: string[];
   desc: string;
 }
@@ -24,7 +24,7 @@ const mentorQuery = `
     linkedin,
     calendly,
     role,
-    categories,
+    growth,
     topics,
     desc,
   }
@@ -70,7 +70,7 @@ const BookAMentor: React.FC = () => {
               linkedin={item.linkedin}
               calendly={item.calendly}
               role={item.role}
-              categories={item.categories}
+              growth={item.growth}
               topics={item.topics}
               desc={item.desc}
             />
