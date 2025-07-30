@@ -64,7 +64,7 @@ const PrivacyPolicy: React.FC = () => {
           <section className="mt-4">
             <h2 className="font-semibold text-2xl">8. Contact Us</h2>
             <p className="p-4 text-lg">
-              If you have any questions or concerns about this privacy policy or our data practices, please contact us at: <a href="mailto:contact.gentalks@gmail.com">contact.gentalks@gmail.com</a>.
+              If you have any questions or concerns about this privacy policy or our data practices, please contact us at: <a href="mailto:gentalks.official@gmail.com">gentalks.official@gmail.com</a>.
             </p>
           </section>
         </section>

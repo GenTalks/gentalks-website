@@ -98,8 +98,8 @@ const Community = () => {
             <h1 className="font-semibold font-teachers text-4xl text-center">
               student ambassador program
             </h1>
-            <p className="font-teachers font-normal text-center text-xl mt-4">
-              our student ambassador program
+            <p className="font-teachers font-normal text-center text-xl mt-4 px-8 mb-8">
+              we will soon be opening student ambassador program applications. stay tuned and join our discord for the latest updates!
             </p>
           </div>
           <img
@@ -115,8 +115,8 @@ const Community = () => {
             <h1 className="text-4xl font-semibold font-teachers text-center">
               mentor program
             </h1>
-            <p className="font-teachers font-normal text-center text-xl mt-2">
-              our mentorship program
+            <p className="font-teachers font-normal text-center text-xl mt-4 px-8 mb-8">
+              we will soon be opening mentor program applications. stay tuned and join our discord for the latest updates!
             </p>
           </div>
           <img
@@ -126,8 +126,8 @@ const Community = () => {
           />
         </div>
       </section>
-            
-            <section className="relative w-full overflow-hidden py-20 px-8 bg-caramel">
+
+      <section className="relative w-full overflow-hidden py-20 px-8 bg-caramel">
         <DiscordBanner />
       </section>
 
