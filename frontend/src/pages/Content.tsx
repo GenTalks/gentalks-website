@@ -1,20 +1,6 @@
 import DiscordBanner from '../components/DiscordBanner';
-import { FaInstagram } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
-import { useEffect } from "react";
 
 const Media = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://www.tiktok.com/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <div className="text-fog bg-cream">
       <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide">
