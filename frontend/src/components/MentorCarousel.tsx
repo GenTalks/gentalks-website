@@ -11,10 +11,12 @@ interface Mentor {
 
 const MentorCarousel = () => {
   const [mentors, setMentors] = useState<Mentor[]>([]);
-  const [originalMentorCount, setOriginalMentorCount] = useState(0);
+  const [origCount, setOrigCount] = useState(0);
   const [translateX, setTranslateX] = useState(0);
-  const animationRef = useRef<number | null>(null);
-  const cardWidth = 280;
+  const [cardWidth, setCardWidth] = useState(280);
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  const rafRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     const fetchMentors = async () => {
@@ -25,41 +27,40 @@ const MentorCarousel = () => {
           role
         }
       `);
-
-      const formatted: Mentor[] = data.map((m: any) => ({
+      const formatted = data.map((m: any) => ({
         image: m.mentorImage,
         name: m.mentorname,
         title: m.role,
       }));
-
-      setOriginalMentorCount(formatted.length);
-      setMentors([...formatted, ...formatted]);
+      setOrigCount(formatted.length);
+      setMentors([...formatted, ...formatted]); // duplicate the mentors
     };
-
     fetchMentors();
   }, []);
 
   useEffect(() => {
-    if (originalMentorCount === 0) return;
+    if (!containerRef.current) return;
+    const cardEl = containerRef.current.querySelector(".mentor-card");
+    if (cardEl) setCardWidth((cardEl as HTMLElement).clientWidth);
+  }, [mentors]);
 
-    const oneSetWidth = originalMentorCount * cardWidth;
+  useEffect(() => {
+    if (origCount === 0) return;
+    const oneSetWidth = origCount * cardWidth;
 
-    const animate = () => {
+    const step = () => {
       setTranslateX((prev) => {
-        const newX = prev - 1.5;
-        return newX <= -oneSetWidth ? 0 : newX;
+        const next = prev - 1.5;
+        return next <= -oneSetWidth ? 0 : next;
       });
-      animationRef.current = requestAnimationFrame(animate);
+      rafRef.current = requestAnimationFrame(step);
     };
 
-    animationRef.current = requestAnimationFrame(animate);
-
+    rafRef.current = requestAnimationFrame(step);
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
-  }, [mentors, originalMentorCount]);
+  }, [origCount, cardWidth]);
 
   return (
     <div className="bg-caramel relative w-full py-16">
@@ -71,23 +72,25 @@ const MentorCarousel = () => {
         <NavButton
           to="/book-a-mentor"
           label="book a mentor"
-          className="border-cream border-2 bg-laurel text-cream px-6 py-2 rounded-full hover:text-laurel hover:bg-cream hover:border-laurel hover:border-2"
+          className="border-cream border-2 bg-laurel text-cream px-6 py-2 rounded-full hover:text-laurel hover:bg-cream hover:border-laurel"
           disableHover
         />
       </div>
 
-      <div className="relative overflow-hidden w-full mt-20">
+      <div ref={containerRef} className="relative overflow-hidden w-full mt-20">
+        {/* Scrolling track */}
         <div
           className="flex"
           style={{ transform: `translateX(${translateX}px)` }}
         >
-          {mentors.map((mentor, index) => (
-            <MentorCard
-              key={`mentor-${index}`}
-              image={mentor.image}
-              name={mentor.name}
-              title={mentor.title}
-            />
+          {mentors.map((mentor, idx) => (
+            <div key={idx} className="mentor-card flex-shrink-0">
+              <MentorCard
+                image={mentor.image}
+                name={mentor.name}
+                title={mentor.title}
+              />
+            </div>
           ))}
         </div>
       </div>
