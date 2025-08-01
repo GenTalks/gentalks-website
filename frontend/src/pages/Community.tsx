@@ -17,21 +17,26 @@ const Community = () => {
           </div>
           <div className="border-fog border-2 bg-cream text-fog p-8 rounded-xl shadow-lg font-teachers text-lg leading-relaxed mt-8">
             <div className="text-left px-4 font-semibold tracking-widest">
-              date posted: July 22, 2025
+              date posted: August 1, 2025
             </div>
 
             <hr className="my-4 border-t-2 border-fog" />
 
             <div className="px-4 text-left tracking-wide">
-              content page is now ready for launch!
+              it's hard launch day! hello everyone, we're the developer team at GenTalks,
+              and we're still working on the website. a little bit about GenTalks -- we want to help high schoolers build their future.
+              click the button below to join our Discord community, whether you're a high school student
+              or you just want to support our journey! thank you everyone so much for growing with us 😉
             </div>
 
-            {/*Button*/}
-            {/*<div className="px-4 py-2 inline-block rounded-full border-cream border-2 bg-laurel text-cream hover:border-laurel hover:bg-cream hover:text-laurel mt-6 tracking-wide">
-                  <a href="/apply">
-                    Apply here
-                  </a>
-                </div>*/}
+            <div className="mt-4">
+              <DiscordButton />
+            </div>
+            {/*Other reference button
+            <div className="px-4 py-2 inline-block rounded-full border-cream border-2 bg-laurel text-cream hover:border-laurel hover:bg-cream hover:text-laurel mt-6 tracking-wide">
+              
+            </div>
+            */}
           </div>
         </div>
       </section>
