@@ -61,7 +61,6 @@ const BookAMentor: React.FC = () => {
       <div className="flex flex-col gap-6 w-1/2 overflow-y-auto max-h-screen">
         {mentors
           .slice()
-          .reverse() // so newest mentor is on top
           .map((item) => (
             <MentorBookingCard
               key={item._id}
