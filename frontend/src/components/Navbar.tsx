@@ -29,7 +29,17 @@ export default function Navbar() {
           <NavButton to="/faqs" label="FAQs" />
           <NavButton to="/contact-us" label="Contact" />
         </div>
+
+        <div>
+          <NavButton
+            to="/book-a-mentor"
+            label="Book a mentor"
+            className="bg-cream text-cream px-6 py-2 rounded-full"
+            disableHover
+          />
+        </div>
       </div>
+
 
       <button
         className="2xl:hidden p-2 rounded-md focus:outline-none"
@@ -57,8 +67,13 @@ export default function Navbar() {
             to="/community"
             label="Community"
             onClick={() => setOpen(false)}
+            
           />
-          <NavButton to="/about" label="About" onClick={() => setOpen(false)} />
+          <NavButton
+            to="/about"
+            label="About"
+            onClick={() => setOpen(false)}
+          />
           <NavButton
             to="/content"
             label="Content"
@@ -74,6 +89,13 @@ export default function Navbar() {
             to="/contact-us"
             label="Contact"
             onClick={() => setOpen(false)}
+          />
+          <NavButton
+            to="/book-a-mentor"
+            label="Book a mentor"
+            onClick={() => setOpen(false)}
+            className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil"
+            disableHover
           />
         </div>
       )}
