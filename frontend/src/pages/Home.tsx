@@ -4,19 +4,16 @@ import MentorCarousel from "../components/MentorCarousel";
 import ExploreButton from "../components/ExploreButton";
 import FAQComp from "../components/FAQComp";
 
-
 const Home = () => {
   return (
     <div className="relative w-full overflow-hidden tracking-wide bg-caramel text-fog">
       <div className="bg-basil relative w-full h-[100vh">
-        
-
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center font-teachers text-cream space-y-6 px-4">
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-8xl text-right self-end mr-[8rem] lg:mr-[20rem]">
             GenTalks
           </h1>
           <h3 className="text-md sm:text-2xl md:text-3xl lg:text-6xl text-right self-end mr-[6rem] lg:mr-[15rem]">
-            Grow with us              
+            Grow with us
           </h3>
         </div>
 
@@ -67,7 +64,7 @@ const Home = () => {
             />
           </div>
           <div className="w-full md:w-1/3 py-8">
-            0+ <br />
+            1+ <br />
             <span className="text-lg font-teachers">gentalks booked</span>
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
@@ -76,7 +73,7 @@ const Home = () => {
             />
           </div>
           <div className="w-full md:w-1/3 py-8">
-            80+ <br />
+            150+ <br />
             <span className="text-lg font-teachers">community members</span>
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
