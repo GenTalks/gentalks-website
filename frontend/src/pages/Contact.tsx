@@ -1,4 +1,4 @@
-import DiscordBanner from '../components/DiscordBanner';
+import DiscordBanner from "../components/DiscordBanner";
 
 const Contact = () => {
   return (
@@ -8,7 +8,8 @@ const Contact = () => {
           contact us!
         </h1>
         <p className="text-xl font-teachers">
-          We're always available to talk and will respond as fast as possible! Feel free to join our community, and connect with us on our socials!
+          We're always available to talk and will respond as fast as possible!
+          Feel free to join our community, and connect with us on our socials!
         </p>
       </section>
 
@@ -38,7 +39,7 @@ const Contact = () => {
         </h1>
 
         <h1 className="text-xl font-teachers text-left py-4">
-          Follow our {" "}
+          Follow our{" "}
           <a
             href="https://www.linkedin.com/company/gentalks/"
             target="_blank"
@@ -53,15 +54,14 @@ const Contact = () => {
 
       <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide mb-12">
         <p className="text-xl font-teachers mt-8">
-          Email us at <strong>gentalks.official@gmail.com</strong> or join our Discord community below!
+          Email us at <strong>gentalks.official@gmail.com</strong> or join our
+          Discord community below!
         </p>
       </section>
-      
+
       <div className="py-16 bg-caramel">
-      <DiscordBanner />
-
+        <DiscordBanner />
       </div>
-
     </div>
   );
 };

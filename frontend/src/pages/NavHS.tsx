@@ -6,7 +6,8 @@ import NavHSCard from "../components/NavHSCard";
 import { RiSuitcaseLine } from "react-icons/ri";
 import { IoSchoolOutline } from "react-icons/io5";
 import { FaUserGraduate } from "react-icons/fa";
-import { LuBookOpenText } from "react-icons/lu";import { GiHeartWings } from "react-icons/gi";
+import { LuBookOpenText } from "react-icons/lu";
+import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
 
 export interface NavHS {
@@ -30,9 +31,7 @@ const navhsQuery = `
 `;
 
 const NavHS: React.FC = () => {
-
-  const [navhs, setNavHS] = useState<NavHS[]>([])
-
+  const [navhs, setNavHS] = useState<NavHS[]>([]);
 
   useEffect(() => {
     sanityClient
@@ -40,9 +39,13 @@ const NavHS: React.FC = () => {
       .then((data: NavHS[]) => {
         const sortedData = data
           .filter((item) => !!item.datePosted) // optional: skip items without date
-          .sort((a, b) => new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime());
+          .sort(
+            (a, b) =>
+              new Date(b.datePosted).getTime() -
+              new Date(a.datePosted).getTime()
+          );
 
-        console.log('Sorted resources:', sortedData);
+        console.log("Sorted resources:", sortedData);
         setNavHS(sortedData);
       })
       .catch(console.error);

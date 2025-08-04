@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { sanityClient } from "../lib/sanityClient";
 import StudyResourceCard from "../components/StudyResourceCard";
@@ -6,7 +6,8 @@ import StudyResourceCard from "../components/StudyResourceCard";
 import { RiSuitcaseLine } from "react-icons/ri";
 import { IoSchoolOutline } from "react-icons/io5";
 import { FaUserGraduate } from "react-icons/fa";
-import { LuBookOpenText } from "react-icons/lu";import { GiHeartWings } from "react-icons/gi";
+import { LuBookOpenText } from "react-icons/lu";
+import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
 
 export interface StudyResource {
@@ -16,7 +17,6 @@ export interface StudyResource {
   resourceUrl: string;
   dateCreated: string;
 }
-
 
 const studyResourceQuery = `
   *[_type == "studyresource"] | order(_createdAt desc) {
@@ -29,9 +29,7 @@ const studyResourceQuery = `
 `;
 
 const StudyResources: React.FC = () => {
-
-  const [studyResources, setStudyResource] = useState<StudyResource[]>([])
-
+  const [studyResources, setStudyResource] = useState<StudyResource[]>([]);
 
   useEffect(() => {
     sanityClient
@@ -39,9 +37,13 @@ const StudyResources: React.FC = () => {
       .then((data: StudyResource[]) => {
         const sortedData = data
           .filter((item) => !!item.dateCreated) // optional: skip items without date
-          .sort((a, b) => new Date(b.dateCreated).getTime() - new Date(a.dateCreated).getTime());
+          .sort(
+            (a, b) =>
+              new Date(b.dateCreated).getTime() -
+              new Date(a.dateCreated).getTime()
+          );
 
-        console.log('Sorted resources:', sortedData);
+        console.log("Sorted resources:", sortedData);
         setStudyResource(sortedData);
       })
       .catch(console.error);
@@ -126,7 +128,6 @@ const StudyResources: React.FC = () => {
           />
         ))}
       </div>
-
     </section>
   );
 };

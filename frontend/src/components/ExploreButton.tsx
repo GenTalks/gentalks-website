@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 interface ExploreButtonProps {
   to: string;
@@ -7,10 +7,7 @@ interface ExploreButtonProps {
 
 const ExploreButton = ({ to, label }: ExploreButtonProps) => {
   return (
-    <Link
-      to={to}
-      className="inline-block px-6 py-3 rounded-full"
-    >
+    <Link to={to} className="inline-block px-6 py-3 rounded-full">
       Explore {label}
     </Link>
   );

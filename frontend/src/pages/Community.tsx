@@ -3,7 +3,7 @@ import { TfiAnnouncement } from "react-icons/tfi";
 import { LuSprout } from "react-icons/lu";
 import { RiNotification4Line } from "react-icons/ri";
 import { FaChalkboardTeacher } from "react-icons/fa";
-import DiscordButton from "../components/DiscordButton"
+import DiscordButton from "../components/DiscordButton";
 
 const Community = () => {
   return (
@@ -13,7 +13,9 @@ const Community = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 justify-center">
             <TfiAnnouncement size={36} className="text-fog" />
-            <h2 className="text-4xl font-teachers text-center">Community Announcements</h2>
+            <h2 className="text-4xl font-teachers text-center">
+              Community Announcements
+            </h2>
           </div>
           <div className="border-fog border-2 bg-cream text-fog p-8 rounded-xl shadow-lg font-teachers text-lg leading-relaxed mt-8">
             <div className="text-left px-4 font-semibold tracking-widest">
@@ -23,10 +25,12 @@ const Community = () => {
             <hr className="my-4 border-t-2 border-fog" />
 
             <div className="px-4 text-left tracking-wide">
-              it's hard launch day! hello everyone, we're the developer team at GenTalks,
-              and we're still working on the website. a little bit about GenTalks -- we want to help high schoolers build their future.
-              click the button below to join our Discord community, whether you're a high school student
-              or you just want to support our journey! thank you everyone so much for growing with us 😉
+              it's hard launch day! hello everyone, we're the developer team at
+              GenTalks, and we're still working on the website. a little bit
+              about GenTalks -- we want to help high schoolers build their
+              future. click the button below to join our Discord community,
+              whether you're a high school student or you just want to support
+              our journey! thank you everyone so much for growing with us 😉
             </div>
 
             <div className="mt-4">
@@ -44,11 +48,11 @@ const Community = () => {
       <section className="flex flex-col py-12 tracking-wide bg-caramel text-fog px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16 flex flex-col items-center gap-6">
-            <h1 className="text-4xl font-teachers text-center">
-              grow with us
-            </h1>
+            <h1 className="text-4xl font-teachers text-center">grow with us</h1>
             <p className="w-2/3 font-teachers text-xl text-center">
-              our discord community is a vibrant online space for growth, where members uplift each other and share valuable insights on careers and life.
+              our discord community is a vibrant online space for growth, where
+              members uplift each other and share valuable insights on careers
+              and life.
             </p>
             <DiscordButton />
           </div>
@@ -57,24 +61,25 @@ const Community = () => {
             {/* Resources */}
             <div className="shadow-md mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <LuSprout size={48} />
-              <h1 className="mt-4 text-xl font-semibold">exclusive resources</h1>
+              <h1 className="mt-4 text-xl font-semibold">
+                exclusive resources
+              </h1>
               <p className="pt-6">
-                access unique tools and a supportive community available only at GenTalks
+                access unique tools and a supportive community available only at
+                GenTalks
               </p>
               <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-basil hover:text-cream mt-8 tracking-wide">
-                <a href="/resources">
-                  view resources
-                </a>
+                <a href="/resources">view resources</a>
               </div>
             </div>
-
 
             {/* Notification */}
             <div className="shadow-md mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <RiNotification4Line size={48} />
               <h1 className="mt-4 text-xl font-semibold">early event access</h1>
               <p className="pt-6">
-                get exclusive updates and be the first to hear about upcoming events!
+                get exclusive updates and be the first to hear about upcoming
+                events!
               </p>
             </div>
 
@@ -83,19 +88,16 @@ const Community = () => {
               <FaChalkboardTeacher size={48} />
               <h1 className="mt-4 text-xl font-semibold">mentorship program</h1>
               <p className="mt-4">
-                access exclusive insight and guidance from industry professionals through our mentorship program.
+                access exclusive insight and guidance from industry
+                professionals through our mentorship program.
               </p>
               <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-basil hover:text-cream mt-10 tracking-wide">
-                <a href="/book-a-mentor">
-                  book a mentor
-                </a>
+                <a href="/book-a-mentor">book a mentor</a>
               </div>
             </div>
-
           </div>
         </div>
       </section>
-
 
       <section className="bg-cream text-fog w-full flex flex-col items-center py-8 space-y-6 track-wide">
         <div className="flex flex-col lg:flex-row items-center justify-between mt-auto">
@@ -104,7 +106,8 @@ const Community = () => {
               student ambassador program
             </h1>
             <p className="font-teachers font-normal text-center text-xl mt-4 px-8 mb-8">
-              we will soon be opening student ambassador program applications. stay tuned and join our discord for the latest updates!
+              we will soon be opening student ambassador program applications.
+              stay tuned and join our discord for the latest updates!
             </p>
           </div>
           <img
@@ -114,14 +117,14 @@ const Community = () => {
           />
         </div>
 
-
         <div className="flex flex-col lg:flex-row-reverse items-center justify-between mt-auto">
           <div className="pr-8 w-full lg:w-1/2">
             <h1 className="text-4xl font-semibold font-teachers text-center">
               mentor program
             </h1>
             <p className="font-teachers font-normal text-center text-xl mt-4 px-8 mb-8">
-              we will soon be opening mentor program applications. stay tuned and join our discord for the latest updates!
+              we will soon be opening mentor program applications. stay tuned
+              and join our discord for the latest updates!
             </p>
           </div>
           <img
@@ -135,7 +138,6 @@ const Community = () => {
       <section className="relative w-full overflow-hidden py-20 px-8 bg-caramel">
         <DiscordBanner />
       </section>
-
     </section>
   );
 };

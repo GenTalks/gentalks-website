@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface StudyResourceCardProps {
   title: string;
@@ -18,19 +18,21 @@ const StudyResourceCard: React.FC<StudyResourceCardProps> = ({
       <h3 className="text-xl font-semibold">{title}</h3>
 
       {/* Add Date Posted*/}
-      <p><strong>Date Created:</strong> {dateCreated ? new Date(dateCreated).toLocaleDateString() : 'N/A'}</p>
+      <p>
+        <strong>Date Created:</strong>{" "}
+        {dateCreated ? new Date(dateCreated).toLocaleDateString() : "N/A"}
+      </p>
 
       <p className="mt-2 leading-[2.5rem]">
-        <strong>Subject:</strong>{' '}
+        <strong>Subject:</strong>{" "}
         {subject ? (
           <span className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1">
             {subject}
           </span>
         ) : (
-          'N/A'
+          "N/A"
         )}
       </p>
-
 
       {/* Application Link Button */}
       {resourceUrl ? (
@@ -46,7 +48,7 @@ const StudyResourceCard: React.FC<StudyResourceCardProps> = ({
         <p className="mt-4 italic">No link available</p>
       )}
     </div>
-  )
-}
+  );
+};
 
 export default StudyResourceCard;

@@ -1,4 +1,4 @@
-import DiscordBanner from '../components/DiscordBanner';
+import DiscordBanner from "../components/DiscordBanner";
 import { RiCommunityLine } from "react-icons/ri";
 import { IoAccessibility } from "react-icons/io5";
 import { LuHeartHandshake } from "react-icons/lu";
@@ -12,9 +12,10 @@ const About = () => {
           our philosophy
         </h1>
         <p className="w-2/3 text-xl font-teachers text-center">
-          GenTalks connects students with resources, mentors, and community to form the Golden Honmoon.
-          Whether you’re navigating personal growth, seeking advice on how to adult,
-          or thinking about your career plans, GenTalks will be there for you.
+          GenTalks connects students with resources, mentors, and community to
+          form the Golden Honmoon. Whether you’re navigating personal growth,
+          seeking advice on how to adult, or thinking about your career plans,
+          GenTalks will be there for you.
         </p>
       </section>
 
@@ -30,7 +31,8 @@ const About = () => {
               <RiCommunityLine size={48} />
               <h1 className="mt-4 text-xl font-semibold">Community</h1>
               <p className="mt-auto pt-6">
-                We are committed to being a safe space where students feel supported and valued.
+                We are committed to being a safe space where students feel
+                supported and valued.
               </p>
             </div>
 
@@ -48,28 +50,29 @@ const About = () => {
               <IoAccessibility size={48} />
               <h1 className="mt-4 text-xl font-semibold">Accessibility</h1>
               <p className="mt-auto pt-6">
-                We are committed to providing help to all, regardless of background or circumstance.
+                We are committed to providing help to all, regardless of
+                background or circumstance.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-
       <section className="flex flex-col items-center py-8 space-y-6 tracking-wide bg-cream text-fog">
         <div className="text-center max-w-3xl px-4 text-2xl sm:text-2xl md:text-3xl lg:text-5xl font-teachers">
           <h1 className="mb-4">our journey</h1>
           <p className="text-lg lg:text-xl font-teachers">
-            from the outside, GenTalks is a cozy community aiming to empower students through nurturing conversations.
-            it looks like we’ve got everything together – a tight-knit community of future leaders and future makers working together to build a brighter future.
-            but it wasn’t always like that.
+            from the outside, GenTalks is a cozy community aiming to empower
+            students through nurturing conversations. it looks like we’ve got
+            everything together – a tight-knit community of future leaders and
+            future makers working together to build a brighter future. but it
+            wasn’t always like that.
           </p>
         </div>
       </section>
 
       <section className="flex flex-col py-12 tracking-wide bg-cream text-fog relative font-teachers space-y-24 px-6">
         <div className="max-w-6xl mx-auto space-y-24">
-
           <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
             <h1 className="text-3xl font-semibold text-left w-full lg:w-1/2">
               the storm came but it didn’t break us.
@@ -133,7 +136,6 @@ const About = () => {
       <section className="bg-caramel mt-12 pb-12">
         <DiscordBanner />
       </section>
-
     </div>
   );
 };

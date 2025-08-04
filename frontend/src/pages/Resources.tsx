@@ -1,4 +1,4 @@
-import DiscordBanner from '../components/DiscordBanner';
+import DiscordBanner from "../components/DiscordBanner";
 import { FaUserGraduate } from "react-icons/fa";
 import { LuBookOpenText } from "react-icons/lu";
 import { LuSprout } from "react-icons/lu";
@@ -14,7 +14,9 @@ const Resources = () => {
           gentalks resources
         </h1>
         <p className="w-1/2 text-xl text-center font-teachers">
-          discover tools and guidance tailored to support your journey. From academic insights to career resources, explore resources that meet your needs.
+          discover tools and guidance tailored to support your journey. From
+          academic insights to career resources, explore resources that meet
+          your needs.
         </p>
       </section>
 
@@ -33,7 +35,6 @@ const Resources = () => {
             <p className="px-12 py-8 font-teachers font-normal text-center text-xl mt-2">
               Want advice on tackling the UC essay prompts?
             </p>
-
           </div>
           <img
             src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
@@ -48,7 +49,8 @@ const Resources = () => {
               FAFSA & CSS Profile, Simplified
             </h1>
             <p className="px-12 py-8 font-teachers font-normal text-center text-xl mt-2">
-              Reading all those financial terms must be confusing. Don't worry, GenTalks is here to help!
+              Reading all those financial terms must be confusing. Don't worry,
+              GenTalks is here to help!
             </p>
           </div>
           <img
@@ -59,13 +61,14 @@ const Resources = () => {
         </div>
       </section>
 
-
       <section className="font-teachers flex flex-col py-12 tracking-wide bg-caramel text-fog px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16 flex flex-col items-center gap-6">
             <h1 className="text-4xl text-center">resources for every step</h1>
             <p className="w-2/3 font-teachers text-xl text-center">
-              wherever you're at, we've got something for you. from academics to scholarships to learning how to adult, explore tools made just for you.
+              wherever you're at, we've got something for you. from academics to
+              scholarships to learning how to adult, explore tools made just for
+              you.
             </p>
           </div>
 
@@ -77,7 +80,9 @@ const Resources = () => {
             >
               <LuBookOpenText size={48} />
               <h1 className="mt-4 text-xl font-semibold">Study Resources</h1>
-              <p className="pt-6">All your SAT, ACT, AP exam prep essentials.</p>
+              <p className="pt-6">
+                All your SAT, ACT, AP exam prep essentials.
+              </p>
             </Link>
 
             {/* Internships */}
@@ -87,7 +92,10 @@ const Resources = () => {
             >
               <RiSuitcaseLine size={48} />
               <h1 className="mt-4 text-xl font-semibold">Internships</h1>
-              <p className="pt-6">Learn how to find internships, write resumes, and apply with confidence.</p>
+              <p className="pt-6">
+                Learn how to find internships, write resumes, and apply with
+                confidence.
+              </p>
             </Link>
 
             {/* Scholarships */}
@@ -97,7 +105,10 @@ const Resources = () => {
             >
               <FaUserGraduate size={48} />
               <h1 className="mt-4 text-xl font-semibold">Scholarships</h1>
-              <p className="pt-6">Discover merit-based and identity-based scholarships, and how to win them.</p>
+              <p className="pt-6">
+                Discover merit-based and identity-based scholarships, and how to
+                win them.
+              </p>
             </Link>
 
             {/* Navigating High School */}
@@ -106,8 +117,13 @@ const Resources = () => {
               className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
             >
               <IoSchoolOutline size={48} />
-              <h1 className="mt-4 text-xl font-semibold">Navigating High School</h1>
-              <p className="pt-6">Course selection, time management, and how to survive & thrive in high school.</p>
+              <h1 className="mt-4 text-xl font-semibold">
+                Navigating High School
+              </h1>
+              <p className="pt-6">
+                Course selection, time management, and how to survive & thrive
+                in high school.
+              </p>
             </Link>
 
             {/* College Prep */}
@@ -117,7 +133,10 @@ const Resources = () => {
             >
               <LuSprout size={48} />
               <h1 className="mt-4 text-xl font-semibold">College Prep</h1>
-              <p className="pt-6">All things college: applications, essays, choosing the right school, and more.</p>
+              <p className="pt-6">
+                All things college: applications, essays, choosing the right
+                school, and more.
+              </p>
             </Link>
 
             {/* How to Adult */}
@@ -127,14 +146,16 @@ const Resources = () => {
             >
               <RiGuideLine size={48} />
               <h1 className="mt-4 text-xl font-semibold">How to Adult</h1>
-              <p className="pt-6">Learn about taxes, jobs, health care, cooking, and real-world life skills.</p>
+              <p className="pt-6">
+                Learn about taxes, jobs, health care, cooking, and real-world
+                life skills.
+              </p>
             </Link>
           </div>
         </div>
       </section>
       <div className="py-16 bg-caramel">
-      <DiscordBanner />
-
+        <DiscordBanner />
       </div>
     </section>
   );

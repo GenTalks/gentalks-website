@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { sanityClient } from "../lib/sanityClient";
 import ScholarshipCard from "../components/ScholarshipCard";
@@ -6,9 +6,9 @@ import ScholarshipCard from "../components/ScholarshipCard";
 import { RiSuitcaseLine } from "react-icons/ri";
 import { IoSchoolOutline } from "react-icons/io5";
 import { FaUserGraduate } from "react-icons/fa";
-import { LuBookOpenText } from "react-icons/lu";import { GiHeartWings } from "react-icons/gi";
+import { LuBookOpenText } from "react-icons/lu";
+import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
-
 
 export interface Scholarship {
   _id: string;
@@ -20,7 +20,6 @@ export interface Scholarship {
   applicationtype: string[];
   applicationUrl: string;
 }
-
 
 const internshipsQuery = `
   *[_type == "scholarship"] | order(_createdAt desc) {
@@ -35,11 +34,8 @@ const internshipsQuery = `
   }
 `;
 
-
 const Scholarships: React.FC = () => {
-
-  const [scholarships, setScholarships] = useState<Scholarship[]>([])
-
+  const [scholarships, setScholarships] = useState<Scholarship[]>([]);
 
   useEffect(() => {
     sanityClient
@@ -47,9 +43,12 @@ const Scholarships: React.FC = () => {
       .then((data: Scholarship[]) => {
         const sortedData = data
           .filter((item) => !!item.deadline) // optional: skip items without date
-          .sort((a, b) => new Date(a.deadline).getTime() - new Date(b.deadline).getTime());
+          .sort(
+            (a, b) =>
+              new Date(a.deadline).getTime() - new Date(b.deadline).getTime()
+          );
 
-        console.log('Sorted internships by nearest deadline:', sortedData);
+        console.log("Sorted internships by nearest deadline:", sortedData);
         setScholarships(sortedData);
       })
       .catch(console.error);
@@ -136,7 +135,6 @@ const Scholarships: React.FC = () => {
           />
         ))}
       </div>
-
     </section>
   );
 };
