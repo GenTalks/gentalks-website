@@ -8,7 +8,7 @@ const MentorPageSchema = {
     fields: [
         defineField({
             name: 'mentorImage',
-            title: 'Mentor Image',
+            title: 'Mentor Image (jpg, jpeg, png, gif, svg)',
             type: 'url',
             validation: Rule => Rule.required()
         }),
