@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React from "react";
 
 interface InternshipCardProps {
   title: string;
@@ -12,9 +11,6 @@ interface InternshipCardProps {
   applicationUrl?: string;
   datePosted?: string;
 }
-
-
-
 
 const InternshipCard: React.FC<InternshipCardProps> = ({
   title,
@@ -30,34 +26,39 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
   return (
     <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream shadow hover:shadow-md transition">
       <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="italic">{company || 'Unknown company'}</p>
+      <p className="italic">{company || "Unknown company"}</p>
 
       {/* Add Location */}
-      <p><strong>Location:</strong> {location || 'N/A'}</p>
+      <p>
+        <strong>Location:</strong> {location || "N/A"}
+      </p>
 
       {/* Add Date Posted*/}
-      <p><strong>Date Posted:</strong> {datePosted ? new Date(datePosted).toLocaleDateString() : 'N/A'}</p>
+      <p>
+        <strong>Date Posted:</strong>{" "}
+        {datePosted ? new Date(datePosted).toLocaleDateString() : "N/A"}
+      </p>
 
       <p>
-        <strong>Compensation:</strong>{' '}
-        {compensation ? compensation.charAt(0).toUpperCase() + compensation.slice(1) : 'N/A'}
+        <strong>Compensation:</strong>{" "}
+        {compensation
+          ? compensation.charAt(0).toUpperCase() + compensation.slice(1)
+          : "N/A"}
       </p>
-
 
       <p className="mt-2 leading-[2.5rem]">
-        <strong>Industries:</strong>{' '}
+        <strong>Industries:</strong>{" "}
         {industries?.length
           ? industries.map((industries, i) => (
-            <span
-              key={i}
-              className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
-            >
-              {industries}
-            </span>
-          ))
-          : 'N/A'}
+              <span
+                key={i}
+                className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
+              >
+                {industries}
+              </span>
+            ))
+          : "N/A"}
       </p>
-
 
       {/* Pros tags */}
       {pros && pros.length > 0 && (
@@ -65,14 +66,11 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
           <strong>Pros:</strong>
           <ul className="list-disc list-inside">
             {pros.map((pro, idx) => (
-              <li key={idx}>
-                {pro.charAt(0).toUpperCase() + pro.slice(1)}
-              </li>
+              <li key={idx}>{pro.charAt(0).toUpperCase() + pro.slice(1)}</li>
             ))}
           </ul>
         </div>
       )}
-
 
       {/* Cons tags */}
       {cons && cons.length > 0 && (
@@ -80,14 +78,11 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
           <strong>Cons:</strong>
           <ul className="list-disc list-inside">
             {cons.map((con, idx) => (
-              <li key={idx}>
-                {con.charAt(0).toUpperCase() + con.slice(1)}
-              </li>
+              <li key={idx}>{con.charAt(0).toUpperCase() + con.slice(1)}</li>
             ))}
           </ul>
         </div>
       )}
-
 
       {/* Application Link Button */}
       {applicationUrl ? (
@@ -103,8 +98,7 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
         <p className="mt-4 italic">No application link available</p>
       )}
     </div>
-  )
-}
+  );
+};
 
-
-export default InternshipCard
+export default InternshipCard;

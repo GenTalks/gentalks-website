@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import gtLogo from '../assets/icons/gt_steam.png';
+import { Link } from "react-router-dom";
+import gtLogo from "../assets/icons/gt_steam.png";
 
 interface GenDiscordProps {
   onClick?: () => void;

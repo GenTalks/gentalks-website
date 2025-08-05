@@ -1,4 +1,4 @@
-import DiscordBanner from '../components/DiscordBanner';
+import DiscordBanner from "../components/DiscordBanner";
 
 const Media = () => {
   return (
@@ -9,11 +9,11 @@ const Media = () => {
         </h1>
         <p className="text-xl font-teachers text-center">
           Making life a little sweeter one sprout at a time. <br /> <br />
-          We're taking suggestions on what this page should be (previously content). Please make recommendations to our devs in the Discord!
+          We're taking suggestions on what this page should be (previously
+          content). Please make recommendations to our devs in the Discord!
         </p>
       </section>
       <DiscordBanner />
-
     </div>
   );
 };

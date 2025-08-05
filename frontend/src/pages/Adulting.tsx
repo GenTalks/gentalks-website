@@ -6,7 +6,8 @@ import AdultingCard from "../components/AdultingCard";
 import { RiSuitcaseLine } from "react-icons/ri";
 import { IoSchoolOutline } from "react-icons/io5";
 import { FaUserGraduate } from "react-icons/fa";
-import { LuBookOpenText } from "react-icons/lu";import { GiHeartWings } from "react-icons/gi";
+import { LuBookOpenText } from "react-icons/lu";
+import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
 
 export interface Adulting {
@@ -17,7 +18,6 @@ export interface Adulting {
   resourceUrl: string;
   datePosted: string;
 }
-
 
 const adultingQuery = `
   *[_type == "adulting"] | order(_createdAt desc) {
@@ -30,8 +30,7 @@ const adultingQuery = `
   }
 `;
 const Adulting: React.FC = () => {
-  const [adultings, setAdultings] = useState<Adulting[]>([])
-
+  const [adultings, setAdultings] = useState<Adulting[]>([]);
 
   useEffect(() => {
     sanityClient
@@ -39,8 +38,12 @@ const Adulting: React.FC = () => {
       .then((data: Adulting[]) => {
         const sortedData = data
           .filter((item) => !!item.datePosted)
-          .sort((a, b) => new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime());
-        console.log('Sorted internships:', sortedData);
+          .sort(
+            (a, b) =>
+              new Date(b.datePosted).getTime() -
+              new Date(a.datePosted).getTime()
+          );
+        console.log("Sorted internships:", sortedData);
         setAdultings(sortedData);
       })
       .catch(console.error);
@@ -128,10 +131,7 @@ const Adulting: React.FC = () => {
           ))}
         </div>
       </section>
-
-
     </section>
-
   );
 };
 

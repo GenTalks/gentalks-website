@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ScholarshipCardProps {
   title: string;
@@ -22,44 +22,44 @@ const ScholarshipCard: React.FC<ScholarshipCardProps> = ({
   return (
     <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream shadow hover:shadow-md transition">
       <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="italic">{organization || 'Unknown company'}</p>
+      <p className="italic">{organization || "Unknown company"}</p>
 
       <p>
-        <strong>Application Deadline:</strong>{' '}
-        {deadline ? new Date(deadline).toLocaleDateString() : 'N/A'}
+        <strong>Application Deadline:</strong>{" "}
+        {deadline ? new Date(deadline).toLocaleDateString() : "N/A"}
       </p>
 
       <p>
-        <strong>Amount:</strong>{' '}
-        {amount ? amount.charAt(0).toUpperCase() + amount.slice(1) : 'N/A'}
+        <strong>Amount:</strong>{" "}
+        {amount ? amount.charAt(0).toUpperCase() + amount.slice(1) : "N/A"}
       </p>
 
       <p className="mt-2 leading-[2.5rem]">
-        <strong>Eligibility:</strong>{' '}
+        <strong>Eligibility:</strong>{" "}
         {eligibility?.length
           ? eligibility.map((eligibility, i) => (
-            <span
-              key={i}
-              className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
-            >
-              {eligibility}
-            </span>
-          ))
-          : 'N/A'}
+              <span
+                key={i}
+                className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
+              >
+                {eligibility}
+              </span>
+            ))
+          : "N/A"}
       </p>
 
       <p className="mt-2 leading-[2.5rem]">
-        <strong>Application Type:</strong>{' '}
+        <strong>Application Type:</strong>{" "}
         {applicationtype?.length
           ? applicationtype.map((applicationtype, i) => (
-            <span
-              key={i}
-              className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
-            >
-              {applicationtype}
-            </span>
-          ))
-          : 'N/A'}
+              <span
+                key={i}
+                className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
+              >
+                {applicationtype}
+              </span>
+            ))
+          : "N/A"}
       </p>
 
       {/* Application Link Button */}

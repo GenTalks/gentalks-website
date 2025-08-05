@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { sanityClient } from "../lib/sanityClient";
 import MentorBookingCard from "../components/MentorBookingCard";
 
-
 export interface BookAMentor {
   _id: string;
   mentorImage: string;
@@ -14,7 +13,6 @@ export interface BookAMentor {
   topics: string[];
   desc: string;
 }
-
 
 const mentorQuery = `
   *[_type == "mentorpage"] | order(_createdAt desc) {
@@ -30,10 +28,8 @@ const mentorQuery = `
   }
 `;
 
-
 const BookAMentor: React.FC = () => {
-  const [mentors, setMentors] = useState<BookAMentor[]>([])
-
+  const [mentors, setMentors] = useState<BookAMentor[]>([]);
 
   useEffect(() => {
     sanityClient
@@ -41,16 +37,17 @@ const BookAMentor: React.FC = () => {
       .then((data: BookAMentor[]) => {
         const sortedData = data
           .filter((item) => !!item.mentorname)
-          .sort((a, b) => new Date(b.mentorname).getTime() - new Date(a.mentorname).getTime());
+          .sort(
+            (a, b) =>
+              new Date(b.mentorname).getTime() -
+              new Date(a.mentorname).getTime()
+          );
 
-        console.log('Sorted internships:', sortedData);
+        console.log("Sorted internships:", sortedData);
         setMentors(sortedData);
       })
       .catch(console.error);
   }, []);
-
-
-
 
   return (
     <section className="min-h-screen bg-caramel text-fog px-6 py-10 flex">
@@ -59,26 +56,22 @@ const BookAMentor: React.FC = () => {
 
       {/* Right side for cards */}
       <div className="flex flex-col gap-6 w-1/2 overflow-y-auto max-h-screen">
-        {mentors
-          .slice()
-          .map((item) => (
-            <MentorBookingCard
-              key={item._id}
-              mentorImage={item.mentorImage}
-              mentorname={item.mentorname}
-              linkedin={item.linkedin}
-              calendly={item.calendly}
-              role={item.role}
-              growth={item.growth}
-              topics={item.topics}
-              desc={item.desc}
-            />
-          ))}
+        {mentors.slice().map((item) => (
+          <MentorBookingCard
+            key={item._id}
+            mentorImage={item.mentorImage}
+            mentorname={item.mentorname}
+            linkedin={item.linkedin}
+            calendly={item.calendly}
+            role={item.role}
+            growth={item.growth}
+            topics={item.topics}
+            desc={item.desc}
+          />
+        ))}
       </div>
     </section>
-
   );
 };
-
 
 export default BookAMentor;

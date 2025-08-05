@@ -1,4 +1,4 @@
-import NavButton from '../components/NavButton';
+import NavButton from "../components/NavButton";
 
 const Footer = () => {
   return (
@@ -12,13 +12,13 @@ const Footer = () => {
 
           {/* Navigation links */}
           <div className="text-fog flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 text-sm text-center lg:text-left order-3 lg:order-2">
-            <NavButton to="/community" label="Community" disableHover/>
-            <NavButton to="/about" label="About" disableHover/>
-            <NavButton to="/content" label="Content" disableHover/>
-            <NavButton to="/resources" label="Resources" disableHover/>
-            <NavButton to="/faqs" label="FAQs" disableHover/>
-            <NavButton to="/contact-us" label="Contact" disableHover/>
-            <NavButton to="/book-a-mentor" label="Book a mentor" disableHover/>
+            <NavButton to="/community" label="Community" disableHover />
+            <NavButton to="/about" label="About" disableHover />
+            <NavButton to="/content" label="Content" disableHover />
+            <NavButton to="/resources" label="Resources" disableHover />
+            <NavButton to="/faqs" label="FAQs" disableHover />
+            <NavButton to="/contact-us" label="Contact" disableHover />
+            <NavButton to="/book-a-mentor" label="Book a mentor" disableHover />
           </div>
 
           {/* Social Media */}
@@ -78,8 +78,16 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-6 text-center lg:text-right">
-              <NavButton to="/terms-and-conditions" label="Terms & Conditions" disableHover/>
-              <NavButton to="/privacy-policy" label="Privacy Policy" disableHover/>
+              <NavButton
+                to="/terms-and-conditions"
+                label="Terms & Conditions"
+                disableHover
+              />
+              <NavButton
+                to="/privacy-policy"
+                label="Privacy Policy"
+                disableHover
+              />
             </div>
           </div>
         </div>

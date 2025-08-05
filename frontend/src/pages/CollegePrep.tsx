@@ -6,7 +6,8 @@ import NavHSCard from "../components/NavHSCard";
 import { RiSuitcaseLine } from "react-icons/ri";
 import { IoSchoolOutline } from "react-icons/io5";
 import { FaUserGraduate } from "react-icons/fa";
-import { LuBookOpenText } from "react-icons/lu";import { GiHeartWings } from "react-icons/gi";
+import { LuBookOpenText } from "react-icons/lu";
+import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
 
 export interface CollegePrep {
@@ -30,8 +31,7 @@ const collegeprepQuery = `
 `;
 
 const CollegePrep: React.FC = () => {
-  const [collegeprep, setCollegePrep] = useState<CollegePrep[]>([])
-
+  const [collegeprep, setCollegePrep] = useState<CollegePrep[]>([]);
 
   useEffect(() => {
     sanityClient
@@ -39,9 +39,13 @@ const CollegePrep: React.FC = () => {
       .then((data: CollegePrep[]) => {
         const sortedData = data
           .filter((item) => !!item.datePosted) // optional: skip items without date
-          .sort((a, b) => new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime());
+          .sort(
+            (a, b) =>
+              new Date(b.datePosted).getTime() -
+              new Date(a.datePosted).getTime()
+          );
 
-        console.log('Sorted resources:', sortedData);
+        console.log("Sorted resources:", sortedData);
         setCollegePrep(sortedData);
       })
       .catch(console.error);
@@ -124,8 +128,6 @@ const CollegePrep: React.FC = () => {
             resourceUrl={item.resourceUrl}
             tags={item.tags}
             datePosted={item.datePosted}
-
-
           />
         ))}
       </div>
