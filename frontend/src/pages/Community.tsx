@@ -78,7 +78,7 @@ const Community = () => {
               <RiNotification4Line size={48} />
               <h1 className="mt-4 text-xl font-semibold">early event access</h1>
               <p className="pt-6">
-                get exclusive updates and be the first to hear about upcoming
+                get real-time updates and be the first to hear about upcoming
                 events!
               </p>
             </div>
@@ -88,8 +88,7 @@ const Community = () => {
               <FaChalkboardTeacher size={48} />
               <h1 className="mt-4 text-xl font-semibold">mentorship program</h1>
               <p className="mt-4">
-                access exclusive insight and guidance from industry
-                professionals through our mentorship program.
+                access insight and guidance from peers and alumni casually or through our mentorship program.
               </p>
               <div className="px py-2 inline-block hover:text-laurel underline mt-4 tracking-wide">
                 <a href="/book-a-mentor">book a mentor</a>
