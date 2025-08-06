@@ -76,9 +76,9 @@ const Community = () => {
             {/* Notification */}
             <div className="shadow-md mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <RiNotification4Line size={48} />
-              <h1 className="mt-4 text-xl font-semibold">early event access</h1>
+              <h1 className="mt-4 text-xl font-semibold">access community events</h1>
               <p className="pt-6">
-                get real-time updates and be the first to hear about upcoming
+                get real time updates and access our community events and webinars
                 events!
               </p>
             </div>
