@@ -78,7 +78,7 @@ const About = () => {
               the storm came but it didn’t break us.
             </h1>
             <img
-              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              src="https://cdn.corenexis.com/file/c/89269482.png"
               alt="matcha"
               className="w-full lg:w-1/2 rounded-xl shadow-lg"
             />
@@ -89,7 +89,7 @@ const About = () => {
               it taught us how to start again.
             </h1>
             <img
-              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              src="https://cdn.corenexis.com/file/c/31586122.png"
               alt="matcha"
               className="w-full lg:w-1/2 rounded-xl shadow-lg"
             />
@@ -100,7 +100,7 @@ const About = () => {
               we replanted – not in spite of the rain, but because of it.
             </h1>
             <img
-              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              src="https://cdn.corenexis.com/file/c/89269482.png"
               alt="matcha"
               className="w-full lg:w-1/2 rounded-xl shadow-lg"
             />
@@ -111,7 +111,7 @@ const About = () => {
               we grew.
             </h1>
             <img
-              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              src="https://cdn.corenexis.com/file/c/31586122.png"
               alt="matcha"
               className="w-full lg:w-1/2 rounded-xl shadow-lg"
             />
@@ -125,7 +125,7 @@ const About = () => {
               </span>
             </h1>
             <img
-              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              src="https://cdn.corenexis.com/file/c/79484182.png"
               alt="matcha"
               className="w-full rounded-xl shadow-lg scale-75"
             />

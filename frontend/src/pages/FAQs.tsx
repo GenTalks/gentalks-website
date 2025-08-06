@@ -34,11 +34,11 @@ const FAQs = () => {
               />
               <FAQComp
                 question="Can I still be a community member even if I'm not in high school?"
-                answer="erm i actually dunno im just the web dev chat"
+                answer="Our resources are catered to high schoolers and early college students but anyone seeking guidance is welcome."
               />
               <FAQComp
                 question="Does GenTalks have any open positions right now?"
-                answer="As of right now, GenTalks does not have any openings. For the most accurate information, check our community page for the latest update."
+                answer="As of right now, GenTalks does not have any openings. Latest opening will be posted under the community announcements."
               />
             </div>
           </section>
@@ -55,11 +55,11 @@ const FAQs = () => {
               />
               <FAQComp
                 question="What am I able to get mentored on?"
-                answer="At GenTalks, our goal is to foster discussions focused on both personal and academic growth. We aim to blend professional insights with genuine conversations."
+                answer="Anything! We're here to help you navigate life from struggling to talk to people and make friends to studying habits"
               />
               <FAQComp
                 question="I don't know what mentor to pick. How can I decide on one?"
-                answer="The Web Development Team is currently working on a feature that will streamline choosing a mentor. Here's some questions to consider: 'Is this mentor in a position I want more insight about?', 'Do they align in a field I'm interested in?' Feel free to try out different mentors -- you can always change your mind after completing a session!"
+                answer="You can book sessions with a few different mentors you're interested in and pick one your vibe with the most!"
               />
               <FAQComp
                 question="What if the mentor I want isn't available?"
@@ -67,11 +67,11 @@ const FAQs = () => {
               />
               <FAQComp
                 question="What if I want to work with a mentor over a long period of time?"
-                answer="Long term mentorship is not encouraged at GenTalks. tom pls help me in writing this i beg u :prayge:"
+                answer="Long term mentorship is not encouraged at GenTalks."
               />
               <FAQComp
                 question="Can I request an extension to my GenTalk?"
-                answer="idk."
+                answer="You may request an extension to your booking. However it is up to the mentor's discretion to give you an extension."
               />
               <FAQComp
                 question="I'm not from the U.S. or Canada region. Can I still book a GenTalk?"
@@ -88,11 +88,7 @@ const FAQs = () => {
             <div className="font-teachers font-normal text-2xl text-left transform">
               <FAQComp
                 question="What is mentoring at GenTalks like?"
-                answer="At GenTalks, we offer a coffee-chat style of mentorship -- casual yet authentic conversations where students can learn from experienced mentors. Mentors have the freedom to choose who they engage with and what topics they'd like to discuss. They also have full control over their schedules and can take breaks whenever they need."
-              />
-              <FAQComp
-                question="What sector or industry is GenTalks focused on?"
-                answer="help im just a puny web dev pls dont find me :prayge:"
+                answer="Depending on your dynamic with your mentee, it can look very different. It can be texting, call sessions, or a combination of both. Mentors have the right to not mentor students if they don't wish to as well as full control of their schedules and boundaries."
               />
               <FAQComp
                 question="How is GenTalks different from other mentorship programs?"
@@ -104,7 +100,7 @@ const FAQs = () => {
               />
               <FAQComp
                 question="What does GenTalks look for in a mentor?"
-                answer="i trully duno."
+                answer="We look for authenticity. Everyone has had drastically different lifestyles, problems, speeds, and personalities. You don't need to know all the answers. In fact, we'd rather you don't. You just need to have the heart to care and the ears to listen."
               />
               <FAQComp
                 question="Does GenTalks monetize my time mentoring students?"

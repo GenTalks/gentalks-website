@@ -71,8 +71,49 @@ const Resources = () => {
               you.
             </p>
           </div>
-
           <div className="grid gap-8 tracking-wide grid-cols-1 md:grid-cols-3">
+            {/* Navigating High School */}
+            <Link
+              to="/navigating-high-school"
+              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+            >
+              <IoSchoolOutline size={48} />
+              <h1 className="mt-4 text-xl font-semibold">
+                Navigating High School
+              </h1>
+              <p className="pt-6">
+                Course selection, time management, and how to survive & thrive
+                in high school.
+              </p>
+            </Link>
+
+            {/* How to Adult */}
+            <Link
+              to="/how-to-adult"
+              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+            >
+              <RiGuideLine size={48} />
+              <h1 className="mt-4 text-xl font-semibold">How to Adult</h1>
+              <p className="pt-6">
+                Learn about taxes, jobs, health care, cooking, and real-world
+                life skills.
+              </p>
+            </Link>
+
+            {/* College Prep */}
+            <Link
+              to="/college-prep"
+              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+            >
+              <LuSprout size={48} />
+              <h1 className="mt-4 text-xl font-semibold">College Prep</h1>
+              <p className="pt-6">
+                All things college: applications, essays, choosing the right
+                school, and more.
+              </p>
+            </Link>
+
+
             {/* Study Sets */}
             <Link
               to="/study-resources"
@@ -108,47 +149,6 @@ const Resources = () => {
               <p className="pt-6">
                 Discover merit-based and identity-based scholarships, and how to
                 win them.
-              </p>
-            </Link>
-
-            {/* Navigating High School */}
-            <Link
-              to="/navigating-high-school"
-              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
-            >
-              <IoSchoolOutline size={48} />
-              <h1 className="mt-4 text-xl font-semibold">
-                Navigating High School
-              </h1>
-              <p className="pt-6">
-                Course selection, time management, and how to survive & thrive
-                in high school.
-              </p>
-            </Link>
-
-            {/* College Prep */}
-            <Link
-              to="/college-prep"
-              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
-            >
-              <LuSprout size={48} />
-              <h1 className="mt-4 text-xl font-semibold">College Prep</h1>
-              <p className="pt-6">
-                All things college: applications, essays, choosing the right
-                school, and more.
-              </p>
-            </Link>
-
-            {/* How to Adult */}
-            <Link
-              to="/how-to-adult"
-              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
-            >
-              <RiGuideLine size={48} />
-              <h1 className="mt-4 text-xl font-semibold">How to Adult</h1>
-              <p className="pt-6">
-                Learn about taxes, jobs, health care, cooking, and real-world
-                life skills.
               </p>
             </Link>
           </div>

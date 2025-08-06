@@ -17,7 +17,7 @@ const Contact = () => {
         <h1 className="text-xl font-teachers py-4">
           Follow us on{" "}
           <a
-            href="https://instagram.com/"
+            href="https://instagram.com/gentalksofficial"
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold"

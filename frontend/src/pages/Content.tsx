@@ -8,9 +8,7 @@ const Media = () => {
           coming soon.
         </h1>
         <p className="text-xl font-teachers text-center">
-          Making life a little sweeter one sprout at a time. <br /> <br />
-          We're taking suggestions on what this page should be (previously
-          content). Please make recommendations to our devs in the Discord!
+          We're baking cookies but we burnt the past 30 batches. A non-burnt batch is coming soon!
         </p>
       </section>
       <DiscordBanner />

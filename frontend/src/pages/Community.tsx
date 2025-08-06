@@ -68,7 +68,7 @@ const Community = () => {
                 access unique tools and a supportive community available only at
                 GenTalks
               </p>
-              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-basil hover:text-cream mt-8 tracking-wide">
+              <div className="px py-2 inline-block hover:text-laurel underline mt-4 tracking-wide">
                 <a href="/resources">view resources</a>
               </div>
             </div>
@@ -91,7 +91,7 @@ const Community = () => {
                 access exclusive insight and guidance from industry
                 professionals through our mentorship program.
               </p>
-              <div className="px-4 py-2 inline-block rounded-full border-laurel border-2 bg-cream text-laurel hover:border-cream hover:bg-basil hover:text-cream mt-10 tracking-wide">
+              <div className="px py-2 inline-block hover:text-laurel underline mt-4 tracking-wide">
                 <a href="/book-a-mentor">book a mentor</a>
               </div>
             </div>
@@ -111,7 +111,7 @@ const Community = () => {
             </p>
           </div>
           <img
-            src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+            src="https://cdn.corenexis.com/file/c/89269482.png"
             alt="matcha"
             className="pr-8 w-full lg:w-1/2 rounded-xl shadow-lg mt-4 lg:mt-0"
           />
@@ -128,7 +128,7 @@ const Community = () => {
             </p>
           </div>
           <img
-            src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+            src="https://cdn.corenexis.com/file/c/31586122.png"
             alt="matcha"
             className="pl-8 w-full lg:w-1/2 rounded-xl shadow-lg mt-4 lg:mt-0"
           />
