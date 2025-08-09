@@ -94,6 +94,7 @@ const InternshipsSchema = {
           { title: 'Intense workplace culture', value: 'intense workplace culture' },
           { title: 'Commitment length', value: 'commitment length' },
           { title: 'Startup environment', value: 'startup environment' },
+          { title: 'None', value: 'none' },
         ],
       },
       validation: Rule => Rule.required()
