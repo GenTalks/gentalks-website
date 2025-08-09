@@ -37,7 +37,7 @@ const Resources = () => {
             </p>
           </div>
           <img
-            src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+            src="https://i.imgur.com/n19WXEh.png"
             alt="matcha"
             className="pr-8 w-full lg:w-1/2 rounded-xl shadow-lg mt-4 lg:mt-0"
           />
@@ -54,7 +54,7 @@ const Resources = () => {
             </p>
           </div>
           <img
-            src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+            src="https://i.imgur.com/n19WXEh.png"
             alt="matcha"
             className="pr-8 w-full lg:w-1/2 rounded-xl shadow-lg mt-4 lg:mt-0"
           />

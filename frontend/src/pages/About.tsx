@@ -78,7 +78,7 @@ const About = () => {
               the storm came but it didn’t break us.
             </h1>
             <img
-              src="https://i.pinimg.com/originals/f4/ec/15/f4ec154d18b85efea1c2a49c5bbd29ee.png"
+              src="https://i.imgur.com/n19WXEh.png"
               alt="matcha"
               className="w-full lg:w-1/2 rounded-xl shadow-lg"
             />
@@ -89,7 +89,7 @@ const About = () => {
               it taught us how to start again.
             </h1>
             <img
-              src="https://i.pinimg.com/originals/f4/ec/15/f4ec154d18b85efea1c2a49c5bbd29ee.png"
+              src="https://i.imgur.com/n19WXEh.png"
               alt="matcha"
               className="w-full lg:w-1/2 rounded-xl shadow-lg"
             />
@@ -100,7 +100,7 @@ const About = () => {
               we replanted – not in spite of the rain, but because of it.
             </h1>
             <img
-              src="https://i.pinimg.com/originals/f4/ec/15/f4ec154d18b85efea1c2a49c5bbd29ee.png"
+              src="https://i.imgur.com/n19WXEh.png"
               alt="matcha"
               className="w-full lg:w-1/2 rounded-xl shadow-lg"
             />
@@ -111,7 +111,7 @@ const About = () => {
               we grew.
             </h1>
             <img
-              src="https://i.pinimg.com/originals/f4/ec/15/f4ec154d18b85efea1c2a49c5bbd29ee.png"
+              src="https://i.imgur.com/n19WXEh.png"
               alt="matcha"
               className="w-full lg:w-1/2 rounded-xl shadow-lg"
             />
@@ -125,7 +125,7 @@ const About = () => {
               </span>
             </h1>
             <img
-              src="https://i.pinimg.com/originals/f4/ec/15/f4ec154d18b85efea1c2a49c5bbd29ee.png"
+              src="https://i.imgur.com/n19WXEh.png"
               alt="matcha"
               className="w-full rounded-xl shadow-lg scale-75"
             />
