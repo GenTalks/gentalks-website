@@ -1,67 +1,71 @@
-import DiscordBanner from "../components/DiscordBanner";
+import React, { useEffect, useState } from "react";
+import { sanityClient } from "../lib/sanityClient";
+import { Link } from "react-router-dom";
 
-const Blogs = () => {
+interface BlogPost {
+  title: string;
+  author: string,
+  slug: { current: string };
+  summary: string;
+  publishedAt: string;
+}
+
+const Blogs : React.FC = () => {
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const query = `*[_type == "blogPost"] | order(publishedAt desc){
+          title,
+          author,
+          slug,
+          summary,
+          publishedAt
+        }`;
+        const data = await sanityClient.fetch(query);
+        setPosts(data);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
   return (
-    <div className="text-fog bg-cream">
-      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide ">
-        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-teachers">
-          contact us!
-        </h1>
-        <p className="text-xl font-teachers">
-          We're always available to talk and will respond as fast as possible!
-          Feel free to join our community, and connect with us on our socials!
-        </p>
-      </section>
+    <div className="min-h-screen bg-cream text-fog px-4 py-12 max-w-5xl mx-auto">
+      <h1 className="text-4xl font-teachers mb-8 text-center">GenBlogs</h1>
 
-      <section className="w-2/3 flex flex-col py-8 space-y-6 items-center mx-auto tracking-wide">
-        <h1 className="text-xl font-teachers py-4">
-          Follow us on{" "}
-          <a
-            href="https://instagram.com/gentalksofficial"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold"
-          >
-            Instagram
-          </a>{" "}
-        </h1>
-
-        <h1 className="text-xl font-teachers py-4">
-          Follow us on{" "}
-          <a
-            href="https://tiktok.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold"
-          >
-            TikTok
-          </a>{" "}
-        </h1>
-
-        <h1 className="text-xl font-teachers text-left py-4">
-          Follow our{" "}
-          <a
-            href="https://www.linkedin.com/company/gentalks/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold"
-          >
-            LinkedIn
-          </a>{" "}
-          page for the latest news and position openings
-        </h1>
-      </section>
-
-      <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide mb-12">
-        <p className="text-xl font-teachers mt-8">
-          Email us at <strong>gentalks.official@gmail.com</strong> or join our
-          Discord community below!
-        </p>
-      </section>
-
-      <div className="py-16 bg-caramel">
-        <DiscordBanner />
-      </div>
+      {loading ? (
+        <p className="text-center text-xl">Loading posts...</p>
+      ) : posts.length === 0 ? (
+        <p className="text-center text-xl">No blog posts found.</p>
+      ) : (
+        <ul className="space-y-8">
+          {posts.map((post) => (
+            <li key={post.slug.current} className="border rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
+              <Link to={`/blog/${post.slug.current}`}>
+                <a className="block">
+                  <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
+                  <p className="text-xl font-semibold mb-2">by {post.author}</p>
+                  <p className="text-fog mb-3">{post.summary}</p>
+                  <time className="text-sm text-fog">
+                    {new Date(post.publishedAt).toLocaleDateString(undefined, {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

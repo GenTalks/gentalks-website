@@ -6,6 +6,8 @@ import studyresource from './StudyResourcesSchema'
 import navhs from './NavHSSchema'
 import collegeprep from './CollegePrepSchema'
 import mentorpage from './MentorPageSchema'
+import blogpost from './BlogPostSchema'
+import blockcontent from './BlockContent'
 
 export const schemaTypes: SchemaTypeDefinition[] = [
     internship,
@@ -15,4 +17,6 @@ export const schemaTypes: SchemaTypeDefinition[] = [
     navhs,
     collegeprep,
     mentorpage,
+    blogpost,
+    blockcontent,
 ]

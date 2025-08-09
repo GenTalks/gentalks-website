@@ -95,7 +95,7 @@ const Resources = () => {
               <RiGuideLine size={48} />
               <h1 className="mt-4 text-xl font-semibold">How to Adult</h1>
               <p className="pt-6">
-                Learn about taxes, jobs, health care, cooking, and real-world
+                Learn about taxes, jobs, health care, cooking, personal resources, and real-world
                 life skills.
               </p>
             </Link>

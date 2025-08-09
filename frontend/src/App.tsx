@@ -5,6 +5,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import About from "./pages/About";
 import Community from "./pages/Community";
 import Blogs from "./pages/Blogs";
+import BlogPostPage from "./pages/BlogPostPage";
 import Playground from "./pages/Playground";
 import Home from "./pages/Home";
 import BookAMentor from "./pages/BookAMentor";
@@ -32,6 +33,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/playground" element={<Playground />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/book-a-mentor" element={<BookAMentor />} />
