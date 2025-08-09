@@ -32,6 +32,7 @@ const InternshipsSchema = {
         list: [
           { title: 'Paid', value: 'paid' },
           { title: 'Unpaid', value: 'unpaid' },
+          { title: 'Volunteer', value: 'volunteer'},
         ],
       },
       validation: Rule => Rule.required(),
