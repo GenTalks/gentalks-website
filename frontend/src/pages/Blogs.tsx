@@ -24,7 +24,7 @@ const Blogs : React.FC = () => {
           slug,
           summary,
           publishedAt,
-          group
+          group,
         }`;
         const data = await sanityClient.fetch(query);
         setPosts(data);
