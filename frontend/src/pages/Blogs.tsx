@@ -8,6 +8,7 @@ interface BlogPost {
   slug: { current: string };
   summary: string;
   publishedAt: string;
+  group: string;
 }
 
 const Blogs : React.FC = () => {
@@ -22,7 +23,8 @@ const Blogs : React.FC = () => {
           author,
           slug,
           summary,
-          publishedAt
+          publishedAt,
+          group
         }`;
         const data = await sanityClient.fetch(query);
         setPosts(data);
@@ -52,6 +54,7 @@ const Blogs : React.FC = () => {
                 <a className="block">
                   <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
                   <p className="text-xl font-semibold mb-2">by {post.author}</p>
+                  <p className="text-xl font-normal mb-2">Group: {post.group} </p>
                   <p className="text-fog mb-3">{post.summary}</p>
                   <time className="text-sm text-fog">
                     {new Date(post.publishedAt).toLocaleDateString(undefined, {

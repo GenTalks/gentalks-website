@@ -60,6 +60,18 @@ const BlogPostSchema = {
             title: 'Published At',
             type: 'datetime',
         }),
+        defineField({
+            name: 'group',
+            title: 'Group',
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'Staff', value: 'staff' },
+                    { title: 'Student', value: 'student' },
+                ],
+            },
+            validation: Rule => Rule.required(),
+        }),
     ]
 }
 
