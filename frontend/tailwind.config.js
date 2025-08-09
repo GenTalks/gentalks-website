@@ -26,6 +26,7 @@ export default {
         sage: '#BAC4A6',
         caramel: '#FFF7F0',
         cream: '#FFFBF8',
+        mahogany: '#D65871',
       },
       dropShadow: {
         evergreen: '3px 5px 4px rgba(51, 85, 52, 0.8)',

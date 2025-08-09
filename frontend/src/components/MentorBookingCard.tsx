@@ -30,7 +30,7 @@ const MentorBooking: React.FC<MentorBookingCardProps> = ({
         <div className="flex-shrink-0 flex justify-center">
           <img
             src={mentorImage}
-            alt="https://wallpaperaccess.com/full/55259.png"
+            alt="https://i.imgur.com/n19WXEh.png"
             className="w-32 h-32 rounded-xl object-cover"
           />
         </div>

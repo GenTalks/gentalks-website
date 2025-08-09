@@ -14,10 +14,10 @@ const Footer = () => {
           <div className="text-fog flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 text-sm text-center lg:text-left order-3 lg:order-2">
             <NavButton to="/community" label="Community" disableHover />
             <NavButton to="/about" label="About" disableHover />
-            <NavButton to="/content" label="Content" disableHover />
+            <NavButton to="/playground" label="Playground" disableHover />
+            <NavButton to="/blogs" label="Blogs" disableHover />
             <NavButton to="/resources" label="Resources" disableHover />
             <NavButton to="/faqs" label="FAQs" disableHover />
-            <NavButton to="/contact-us" label="Contact" disableHover />
             <NavButton to="/book-a-mentor" label="Book a mentor" disableHover />
           </div>
 

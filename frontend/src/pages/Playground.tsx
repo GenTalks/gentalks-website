@@ -1,6 +1,6 @@
 import DiscordBanner from "../components/DiscordBanner";
 
-const Media = () => {
+const Playground = () => {
   return (
     <div className="text-fog bg-cream">
       <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide">
@@ -16,4 +16,4 @@ const Media = () => {
   );
 };
 
-export default Media;
+export default Playground;

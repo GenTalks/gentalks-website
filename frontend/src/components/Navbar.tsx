@@ -24,10 +24,10 @@ export default function Navbar() {
         <div className="text-fog ">
           <NavButton to="/community" label="Community" />
           <NavButton to="/about" label="About" />
-          <NavButton to="/content" label="Content" />
+          <NavButton to="/playground" label="Playground" />
+          <NavButton to="/blogs" label="Blogs" />
           <NavButton to="/resources" label="Resources" />
           <NavButton to="/faqs" label="FAQs" />
-          <NavButton to="/contact-us" label="Contact" />
         </div>
 
         <div>
@@ -68,23 +68,32 @@ export default function Navbar() {
             label="Community"
             onClick={() => setOpen(false)}
           />
-          <NavButton to="/about" label="About" onClick={() => setOpen(false)} />
+
           <NavButton
-            to="/content"
-            label="Content"
+            to="/about"
+            label="About"
             onClick={() => setOpen(false)}
           />
+
+          <NavButton
+            to="/playground"
+            label="Playground"
+            onClick={() => setOpen(false)}
+          />
+
+          <NavButton
+            to="/blogs"
+            label="Blogs"
+            onClick={() => setOpen(false)}
+          />
+
           <NavButton
             to="/resources"
             label="Resources"
             onClick={() => setOpen(false)}
           />
           <NavButton to="/faqs" label="FAQs" onClick={() => setOpen(false)} />
-          <NavButton
-            to="/contact-us"
-            label="Contact"
-            onClick={() => setOpen(false)}
-          />
+
           <NavButton
             to="/book-a-mentor"
             label="Book a mentor"

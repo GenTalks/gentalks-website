@@ -4,6 +4,7 @@ import { LuSprout } from "react-icons/lu";
 import { RiNotification4Line } from "react-icons/ri";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import DiscordButton from "../components/DiscordButton";
+import StatusLight from "../components/StatusLight";
 
 const Community = () => {
   return (
@@ -19,28 +20,27 @@ const Community = () => {
           </div>
           <div className="border-fog border-2 bg-cream text-fog p-8 rounded-xl shadow-lg font-teachers text-lg leading-relaxed mt-8">
             <div className="text-left px-4 font-semibold tracking-widest">
-              date posted: August 1, 2025
+              date posted: August 8, 2025
             </div>
 
             <hr className="my-4 border-t-2 border-fog" />
 
             <div className="px-4 text-left tracking-wide">
-              it's hard launch day! hello everyone, we're the developer team at
-              GenTalks, and we're still working on the website. a little bit
-              about GenTalks -- we want to help high schoolers build their
-              future. click the button below to join our Discord community,
-              whether you're a high school student or you just want to support
-              our journey! thank you everyone so much for growing with us 😉
+              Are you a high schooler looking for something to put on your college apps or just want something to do?
+              Look no further!! GenTalks is now offering the opportunity for you to be an ambassador for us.
+              Apply and join our team! We can't wait to see your applications 🙂
             </div>
 
-            <div className="mt-4">
+            {/* <div className="mt-4">
               <DiscordButton />
-            </div>
-            {/*Other reference button
+            </div> */}
+            {/* Other reference button */}
             <div className="px-4 py-2 inline-block rounded-full border-cream border-2 bg-laurel text-cream hover:border-laurel hover:bg-cream hover:text-laurel mt-6 tracking-wide">
-              
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIpOiUV_nKq48-ifvL--rmpPAWVplYJ5Ux57auAAR43GEdmQ/viewform">
+                Apply now!
+              </a>
             </div>
-            */}
+
           </div>
         </div>
       </section>
@@ -104,13 +104,31 @@ const Community = () => {
             <h1 className="font-semibold font-teachers text-4xl text-center">
               student ambassador program
             </h1>
-            <p className="font-teachers font-normal text-center text-xl mt-4 px-8 mb-8">
-              we will soon be opening student ambassador program applications.
-              stay tuned and join our discord for the latest updates!
-            </p>
+
+            <div className="space-y-4 text-center font-teachers font-normal my-8">
+              <StatusLight status="open" /> < br />
+            </div>
+            <ul className="list-disc list-inside text-center font-teachers text-xl my-8">
+              <li>Represent GenTalks in your school or community</li>
+              <li>Share the space with others who might benefit</li>
+              <li>Dedicate 2-3 hours per month (projects & communication)</li>
+              <li>Spread awareness gently (word of mouth, social shares)</li>
+              <li>Share what high schoolers really want and need</li>
+            </ul>
+
+            <div className="space-y-4 text-center font-teachers font-normal gap-8">
+              <div className="text-xl inline-block text-center font-teachers font-normal px-4 py-2 border-cream border-2 hover:border-laurel rounded-full bg-laurel text-cream hover:bg-cream hover:text-laurel">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIpOiUV_nKq48-ifvL--rmpPAWVplYJ5Ux57auAAR43GEdmQ/viewform">
+                  apply here!
+                </a>
+              </div>
+            </div>
+
+
+
           </div>
           <img
-            src="https://cdn.corenexis.com/file/c/89269482.png"
+            src="https://i.imgur.com/n19WXEh.png"
             alt="matcha"
             className="pr-8 w-full lg:w-1/2 rounded-xl shadow-lg mt-4 lg:mt-0"
           />
@@ -127,7 +145,7 @@ const Community = () => {
             </p>
           </div>
           <img
-            src="https://cdn.corenexis.com/file/c/31586122.png"
+            src="https://i.imgur.com/n19WXEh.png"
             alt="matcha"
             className="pl-8 w-full lg:w-1/2 rounded-xl shadow-lg mt-4 lg:mt-0"
           />

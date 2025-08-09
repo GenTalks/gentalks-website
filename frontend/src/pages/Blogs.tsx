@@ -1,6 +1,6 @@
 import DiscordBanner from "../components/DiscordBanner";
 
-const Contact = () => {
+const Blogs = () => {
   return (
     <div className="text-fog bg-cream">
       <section className="w-full flex flex-col items-center py-8 space-y-6 tracking-wide ">
@@ -66,4 +66,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Blogs;

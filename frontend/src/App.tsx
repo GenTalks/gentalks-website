@@ -4,8 +4,8 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import About from "./pages/About";
 import Community from "./pages/Community";
-import Contact from "./pages/Contact";
-import Content from "./pages/Content";
+import Blogs from "./pages/Blogs";
+import Playground from "./pages/Playground";
 import Home from "./pages/Home";
 import BookAMentor from "./pages/BookAMentor";
 import Resources from "./pages/Resources";
@@ -30,10 +30,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/community" element={<Community />} />
             <Route path="/about" element={<About />} />
-            <Route path="/content" element={<Content />} />
+            <Route path="/playground" element={<Playground />} />
+            <Route path="/blogs" element={<Blogs />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/faqs" element={<FAQs />} />
-            <Route path="/contact-us" element={<Contact />} />
             <Route path="/book-a-mentor" element={<BookAMentor />} />
             <Route path="/terms-and-conditions" element={<TermsConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />

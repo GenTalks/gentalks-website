@@ -28,7 +28,7 @@ const Home = () => {
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <h2 className="text-4xl lg:text-6xl font-bold">
-              innovation meets impact.
+              accessibility meets impact.
             </h2>
 
             <div className="border-laurel border-2 bg-cream text-laurel rounded-full scale-125 hover:border-basil hover:bg-basil hover:text-cream">
@@ -58,7 +58,7 @@ const Home = () => {
             5+ <br />
             <span className="text-lg font-teachers">mentors</span>
             <img
-              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              src="https://i.imgur.com/n19WXEh.png"
               alt="matcha"
               className="w-full rounded-xl shadow-lg scale-75"
             />
@@ -67,7 +67,7 @@ const Home = () => {
             1+ <br />
             <span className="text-lg font-teachers">gentalks booked</span>
             <img
-              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              src="https://i.imgur.com/n19WXEh.png"
               alt="matcha"
               className="w-full rounded-xl shadow-lg scale-75"
             />
@@ -76,7 +76,7 @@ const Home = () => {
             150+ <br />
             <span className="text-lg font-teachers">community members</span>
             <img
-              src="https://static.vecteezy.com/system/resources/previews/010/415/001/large_2x/matcha-set-hand-drawn-illustrations-vector.jpg"
+              src="https://i.imgur.com/n19WXEh.png"
               alt="matcha"
               className="w-full rounded-xl shadow-lg scale-75"
             />
