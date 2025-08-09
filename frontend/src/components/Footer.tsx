@@ -40,7 +40,7 @@ const Footer = () => {
 
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/gentalksofficial?igsh=NTh1eXlxb2kxNDhy"
               target="_blank"
               className="w-6 h-6 text-fog hover:text-laurel transition-colors"
             >
