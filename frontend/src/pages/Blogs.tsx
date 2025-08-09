@@ -39,7 +39,7 @@ const Blogs : React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-cream text-fog px-4 py-12 max-w-5xl mx-auto">
+    <div className="min-h-screen font-teachers bg-cream text-fog px-4 py-12 max-w-5xl mx-auto">
       <h1 className="text-4xl font-teachers mb-8 text-center">GenBlogs</h1>
 
       {loading ? (
@@ -47,9 +47,9 @@ const Blogs : React.FC = () => {
       ) : posts.length === 0 ? (
         <p className="text-center text-xl">No blog posts found.</p>
       ) : (
-        <ul className="space-y-8">
+        <ul className="space-y-8 font-teachers">
           {posts.map((post) => (
-            <li key={post.slug.current} className="border rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
+            <li key={post.slug.current} className="border rounded-lg p-6  font-teachers hover:shadow-lg transition-shadow duration-200">
               <Link to={`/blog/${post.slug.current}`}>
                 <a className="block">
                   <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
