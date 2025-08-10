@@ -12,6 +12,16 @@ interface InternshipCardProps {
   datePosted?: string;
 }
 
+function formatLocalDate(dateString: string) {
+  const [year, month, day] = dateString.split("-").map(Number);
+  const localDate = new Date(year, month - 1, day);
+  return localDate.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 const InternshipCard: React.FC<InternshipCardProps> = ({
   title,
   company,
@@ -33,10 +43,10 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
         <strong>Location:</strong> {location || "N/A"}
       </p>
 
-      {/* Add Date Posted*/}
+      {/* Add Date Posted */}
       <p>
         <strong>Date Posted:</strong>{" "}
-        {datePosted ? new Date(datePosted).toLocaleDateString() : "N/A"}
+        {datePosted ? formatLocalDate(datePosted) : "N/A"}
       </p>
 
       <p>
@@ -49,12 +59,12 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
       <p className="mt-2 leading-[2.5rem]">
         <strong>Industries:</strong>{" "}
         {industries?.length
-          ? industries.map((industries, i) => (
+          ? industries.map((industry, i) => (
               <span
                 key={i}
                 className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
               >
-                {industries}
+                {industry}
               </span>
             ))
           : "N/A"}

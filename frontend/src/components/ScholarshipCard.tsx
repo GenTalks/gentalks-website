@@ -10,7 +10,6 @@ interface ScholarshipCardProps {
   applicationUrl?: string;
 }
 
-// Helper function to parse date string as local date and format it nicely
 function formatLocalDate(dateString: string) {
   const [year, month, day] = dateString.split("-").map(Number);
   const localDate = new Date(year, month - 1, day);
