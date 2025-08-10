@@ -10,6 +10,17 @@ interface ScholarshipCardProps {
   applicationUrl?: string;
 }
 
+// Helper function to parse date string as local date and format it nicely
+function formatLocalDate(dateString: string) {
+  const [year, month, day] = dateString.split("-").map(Number);
+  const localDate = new Date(year, month - 1, day);
+  return localDate.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 const ScholarshipCard: React.FC<ScholarshipCardProps> = ({
   title,
   organization,
@@ -26,7 +37,7 @@ const ScholarshipCard: React.FC<ScholarshipCardProps> = ({
 
       <p>
         <strong>Application Deadline:</strong>{" "}
-        {deadline ? new Date(deadline).toLocaleDateString() : "N/A"}
+        {deadline ? formatLocalDate(deadline) : "N/A"}
       </p>
 
       <p>
