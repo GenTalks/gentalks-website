@@ -8,6 +8,16 @@ interface NavHSCardProps {
   datePosted?: string;
 }
 
+function formatLocalDate(dateString: string) {
+  const [year, month, day] = dateString.split("-").map(Number);
+  const localDate = new Date(year, month - 1, day);
+  return localDate.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 const NavHSCard: React.FC<NavHSCardProps> = ({
   title,
   author,
@@ -23,27 +33,27 @@ const NavHSCard: React.FC<NavHSCardProps> = ({
         <strong>by:</strong> {author || "N/A"}
       </p>
 
-      {/* Add Date Posted*/}
+      {/* Add Date Posted */}
       <p>
-        Date Posted:{" "}
-        {datePosted ? new Date(datePosted).toLocaleDateString() : "N/A"}
+        <strong>Date Posted:</strong>{" "}
+        {datePosted ? formatLocalDate(datePosted) : "N/A"}
       </p>
 
       <p className="mt-2 leading-[2.5rem]">
         <strong>Tags:</strong>{" "}
         {tags?.length
-          ? tags.map((tags, i) => (
+          ? tags.map((tag, i) => (
               <span
                 key={i}
                 className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
               >
-                {tags}
+                {tag}
               </span>
             ))
           : "N/A"}
       </p>
 
-      {/* Application Link Button */}
+      {/* Resource Link Button */}
       {resourceUrl ? (
         <a
           href={resourceUrl}

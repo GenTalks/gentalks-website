@@ -7,6 +7,16 @@ interface StudyResourceCardProps {
   dateCreated?: string;
 }
 
+function formatLocalDate(dateString: string) {
+  const [year, month, day] = dateString.split("-").map(Number);
+  const localDate = new Date(year, month - 1, day);
+  return localDate.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 const StudyResourceCard: React.FC<StudyResourceCardProps> = ({
   title,
   subject,
@@ -17,10 +27,10 @@ const StudyResourceCard: React.FC<StudyResourceCardProps> = ({
     <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream shadow hover:shadow-md transition">
       <h3 className="text-xl font-semibold">{title}</h3>
 
-      {/* Add Date Posted*/}
+      {/* Add Date Created */}
       <p>
         <strong>Date Created:</strong>{" "}
-        {dateCreated ? new Date(dateCreated).toLocaleDateString() : "N/A"}
+        {dateCreated ? formatLocalDate(dateCreated) : "N/A"}
       </p>
 
       <p className="mt-2 leading-[2.5rem]">
@@ -34,7 +44,7 @@ const StudyResourceCard: React.FC<StudyResourceCardProps> = ({
         )}
       </p>
 
-      {/* Application Link Button */}
+      {/* Resource Link Button */}
       {resourceUrl ? (
         <a
           href={resourceUrl}
