@@ -1,8 +1,8 @@
 import { defineField } from 'sanity'
 
-const BlogPostSchema = {
-    name: 'blogPost',
-    title: 'Blog Post',
+const StudentStoriesSchema = {
+    name: 'studentStories',
+    title: 'Student Stories',
     type: 'document',
     fields: [
         defineField({
@@ -64,4 +64,4 @@ const BlogPostSchema = {
 }
 
 
-export default BlogPostSchema;
+export default StudentStoriesSchema;

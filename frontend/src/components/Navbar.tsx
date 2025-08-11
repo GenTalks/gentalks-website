@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className="text-fog ">
           <NavButton to="/community" label="Community" />
           <NavButton to="/about" label="About" />
-          <NavButton to="/playground" label="Playground" />
+          <NavButton to="/student-center" label="Student Center" />
           <NavButton to="/blogs" label="Blogs" />
           <NavButton to="/resources" label="Resources" />
           <NavButton to="/faqs" label="FAQs" />
@@ -76,8 +76,8 @@ export default function Navbar() {
           />
 
           <NavButton
-            to="/playground"
-            label="Playground"
+            to="/student-center"
+            label="Student Center"
             onClick={() => setOpen(false)}
           />
 

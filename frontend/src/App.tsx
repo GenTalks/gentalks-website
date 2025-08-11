@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Community from "./pages/Community";
 import Blogs from "./pages/Blogs";
 import BlogPostPage from "./pages/BlogPostPage";
-import Playground from "./pages/Playground";
+import StudentCenter from "./pages/StudentCenter";
 import Home from "./pages/Home";
 import BookAMentor from "./pages/BookAMentor";
 import Resources from "./pages/Resources";
@@ -19,6 +19,9 @@ import StudyResources from "./pages/StudyResources";
 import Internships from "./pages/Internships";
 import NavHS from "./pages/NavHS";
 import Scholarships from "./pages/Scholarships";
+import StudentStories from "./pages/StudentStories";
+import StudentStory from "./pages/StudentStoryPage";
+import StudentProjects from "./pages/StudentProjects";
 
 function App() {
   return (
@@ -31,7 +34,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/community" element={<Community />} />
             <Route path="/about" element={<About />} />
-            <Route path="/playground" element={<Playground />} />
+            <Route path="/student-center" element={<StudentCenter />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/resources" element={<Resources />} />
@@ -45,6 +48,9 @@ function App() {
             <Route path="/internships" element={<Internships />} />
             <Route path="/navigating-high-school" element={<NavHS />} />
             <Route path="/scholarships" element={<Scholarships />} />
+            <Route path="/student-stories" element={<StudentStories />} />
+            <Route path="/student-story/:slug" element={<StudentStory />} />
+            <Route path="/student-projects" element={<StudentProjects />} />
           </Routes>
         </main>
 
