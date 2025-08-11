@@ -9,14 +9,15 @@ interface AdultingCardProps {
 }
 
 function formatLocalDate(dateString: string) {
-  const [year, month, day] = dateString.split("-").map(Number);
-  const localDate = new Date(year, month - 1, day);
-  return localDate.toLocaleDateString(undefined, {
+  const utcDate = new Date(dateString + "T00:00:00Z");
+  return utcDate.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "America/Los_Angeles",
   });
 }
+
 
 const AdultingCard: React.FC<AdultingCardProps> = ({
   title,
