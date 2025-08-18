@@ -98,7 +98,7 @@ const MentorBooking: React.FC<MentorBookingCardProps> = ({
       </div>
       {/* Description */}
       <div>
-        <p className="text-md p-4">{desc || "No description provided."}</p>
+        <p className="whiteSpace-pre-line text-md p-4">{desc || "No description provided."}</p>
       </div>
     </div>
   );
