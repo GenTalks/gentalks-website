@@ -72,7 +72,7 @@ const MentorCarousel = () => {
         <NavButton
           to="/book-a-mentor"
           label="book a mentor"
-          className="border-cream border-2 bg-laurel text-cream px-6 py-2 rounded-full hover:text-laurel hover:bg-cream hover:border-laurel"
+          className="border-laurel border-2 bg-laurel text-cream px-6 py-2 rounded-full hover:text-laurel hover:bg-cream hover:border-laurel"
           disableHover
         />
       </div>

@@ -7,7 +7,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 relative flex items-center justify-between px-6 2xl:px-12 py-4 bg-cream shadow-deep tracking-wide">
+    <nav className="sticky top-0 z-50 relative flex items-center justify-between shadow-sm px-6 2xl:px-12 py-4 bg-cream tracking-wide">
       <div className="shrink-0">
         <HomeButton onClick={() => setOpen(false)} />
       </div>
@@ -62,7 +62,7 @@ export default function Navbar() {
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 right-0 bg-cream flex flex-col items-center space-y-4 p-6 shadow-md 2xl:hidden z-50 text-fog">
+        <div className="absolute top-full left-0 right-0 bg-cream flex flex-col items-center shadow-sm space-y-4 p-6 2xl:hidden z-50 text-fog">
           <NavButton
             to="/community"
             label="Community"

@@ -38,8 +38,8 @@ const Home = () => {
 
           <p className="text-lg lg:text-xl leading-relaxed">
             GenTalks is empowering a student-led community through mentorship,
-            storytelling, and accessible resources as we aim to create the next
-            generation of changemakers.
+            connection, and accessible resources as we aim to inspire and develop the next
+            generation of change-makers.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ const Home = () => {
 
       <section className="bg-cream py-12 px-8 font-teachers">
         <div className="flex justify-center text-fog">
-          <h2 className="text-2xl lg:text-4xl font-bold text-center">
+          <h2 className="text-2xl lg:text-4xl font-bold text-center tracking-md">
             our community at a glance
           </h2>
         </div>
@@ -64,7 +64,7 @@ const Home = () => {
             />
           </div>
           <div className="w-full md:w-1/3 py-8">
-            1+ <br />
+            10+ <br />
             <span className="text-lg font-teachers">gentalks booked</span>
             <img
               src="https://i.imgur.com/n19WXEh.png"
@@ -73,7 +73,7 @@ const Home = () => {
             />
           </div>
           <div className="w-full md:w-1/3 py-8">
-            150+ <br />
+            200+ <br />
             <span className="text-lg font-teachers">community members</span>
             <img
               src="https://i.imgur.com/n19WXEh.png"
