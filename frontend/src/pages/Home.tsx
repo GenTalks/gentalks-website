@@ -102,15 +102,15 @@ const Home = () => {
           <div className="w-full lg:w-1/2 flex flex-col space-y-4 font-teachers items-center">
             <FAQComp
               question="What am I able to get mentored on?"
-              answer="At GenTalks, we foster a positive environment designed to empower the academic community."
+              answer="At GenTalks, we aim to empower the academic community through guidance on academic excellence."
             />
             <FAQComp
               question="Do I have to pay for GenTalks' services?"
-              answer="Never. Our program will always be free."
+              answer="Never. Our program will always be free and will never monetize GenTalks bookings."
             />
             <FAQComp
-              question="How can I join the community?"
-              answer="Our Discord community is linked right below."
+              question="How can I become a mentor?"
+              answer="You can check out our mentors page "
             />
           </div>
         </div>

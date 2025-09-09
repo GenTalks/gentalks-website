@@ -50,7 +50,7 @@ const Resources = () => {
             </h1>
             <p className="px-12 py-8 font-teachers font-normal text-center text-xl mt-2">
               Reading all those financial terms must be confusing. Don't worry,
-              GenTalks is here to help!
+              GenTalks is here!
             </p>
           </div>
           <img
