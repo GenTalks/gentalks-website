@@ -23,18 +23,20 @@ const StudentCenter = () => {
             <hr className="my-4 border-t-2 border-fog" />
 
             <div className="px-4 text-left tracking-wide">
-              student center is officially open! stay tuned for the application links!
+              student center is officially open! 
+              think the website is missing something or want to show off your research project or looking for collaborators on your latest side quest? 
+              we gotchu - apply below to launch your idea with gentalks.
             </div>
 
-            <div className="mt-4">
+            {/* <div className="mt-4">
               <DiscordButton />
-            </div>
+            </div> */}
             {/* Other reference button */}
-            {/* <div className="px-4 py-2 inline-block rounded-full border-cream border-2 bg-laurel text-cream hover:border-laurel hover:bg-cream hover:text-laurel mt-6 tracking-wide">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIpOiUV_nKq48-ifvL--rmpPAWVplYJ5Ux57auAAR43GEdmQ/viewform">
+            <div className="px-4 py-2 inline-block rounded-full border-cream border-2 bg-laurel text-cream hover:border-laurel hover:bg-cream hover:text-laurel mt-6 tracking-wide">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwTopvpZZdVoXLrAhWsc_Ekl8YuTCgD05sD_UrbdMWj_0RCw/viewform">
                 Apply now!
               </a>
-            </div> */}
+            </div>
 
           </div>
         </div>
