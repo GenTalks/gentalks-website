@@ -1,7 +1,7 @@
 import DiscordBanner from "../components/DiscordBanner";
 import { TfiAnnouncement } from "react-icons/tfi";
 import ExploreButton from "../components/ExploreButton";
-import DiscordButton from "../components/DiscordButton";
+// import DiscordButton from "../components/DiscordButton";
 
 const StudentCenter = () => {
   return (
@@ -17,7 +17,7 @@ const StudentCenter = () => {
           </div>
           <div className="border-fog border-2 bg-cream text-fog p-8 rounded-xl shadow-lg font-teachers text-lg leading-relaxed mt-8">
             <div className="text-left px-4 font-semibold tracking-widest">
-              date posted: August 11, 2025
+              date posted: September 14, 2025
             </div>
 
             <hr className="my-4 border-t-2 border-fog" />
