@@ -50,12 +50,12 @@ const BookAMentor: React.FC = () => {
   }, []);
 
   return (
-    <section className="min-h-screen bg-caramel text-fog px-6 py-10 flex">
+    <section className="min-h-screen bg-cream text-fog px-6 py-10 flex">
       <h1 className="text-4xl font-teachers pl-16">book a mentor</h1>
       <div className="flex-1"></div>
 
       {/* Right side for cards */}
-      <div className="flex flex-col gap-6 w-1/2 overflow-y-auto max-h-screen">
+      <div className="shadow-md flex flex-col gap-6 w-1/2 overflow-y-auto max-h-screen">
         {mentors.slice().map((item) => (
           <MentorBookingCard
             key={item._id}

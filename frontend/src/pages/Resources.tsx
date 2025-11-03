@@ -20,7 +20,7 @@ const Resources = () => {
         </p>
       </section>
 
-      <section className="bg-cream w-full flex flex-col py-12 space-y-6 fon-teacherstext-fog track-wide py-16 font-teachers">
+      <section className="bg-cream w-full flex flex-col py-12 space-y-6 text-fog track-wide py-16 font-teachers">
         <div className="items-left">
           <h1 className="w-full pl-48 text-left text-5xl font-semibold mt-8">
             featured resources
@@ -61,7 +61,7 @@ const Resources = () => {
         </div>
       </section>
 
-      <section className="font-teachers flex flex-col py-12 tracking-wide bg-caramel text-fog px-6">
+      <section className="font-teachers flex flex-col py-12 tracking-wide bg-cream text-fog px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16 flex flex-col items-center gap-6">
             <h1 className="text-4xl text-center">resources for every step</h1>
@@ -75,7 +75,7 @@ const Resources = () => {
             {/* Navigating High School */}
             <Link
               to="/navigating-high-school"
-              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+              className="shadow-md bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
             >
               <IoSchoolOutline size={48} />
               <h1 className="mt-4 text-xl font-semibold">
@@ -90,7 +90,7 @@ const Resources = () => {
             {/* How to Adult */}
             <Link
               to="/how-to-adult"
-              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+              className="shadow-md bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
             >
               <RiGuideLine size={48} />
               <h1 className="mt-4 text-xl font-semibold">How to Adult</h1>
@@ -103,7 +103,7 @@ const Resources = () => {
             {/* College Prep */}
             <Link
               to="/college-prep"
-              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+              className="shadow-md bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
             >
               <LuSprout size={48} />
               <h1 className="mt-4 text-xl font-semibold">College Prep</h1>
@@ -117,7 +117,7 @@ const Resources = () => {
             {/* Study Sets */}
             <Link
               to="/study-resources"
-              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+              className="shadow-md bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
             >
               <LuBookOpenText size={48} />
               <h1 className="mt-4 text-xl font-semibold">Study Resources</h1>
@@ -129,7 +129,7 @@ const Resources = () => {
             {/* Internships */}
             <Link
               to="/internships"
-              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+              className="shadow-md bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
             >
               <RiSuitcaseLine size={48} />
               <h1 className="mt-4 text-xl font-semibold">Internships</h1>
@@ -142,7 +142,7 @@ const Resources = () => {
             {/* Scholarships */}
             <Link
               to="/scholarships"
-              className="bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
+              className="shadow-md bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start hover:scale-[1.02] transition-transform duration-200"
             >
               <FaUserGraduate size={48} />
               <h1 className="mt-4 text-xl font-semibold">Scholarships</h1>
@@ -154,7 +154,7 @@ const Resources = () => {
           </div>
         </div>
       </section>
-      <div className="py-16 bg-caramel">
+      <div className="py-16 bg-cream">
         <DiscordBanner />
       </div>
     </section>

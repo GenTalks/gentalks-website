@@ -4,7 +4,7 @@ import FAQComp from "../components/FAQComp";
 const FAQs = () => {
   return (
     <div className="w-full bg-cream">
-      <section className="w-full flex flex-col items-center py-16 space-y-6 tracking-wide bg-caramel text-fog">
+      <section className="w-full flex flex-col items-center py-16 space-y-6 tracking-wide text-fog">
         <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-teachers">
           frequently asked questions
         </h1>
@@ -135,7 +135,7 @@ const FAQs = () => {
           </section>
         </div>
       </div>
-      <section className="w-full flex flex-col items-center pt-20 space-y-6 tracking-wide bg-caramel py-16">
+      <section className="w-full flex flex-col items-center pt-20 space-y-6 tracking-wide py-16">
         <DiscordBanner />
       </section>
     </div>

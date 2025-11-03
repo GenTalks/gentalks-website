@@ -63,7 +63,7 @@ const MentorCarousel = () => {
   }, [origCount, cardWidth]);
 
   return (
-    <div className="bg-caramel relative w-full py-16">
+    <div className="bg-cream relative w-full py-16">
       <h2 className="text-4xl lg:text-6xl text-center mb-16 font-teachers text-fog tracking-wide">
         our mentors
       </h2>

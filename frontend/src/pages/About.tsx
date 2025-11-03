@@ -6,7 +6,7 @@ import { LuSprout } from "react-icons/lu";
 
 const About = () => {
   return (
-    <div className="bg-caramel text-fog">
+    <div className="bg-cream text-fog">
       <section className="flex flex-col items-center py-8 space-y-6 tracking-wide bg-cream text-fog">
         <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl transform font-teachers">
           our philosophy
@@ -19,7 +19,7 @@ const About = () => {
         </p>
       </section>
 
-      <section className="flex flex-col py-12 tracking-wide bg-caramel text-fog px-6">
+      <section className="flex flex-col py-12 tracking-wide bg-cream text-fog px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16">
             <h1 className="text-5xl font-teachers text-center">our values</h1>
@@ -27,7 +27,7 @@ const About = () => {
 
           <div className="grid gap-8 tracking-wide grid-cols-1 md:grid-cols-3">
             {/* Community */}
-            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
+            <div className="shadow-md mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <RiCommunityLine size={48} />
               <h1 className="mt-4 text-xl font-semibold">Community</h1>
               <p className="mt-auto pt-6">
@@ -39,14 +39,14 @@ const About = () => {
             {/* Empathy */}
             <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <LuHeartHandshake size={48} />
-              <h1 className="mt-4 text-xl font-semibold">Empathy</h1>
+              <h1 className="shadow-md mt-4 text-xl font-semibold">Empathy</h1>
               <p className="pt-6">
                 We are committed to lead with compassion and understanding.
               </p>
             </div>
 
             {/* Accessibility */}
-            <div className="mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
+            <div className="shadow-md mt-4 bg-cream text-fog px-8 py-6 rounded-3xl text-left text-lg font-teachers flex flex-col items-start">
               <IoAccessibility size={48} />
               <h1 className="mt-4 text-xl font-semibold">Accessibility</h1>
               <p className="mt-auto pt-6">
@@ -133,7 +133,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="bg-caramel mt-12 pb-12">
+      <section className="bg-cream mt-12 pb-12">
         <DiscordBanner />
       </section>
     </div>

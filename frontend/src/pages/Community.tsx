@@ -45,7 +45,7 @@ const Community = () => {
         </div>
       </section>
 
-      <section className="flex flex-col py-12 tracking-wide bg-caramel text-fog px-6">
+      <section className="flex flex-col py-12 tracking-wide bg-cream text-fog px-6">
         <div className="max-w-6xl mx-auto w-full">
           <div className="mb-16 flex flex-col items-center gap-6">
             <h1 className="text-4xl font-teachers text-center">grow with us</h1>
@@ -139,10 +139,10 @@ const Community = () => {
             <h1 className="text-4xl font-semibold font-teachers text-center">
               mentor program
             </h1>
-            <p className="font-teachers font-normal text-center text-xl mt-4 px-8 mb-8">
-              we will soon be opening mentor program applications. stay tuned
-              and join our discord for the latest updates!
-            </p>
+            <ul className="list-disc list-inside text-center font-teachers text-xl my-8">
+              <li>Share your insights regarding academia or industry work</li>
+              <li>Help high school students navigate the difficulty of college applications</li>
+            </ul>
           </div>
           <img
             src="https://i.imgur.com/n19WXEh.png"
@@ -152,7 +152,7 @@ const Community = () => {
         </div>
       </section>
 
-      <section className="relative w-full overflow-hidden py-20 px-8 bg-caramel">
+      <section className="relative w-full overflow-hidden py-20 px-8 bg-cream">
         <DiscordBanner />
       </section>
     </section>

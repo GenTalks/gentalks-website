@@ -82,7 +82,7 @@ const StudentCenter = () => {
         </div>
       </section>
 
-      <section className="relative w-full overflow-hidden py-20 px-8 bg-caramel">
+      <section className="relative w-full overflow-hidden py-20 px-8 bg-cream">
         <DiscordBanner />
       </section>
     </section>

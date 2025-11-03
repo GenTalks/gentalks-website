@@ -6,7 +6,7 @@ import FAQComp from "../components/FAQComp";
 
 const Home = () => {
   return (
-    <div className="relative w-full overflow-hidden tracking-wide bg-caramel text-fog">
+    <div className="bg-cream relative w-full overflow-hidden tracking-wide text-fog">
       <div className="bg-basil relative w-full h-[100vh">
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center font-teachers text-cream space-y-6 px-4">
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-8xl text-right self-end mr-[8rem] lg:mr-[20rem]">
@@ -88,7 +88,7 @@ const Home = () => {
         <MentorCarousel />
       </section>
 
-      <section className="relative w-full overflow-hidden py-40 px-4 sm:px-8 bg-cream">
+      <section className="bg-cream relative w-full overflow-hidden py-40 px-4 sm:px-8">
         <div className="flex flex-col lg:flex-row w-full gap-10">
           <div className="w-full lg:w-1/2 font-teachers flex flex-col items-center lg:items-start text-center lg:text-left pl-0 lg:pl-20">
             <h1 className="text-5xl font-bold mb-12 text-fog">
@@ -116,7 +116,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="relative w-full overflow-hidden py-20 px-8 bg-caramel">
+      <section className="relative w-full overflow-hidden py-20 px-8 bg-cream">
         <DiscordBanner />
       </section>
     </div>
