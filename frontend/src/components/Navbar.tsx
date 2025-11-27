@@ -1,13 +1,60 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import HomeButton from "./HomeButton";
 import NavButton from "./NavButton";
-import { Link } from "react-router-dom";
+import { useUser } from "../hooks/useUser";
+import { supabase } from "../lib/supabase";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { user } = useUser();
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    window.location.href = "/";
+  };
+
+  const navLinks = [
+    { to: "/community", label: "Community" },
+    { to: "/about", label: "About" },
+    { to: "/student-center", label: "Student Center" },
+    { to: "/blogs", label: "Blogs" },
+    { to: "/resources", label: "Resources" },
+    { to: "/faqs", label: "FAQs" },
+  ];
+
+  const renderStaffControls = () => {
+    if (user) {
+      return (
+        <>
+          <NavButton
+            to="/staff-dashboard"
+            label="Staff Dashboard"
+            onClick={() => setOpen(false)}
+            className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil font-teachers"
+          />
+          <button
+            onClick={handleLogout}
+            className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil font-teachers"
+          >
+            Logout
+          </button>
+        </>
+      );
+    } else {
+      return (
+        <NavButton
+          to="/staff-login"
+          label="Staff Login"
+          onClick={() => setOpen(false)}
+          className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil font-teachers"
+        />
+      );
+    }
+  };
 
   return (
-    <nav className="sticky top-0 z-50 relative flex items-center justify-between shadow-sm px-6 2xl:px-12 py-4 bg-cream tracking-wide">
+    <nav className="sticky top-0 z-50 flex items-center justify-between px-6 2xl:px-12 py-4 bg-cream shadow-sm tracking-wide relative">
       <div className="shrink-0">
         <HomeButton onClick={() => setOpen(false)} />
       </div>
@@ -20,27 +67,26 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className="text-lg hidden 2xl:flex gap-4 items-center flex-shrink-0">
-        <div className="text-fog ">
-          <NavButton to="/community" label="Community" />
-          <NavButton to="/about" label="About" />
-          <NavButton to="/student-center" label="Student Center" />
-          <NavButton to="/blogs" label="Blogs" />
-          <NavButton to="/resources" label="Resources" />
-          <NavButton to="/faqs" label="FAQs" />
+      {/* Desktop menu */}
+      <div className="hidden 2xl:flex items-center gap-4 flex-shrink-0">
+        <div className="flex gap-4 text-fog">
+          {navLinks.map((link) => (
+            <NavButton key={link.to} to={link.to} label={link.label} />
+          ))}
         </div>
 
-        <div>
-          <NavButton
-            to="/book-a-mentor"
-            label="Book a mentor"
-            onClick={() => setOpen(false)}
-            className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil"
-            disableHover
-          />
-        </div>
+        <NavButton
+          to="/book-a-mentor"
+          label="Book a mentor"
+          onClick={() => setOpen(false)}
+          className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil"
+          disableHover
+        />
+
+        {renderStaffControls()}
       </div>
 
+      {/* Mobile menu toggle */}
       <button
         className="2xl:hidden p-2 rounded-md focus:outline-none"
         onClick={() => setOpen(!open)}
@@ -61,38 +107,17 @@ export default function Navbar() {
         </svg>
       </button>
 
+      {/* Mobile menu */}
       {open && (
-        <div className="absolute top-full left-0 right-0 bg-cream flex flex-col items-center shadow-sm space-y-4 p-6 2xl:hidden z-50 text-fog">
-          <NavButton
-            to="/community"
-            label="Community"
-            onClick={() => setOpen(false)}
-          />
-
-          <NavButton
-            to="/about"
-            label="About"
-            onClick={() => setOpen(false)}
-          />
-
-          <NavButton
-            to="/student-center"
-            label="Student Center"
-            onClick={() => setOpen(false)}
-          />
-
-          <NavButton
-            to="/blogs"
-            label="Blogs"
-            onClick={() => setOpen(false)}
-          />
-
-          <NavButton
-            to="/resources"
-            label="Resources"
-            onClick={() => setOpen(false)}
-          />
-          <NavButton to="/faqs" label="FAQs" onClick={() => setOpen(false)} />
+        <div className="absolute top-full left-0 right-0 bg-cream flex flex-col items-center space-y-4 p-6 shadow-sm 2xl:hidden z-50 text-fog">
+          {navLinks.map((link) => (
+            <NavButton
+              key={link.to}
+              to={link.to}
+              label={link.label}
+              onClick={() => setOpen(false)}
+            />
+          ))}
 
           <NavButton
             to="/book-a-mentor"
@@ -101,6 +126,8 @@ export default function Navbar() {
             className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil"
             disableHover
           />
+
+          {renderStaffControls()}
         </div>
       )}
     </nav>

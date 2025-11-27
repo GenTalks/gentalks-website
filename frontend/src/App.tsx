@@ -22,8 +22,14 @@ import Scholarships from "./pages/Scholarships";
 import StudentStories from "./pages/StudentStories";
 import StudentStory from "./pages/StudentStoryPage";
 import StudentProjects from "./pages/StudentProjects";
+import StaffLogin from "./pages/StaffLogin";
+import StaffDashboard from "./pages/StaffDashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { useUser } from "./hooks/useUser";
 
 function App() {
+  const { user } = useUser();
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col bg-cream">
@@ -51,6 +57,15 @@ function App() {
             <Route path="/student-stories" element={<StudentStories />} />
             <Route path="/student-story/:slug" element={<StudentStory />} />
             <Route path="/student-projects" element={<StudentProjects />} />
+            <Route path="/staff-login" element={<StaffLogin />} />
+            <Route
+              path="/staff-dashboard"
+              element={
+                <ProtectedRoute user={user} role="staff">
+                  <StaffDashboard />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </main>
 
