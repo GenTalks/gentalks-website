@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { supabase } from "../lib/supabase";
 import { useNavigate } from "react-router-dom";
-import type { AuthError } from "@supabase/supabase-js";
 
 export default function StaffLogin() {
   const [email, setEmail] = useState("");
@@ -11,7 +10,8 @@ export default function StaffLogin() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    const { data, error }: { data: any; error: AuthError | null } = await supabase.auth.signInWithPassword({
+
+    const { error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
@@ -19,7 +19,7 @@ export default function StaffLogin() {
     if (error) {
       setError(error.message);
     } else {
-      navigate("/staff-dashboard"); 
+      navigate("/staff-dashboard");
     }
   };
 
@@ -36,6 +36,7 @@ export default function StaffLogin() {
         className="border px-4 py-2 rounded"
         required
       />
+
       <input
         type="password"
         placeholder="Password"
@@ -44,12 +45,14 @@ export default function StaffLogin() {
         className="border px-4 py-2 rounded"
         required
       />
+
       <button
         type="submit"
         className="bg-basil text-white px-4 py-2 rounded-lg hover:bg-laurel font-teachers"
       >
         Login
       </button>
+
       {error && <p className="text-red-500">{error}</p>}
     </form>
   );
