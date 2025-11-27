@@ -7,12 +7,16 @@ interface Props {
 }
 
 export default function ProtectedRoute({ user, role, children }: Props) {
+  if (user === undefined) {
+    return null;
+  }
+
   if (!user) {
     return <Navigate to="/staff-login" replace />;
   }
 
-  if (role && user.user_metadata?.role !== role) {
-    return <Navigate to="/" replace />;
+  if (role && user.user_metadata.role !== role) {
+    return <Navigate to="/staff-login" replace />;
   }
 
   return <>{children}</>;
