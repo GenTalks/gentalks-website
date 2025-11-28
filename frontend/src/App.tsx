@@ -23,14 +23,12 @@ import Scholarships from "./pages/Scholarships";
 import StudentStories from "./pages/StudentStories";
 import StudentStory from "./pages/StudentStoryPage";
 import StudentProjects from "./pages/StudentProjects";
-
 import StaffLogin from "./pages/StaffLogin";
 import StaffDashboard from "./pages/StaffDashboard";
-import ProtectedRoute from "./components/ProtectedRoute";
 import { useAuth } from "./context/AuthContext";
 
 function App() {
-  const { user, loading } = useAuth();
+  const { loading } = useAuth();
 
   if (loading) {
     return (
