@@ -5,6 +5,7 @@ import type { User } from "@supabase/supabase-js";
 type Profile = {
   name: string;
   role: string;
+  biography: string | null;
 };
 
 export function useUser() {
@@ -14,19 +15,15 @@ export function useUser() {
 
   useEffect(() => {
     const load = async () => {
-      // console.log("🔵 Fetching session...");
       const { data } = await supabase.auth.getSession();
       const u = data.session?.user ?? null;
 
-      // console.log("🟢 Session user:", u);
       setUser(u);
 
       if (u) {
-        // console.log("🔵 Fetching profile for user id:", u.id);
-
         const { data: p, error } = await supabase
           .from("profiles")
-          .select("name, role")
+          .select("name, role, biography")
           .eq("id", u.id)
           .single();
 
@@ -34,8 +31,6 @@ export function useUser() {
         console.log("🔴 Profile error (if any):", error);
 
         setProfile(p ?? null);
-      } else {
-        // console.log("⚠️ No user found in session.");
       }
 
       setLoading(false);

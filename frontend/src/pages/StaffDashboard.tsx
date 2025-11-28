@@ -28,7 +28,7 @@ export default function StaffDashboard() {
       </h1>
 
       <p className="text-lg mb-8">
-        Your role: <span className="font-semibold">{profile?.role ?? "Unknown"}</span>
+        Your role: <span className="font-semibold">{profile?.biography ?? "Unknown"}</span>
       </p>
 
       {/* DASHBOARD HOME SECTION */}
@@ -44,7 +44,7 @@ export default function StaffDashboard() {
         </h2>
 
         <p className="mb-6">
-          Based on your role (<strong>{profile?.role}</strong>), these forms are available:
+          Based on your role (<strong>{profile?.biography}</strong>), these forms are available:
         </p>
 
         {/* Render actual forms */}
