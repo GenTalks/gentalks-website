@@ -19,17 +19,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const load = async () => {
       const { data } = await supabase.auth.getSession();
-      setUser(data.session?.user ?? null); // ✅ valid now
+      setUser(data.session?.user ?? null);
       setLoading(false);
     };
 
     load();
 
-    const { data: listener } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
-        setUser(session?.user ?? null); // ✅ valid now
-      }
-    );
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+      setLoading(false); 
+    });
 
     return () => listener.subscription.unsubscribe();
   }, []);

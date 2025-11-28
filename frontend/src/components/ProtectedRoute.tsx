@@ -3,22 +3,15 @@ import { Navigate } from "react-router-dom";
 interface Props {
   user: any;
   loading: boolean;
-  roles?: string[];
   children: React.ReactNode;
 }
 
-export default function ProtectedRoute({ user, loading, roles, children }: Props) {
-  // 1. Don't redirect during loading
-  if (loading) return <p className="text-center mt-20">Checking session...</p>;
+export default function ProtectedRoute({ user, loading, children }: Props) {
+  // Still loading session
+  if (loading) return null;
 
-  // 2. After loading, if no user → redirect
+  // Not logged in
   if (!user) return <Navigate to="/staff-login" replace />;
-
-  // 3. Role validation
-  const userRole = user.user_metadata?.role;
-  if (roles && !roles.includes(userRole)) {
-    return <Navigate to="/staff-login" replace />;
-  }
 
   return <>{children}</>;
 }

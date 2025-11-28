@@ -32,7 +32,6 @@ import { useAuth } from "./context/AuthContext";
 function App() {
   const { user, loading } = useAuth();
 
-  // Global loading screen
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen bg-cream">
@@ -70,21 +69,10 @@ function App() {
             <Route path="/student-stories" element={<StudentStories />} />
             <Route path="/student-story/:slug" element={<StudentStory />} />
             <Route path="/student-projects" element={<StudentProjects />} />
-
             <Route path="/staff-login" element={<StaffLogin />} />
+            <Route path="/staff-dashboard" element={<StaffDashboard />} />
 
-            <Route
-              path="/staff-dashboard"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  loading={loading}
-                  roles={["manager", "developer", "creative", "mentor", "ambassador"]}
-                >
-                  <StaffDashboard />
-                </ProtectedRoute>
-              }
-            />
+
           </Routes>
         </main>
 
