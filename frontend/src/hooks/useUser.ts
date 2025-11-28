@@ -1,39 +1,64 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { supabase } from "../lib/supabase";
-import { useAuth } from "../context/AuthContext";
+import type { User } from "@supabase/supabase-js";
 
-type ProfileSelect = {
+type Profile = {
   name: string;
   role: string;
 };
 
 export function useUser() {
-  const { user, loading: authLoading } = useAuth();
-  const [profile, setProfile] = useState<ProfileSelect | null>(null);
+  const [user, setUser] = useState<User | null>(null);
+  const [profile, setProfile] = useState<Profile | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (authLoading) return;
+    const load = async () => {
+      // console.log("🔵 Fetching session...");
+      const { data } = await supabase.auth.getSession();
+      const u = data.session?.user ?? null;
 
-    if (!user) {
-      setProfile(null);
-      setLoading(false);
-      return;
-    }
+      // console.log("🟢 Session user:", u);
+      setUser(u);
 
-    const loadProfile = async () => {
-      const { data } = await supabase
-        .from("profiles")
-        .select("name, role")
-        .eq("id", user.id)
-        .single();
+      if (u) {
+        // console.log("🔵 Fetching profile for user id:", u.id);
 
-      setProfile(data as ProfileSelect | null);
+        const { data: p, error } = await supabase
+          .from("profiles")
+          .select("name, role")
+          .eq("id", u.id)
+          .single();
+
+        console.log("🟣 Profile data returned:", p);
+        console.log("🔴 Profile error (if any):", error);
+
+        setProfile(p ?? null);
+      } else {
+        // console.log("⚠️ No user found in session.");
+      }
+
       setLoading(false);
     };
 
-    loadProfile();
-  }, [user, authLoading]);
+    load();
+
+    const { data: listener } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        console.log("🟡 Auth state changed:", event, session);
+
+        const u = session?.user ?? null;
+        setUser(u);
+
+        if (!u) {
+          console.log("🔻 User logged out, clearing profile.");
+          setProfile(null);
+        }
+      }
+    );
+
+    return () => listener.subscription.unsubscribe();
+  }, []);
 
   return { user, profile, loading };
 }

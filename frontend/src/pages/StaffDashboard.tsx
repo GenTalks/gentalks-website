@@ -1,31 +1,60 @@
+import { useUser } from "../hooks/useUser";
 import { supabase } from "../lib/supabase";
-import { useNavigate } from "react-router-dom";
+import { FormsByRole } from "../components/FormsByRole";
 
 export default function StaffDashboard() {
-  const navigate = useNavigate();
+  const { user, profile, loading } = useUser();
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    // go to login after logout
-    navigate("/staff-login");
+    window.location.href = "/staff-login";
   };
 
-  return (
-    <div className="max-w-3xl mx-auto mt-20 p-6 border rounded-lg shadow-lg bg-cream font-teachers">
-      <h1 className="text-3xl font-bold text-laurel mb-4">Staff Dashboard</h1>
+  if (loading) {
+    return <p className="text-center mt-20">Checking session...</p>;
+  }
 
-      <p className="text-lg mb-4">
-        You are signed in. 
+  if (!user) {
+    window.location.href = "/staff-login";
+    return null;
+  }
+
+  return (
+    <div className="max-w-5xl mx-auto mt-20 p-6 border rounded-lg bg-cream shadow-lg font-teachers">
+
+      {/* WELCOME */}
+      <h1 className="text-3xl font-bold text-laurel mb-1">
+        Welcome, {profile?.name ?? "Staff"}!
+      </h1>
+
+      <p className="text-lg mb-8">
+        Your role: <span className="font-semibold">{profile?.role ?? "Unknown"}</span>
       </p>
 
-      <div className="p-4 bg-white rounded-lg shadow-inner mb-6">
-        <h2 className="text-xl font-bold text-basil mb-2">Welcome</h2>
-        <p className="text-gray-700">FAH.</p>
-      </div>
+      {/* DASHBOARD HOME SECTION */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-basil mb-2">Dashboard Home</h2>
+        <p>This is the main dashboard area where general info will go.</p>
+      </section>
 
+      {/* FORMS SECTION */}
+      <section className="mt-10">
+        <h2 className="text-2xl font-bold text-basil mb-4">
+          Forms & Permissions
+        </h2>
+
+        <p className="mb-6">
+          Based on your role (<strong>{profile?.role}</strong>), these forms are available:
+        </p>
+
+        {/* Render actual forms */}
+        <FormsByRole role={profile?.role ?? "unknown"} />
+      </section>
+
+      {/* LOGOUT BUTTON */}
       <button
         onClick={handleLogout}
-        className="bg-basil text-white px-6 py-3 rounded-lg hover:bg-laurel transition"
+        className="mt-12 bg-basil text-white px-6 py-3 rounded-lg hover:bg-laurel transition"
       >
         Logout
       </button>
