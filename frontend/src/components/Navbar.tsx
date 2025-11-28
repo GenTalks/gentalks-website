@@ -7,7 +7,7 @@ import { supabase } from "../lib/supabase";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const { user, loading } = useUser(); // role removed since not used
+  const { user, loading } = useUser(); 
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -23,31 +23,33 @@ export default function Navbar() {
     { to: "/faqs", label: "FAQs" },
   ];
 
-  if (loading) return null; // wait until session is loaded
+  if (loading) return null; 
 
   const renderStaffControls = () =>
     user ? (
       <>
         <NavButton
-          to="/staff-dashboard"
-          label="Staff Dashboard"
-          onClick={() => setOpen(false)}
-          className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil font-teachers"
-        />
+            to="/staff-dashboard"
+            label="Staff Dashboard"
+            onClick={() => setOpen(false)}
+            className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil"
+            disableHover
+          />
         <button
           onClick={handleLogout}
-          className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil font-teachers"
+          className="bg-laurel text-cream hover:text-cream px-6 py-2 rounded-full hover:bg-basil transition font-teachers"
         >
           Logout
         </button>
       </>
     ) : (
       <NavButton
-        to="/staff-login"
-        label="Staff Login"
-        onClick={() => setOpen(false)}
-        className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil font-teachers"
-      />
+            to="/staff-login"
+            label="Staff Login"
+            onClick={() => setOpen(false)}
+            className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil"
+            disableHover
+          />
     );
 
   return (
