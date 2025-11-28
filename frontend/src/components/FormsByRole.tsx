@@ -16,9 +16,10 @@ import StudentStoriesForm from "../forms/StudentStoriesForm";
 
 type Props = {
     role: string;
+    biography: string;
 };
 
-export function FormsByRole({ role }: Props) {
+export function FormsByRole({ role, biography }: Props) {
     const formsByRole: Record<string, React.ReactNode[]> = {
         developer: [
             <AAplicationStatusForm />,
@@ -94,7 +95,7 @@ export function FormsByRole({ role }: Props) {
 
     return (
         <div>
-            <h2 className="text-xl font-bold mb-4">Available Forms for Your Role: {role}</h2>
+            <h2 className="text-xl font-bold mb-4">Available Forms for Your Role: {biography}</h2>
 
             <div className="space-y-6">
                 {forms.map((formComponent, index) => (

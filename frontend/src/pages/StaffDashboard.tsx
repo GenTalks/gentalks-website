@@ -22,7 +22,6 @@ export default function StaffDashboard() {
   return (
     <div className="max-w-5xl mx-auto mt-20 p-6 border rounded-lg bg-cream shadow-lg font-teachers">
 
-      {/* WELCOME */}
       <h1 className="text-3xl font-bold text-laurel mb-1">
         Welcome, {profile?.name ?? "Staff"}!
       </h1>
@@ -31,13 +30,11 @@ export default function StaffDashboard() {
         Your role: <span className="font-semibold">{profile?.biography ?? "Unknown"}</span>
       </p>
 
-      {/* DASHBOARD HOME SECTION */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-basil mb-2">Dashboard Home</h2>
         <p>This is the main dashboard area where general info will go.</p>
       </section>
 
-      {/* FORMS SECTION */}
       <section className="mt-10">
         <h2 className="text-2xl font-bold text-basil mb-4">
           Forms & Permissions
@@ -47,11 +44,9 @@ export default function StaffDashboard() {
           Based on your role (<strong>{profile?.biography}</strong>), these forms are available:
         </p>
 
-        {/* Render actual forms */}
-        <FormsByRole role={profile?.role ?? "unknown"} />
+        <FormsByRole role={profile?.role ?? "unknown"} biography={profile?.biography ?? "Unknown"} />
       </section>
 
-      {/* LOGOUT BUTTON */}
       <button
         onClick={handleLogout}
         className="mt-12 bg-basil text-white px-6 py-3 rounded-lg hover:bg-laurel transition"

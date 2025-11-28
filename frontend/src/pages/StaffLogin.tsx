@@ -22,7 +22,6 @@ export default function StaffLogin() {
       return;
     }
 
-    // Auto-redirect after successful login
     navigate("/staff-dashboard");
   };
 
