@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+
 import About from "./pages/About";
 import Community from "./pages/Community";
 import Blogs from "./pages/Blogs";
@@ -22,20 +23,32 @@ import Scholarships from "./pages/Scholarships";
 import StudentStories from "./pages/StudentStories";
 import StudentStory from "./pages/StudentStoryPage";
 import StudentProjects from "./pages/StudentProjects";
+
 import StaffLogin from "./pages/StaffLogin";
 import StaffDashboard from "./pages/StaffDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
-import { useUser } from "./hooks/useUser";
+import { useAuth } from "./context/AuthContext";
 
 function App() {
-  const { user } = useUser();
+  const { user, loading } = useAuth();
+
+  // Global loading screen
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen bg-cream">
+        Loading...
+      </div>
+    );
+  }
 
   return (
     <Router>
       <div className="min-h-screen flex flex-col bg-cream">
         <Navbar />
+
         <main className="flex-grow">
           <ScrollToTop />
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/community" element={<Community />} />
@@ -57,11 +70,17 @@ function App() {
             <Route path="/student-stories" element={<StudentStories />} />
             <Route path="/student-story/:slug" element={<StudentStory />} />
             <Route path="/student-projects" element={<StudentProjects />} />
+
             <Route path="/staff-login" element={<StaffLogin />} />
+
             <Route
               path="/staff-dashboard"
               element={
-                <ProtectedRoute user={user} role="staff">
+                <ProtectedRoute
+                  user={user}
+                  loading={loading}
+                  roles={["manager", "developer", "creative", "mentor", "ambassador"]}
+                >
                   <StaffDashboard />
                 </ProtectedRoute>
               }

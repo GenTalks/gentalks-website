@@ -7,7 +7,7 @@ import { supabase } from "../lib/supabase";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const { user } = useUser();
+  const { user, loading } = useUser(); // role removed since not used
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -23,35 +23,32 @@ export default function Navbar() {
     { to: "/faqs", label: "FAQs" },
   ];
 
-  const renderStaffControls = () => {
-    if (user) {
-      return (
-        <>
-          <NavButton
-            to="/staff-dashboard"
-            label="Staff Dashboard"
-            onClick={() => setOpen(false)}
-            className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil font-teachers"
-          />
-          <button
-            onClick={handleLogout}
-            className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil font-teachers"
-          >
-            Logout
-          </button>
-        </>
-      );
-    } else {
-      return (
+  if (loading) return null; // wait until session is loaded
+
+  const renderStaffControls = () =>
+    user ? (
+      <>
         <NavButton
-          to="/staff-login"
-          label="Staff Login"
+          to="/staff-dashboard"
+          label="Staff Dashboard"
           onClick={() => setOpen(false)}
           className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil font-teachers"
         />
-      );
-    }
-  };
+        <button
+          onClick={handleLogout}
+          className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil font-teachers"
+        >
+          Logout
+        </button>
+      </>
+    ) : (
+      <NavButton
+        to="/staff-login"
+        label="Staff Login"
+        onClick={() => setOpen(false)}
+        className="bg-laurel text-cream px-6 py-2 rounded-full hover:bg-basil font-teachers"
+      />
+    );
 
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between px-6 2xl:px-12 py-4 bg-cream shadow-sm tracking-wide relative">
@@ -67,7 +64,6 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Desktop menu */}
       <div className="hidden 2xl:flex items-center gap-4 flex-shrink-0">
         <div className="flex gap-4 text-fog">
           {navLinks.map((link) => (
@@ -86,7 +82,6 @@ export default function Navbar() {
         {renderStaffControls()}
       </div>
 
-      {/* Mobile menu toggle */}
       <button
         className="2xl:hidden p-2 rounded-md focus:outline-none"
         onClick={() => setOpen(!open)}
@@ -107,7 +102,6 @@ export default function Navbar() {
         </svg>
       </button>
 
-      {/* Mobile menu */}
       {open && (
         <div className="absolute top-full left-0 right-0 bg-cream flex flex-col items-center space-y-4 p-6 shadow-sm 2xl:hidden z-50 text-fog">
           {navLinks.map((link) => (
