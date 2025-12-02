@@ -17,6 +17,28 @@ const Community = () => {
     "open" | "reviewing" | "closed"
   >("open");
 
+  const [announcement, setAnnouncement] = useState<string>("");
+  const [announcementLink, setAnnouncementLink] = useState<string>("");
+  const [postedDate, setPostedDate] = useState<string>("");
+
+  useEffect(() => {
+    async function fetchAnnouncement() {
+      const { data } = await supabase
+        .from("community_announcements")
+        .select("announcement, announcement_link, date_posted")
+        .eq("id", "326ec86a-9e2d-4b4a-a2ad-77899b6793c6")
+        .single();
+
+      if (data) {
+        setAnnouncement(data.announcement);
+        setAnnouncementLink(data.announcement_link);
+        setPostedDate(data.date_posted);
+      }
+    }
+
+    fetchAnnouncement();
+  }, []);
+
   useEffect(() => {
     async function fetchStatuses() {
       const { data: ambassadorData } = await supabase
@@ -56,22 +78,29 @@ const Community = () => {
           </div>
           <div className="border-fog border-2 bg-cream text-fog p-8 rounded-xl shadow-lg font-teachers text-lg leading-relaxed mt-8">
             <div className="text-left px-4 font-semibold tracking-widest">
-              date posted: August 8, 2025
+              date posted: {postedDate
+                ? new Date(postedDate).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                }).toLowerCase()
+                : "—"}
+
             </div>
 
             <hr className="my-4 border-t-2 border-fog" />
 
             <div className="px-4 text-left tracking-wide">
-              Are you a high schooler looking for something to put on your college apps or just want something to do?
-              Look no further!! GenTalks is now offering the opportunity for you to be an ambassador for us.
+              {announcement || "No announcement posted yet."}
             </div>
 
-            <div className="px-4 py-2 inline-block rounded-full border-cream border-2 bg-laurel text-cream hover:border-laurel hover:bg-cream hover:text-laurel mt-6 tracking-wide">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIpOiUV_nKq48-ifvL--rmpPAWVplYJ5Ux57auAAR43GEdmQ/viewform">
-                Apply now!
-              </a>
-            </div>
+            {announcementLink && (
+              <div className="px-4 py-2 inline-block rounded-full border-cream border-2 bg-laurel text-cream hover:border-laurel hover:bg-cream hover:text-laurel mt-6 tracking-wide">
+                <a href={announcementLink}>Learn more</a>
+              </div>
+            )}
           </div>
+
         </div>
       </section>
 

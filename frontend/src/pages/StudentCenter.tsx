@@ -1,9 +1,32 @@
 import DiscordBanner from "../components/DiscordBanner";
 import { TfiAnnouncement } from "react-icons/tfi";
 import ExploreButton from "../components/ExploreButton";
+import { useEffect, useState } from "react";
+import { supabase } from "../lib/supabase";
 // import DiscordButton from "../components/DiscordButton";
 
 const StudentCenter = () => {
+  const [announcement, setAnnouncement] = useState("");
+  const [announcementLink, setAnnouncementLink] = useState("");
+  const [postedDate, setPostedDate] = useState("");
+
+  useEffect(() => {
+    async function fetchStudentAnnouncement() {
+      const { data } = await supabase
+        .from("student_center_announcements")
+        .select("announcement, announcement_link, date_posted")
+        .eq("id", "44db8159-bf40-43a0-a097-7c595cce324d")
+        .single();
+
+      if (data) {
+        setAnnouncement(data.announcement);
+        setAnnouncementLink(data.announcement_link);
+        setPostedDate(data.date_posted);
+      }
+    }
+
+    fetchStudentAnnouncement();
+  }, []);
   return (
     <section className="text-fog bg-cream font-teachers">
       <section className="py-16 px-6 space-y-24 tracking-wide">
@@ -17,26 +40,28 @@ const StudentCenter = () => {
           </div>
           <div className="border-fog border-2 bg-cream text-fog p-8 rounded-xl shadow-lg font-teachers text-lg leading-relaxed mt-8">
             <div className="text-left px-4 font-semibold tracking-widest">
-              date posted: September 14, 2025
+              date posted: {postedDate
+                ? new Date(postedDate).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                }).toLowerCase()
+                : "—"}
+
             </div>
 
             <hr className="my-4 border-t-2 border-fog" />
 
             <div className="px-4 text-left tracking-wide">
-              student center is officially open! 
-              think the website is missing something or want to show off your research project or looking for collaborators on your latest side quest? 
-              we gotchu - apply below to launch your idea with gentalks.
+              {announcement || "No announcement posted yet."}
             </div>
 
-            {/* <div className="mt-4">
-              <DiscordButton />
-            </div> */}
-            {/* Other reference button */}
-            <div className="px-4 py-2 inline-block rounded-full border-cream border-2 bg-laurel text-cream hover:border-laurel hover:bg-cream hover:text-laurel mt-6 tracking-wide">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwTopvpZZdVoXLrAhWsc_Ekl8YuTCgD05sD_UrbdMWj_0RCw/viewform">
-                Apply now!
-              </a>
-            </div>
+            {announcementLink && (
+              <div className="px-4 py-2 inline-block rounded-full border-cream border-2 bg-laurel text-cream hover:border-laurel hover:bg-cream hover:text-laurel mt-6 tracking-wide">
+                <a href={announcementLink}>Learn more</a>
+              </div>
+            )}
+
 
           </div>
         </div>
