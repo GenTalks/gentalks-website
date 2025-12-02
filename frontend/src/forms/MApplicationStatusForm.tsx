@@ -28,7 +28,7 @@ export default function MAplicationStatusForm() {
   return (
     <div className="p-4 rounded-lg border bg-white shadow">
       <h3 className="text-lg font-semibold mb-2">
-        Mentor Application Status
+        Update Mentor Application Status
       </h3>
 
       <form onSubmit={updateStatus} className="space-y-4">

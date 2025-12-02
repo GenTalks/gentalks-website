@@ -3,8 +3,32 @@ import DiscordBanner from "../components/DiscordBanner";
 import MentorCarousel from "../components/MentorCarousel";
 import ExploreButton from "../components/ExploreButton";
 import FAQComp from "../components/FAQComp";
+import { useState, useEffect } from "react";
+import { supabase } from "../lib/supabase";
 
 const Home = () => {
+
+  const [stats, setStats] = useState({ mentors: 0, bookings: 0, members: 0 });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchStats() {
+      const { data, error } = await supabase
+        .from("home_statistics")
+        .select("mentors, bookings, members")
+        .eq("id", "6d2a120b-b20d-4435-a22d-8963562c2c75")
+        .single();
+
+      if (data) setStats(data);
+      if (error) console.error(error);
+      setLoading(false);
+    }
+    fetchStats();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+
+
   return (
     <div className="bg-cream relative w-full overflow-hidden tracking-wide text-fog">
       <div className="bg-basil relative w-full h-[100vh">
@@ -55,29 +79,29 @@ const Home = () => {
 
         <div className="flex flex-col md:flex-row justify-between text-center text-laurel items-center text-4xl font-teachers pt-16 gap-8 md:gap-0">
           <div className="w-full md:w-1/3 py-8">
-            5+ <br />
+            {stats.mentors}+ <br />
             <span className="text-lg font-teachers">mentors</span>
             <img
               src="https://i.imgur.com/n19WXEh.png"
-              alt="matcha"
+              alt="mentors"
               className="w-full rounded-xl shadow-lg scale-75"
             />
           </div>
           <div className="w-full md:w-1/3 py-8">
-            10+ <br />
+            {stats.bookings}+ <br />
             <span className="text-lg font-teachers">gentalks booked</span>
             <img
               src="https://i.imgur.com/n19WXEh.png"
-              alt="matcha"
+              alt="bookings"
               className="w-full rounded-xl shadow-lg scale-75"
             />
           </div>
           <div className="w-full md:w-1/3 py-8">
-            200+ <br />
+            {stats.members}+ <br />
             <span className="text-lg font-teachers">community members</span>
             <img
               src="https://i.imgur.com/n19WXEh.png"
-              alt="matcha"
+              alt="members"
               className="w-full rounded-xl shadow-lg scale-75"
             />
           </div>

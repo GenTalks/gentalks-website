@@ -6,7 +6,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import About from "./pages/About";
 import Community from "./pages/Community";
 import Blogs from "./pages/Blogs";
-import BlogPostPage from "./pages/BlogPostPage";
+import BlogDetail from "./pages/BlogDetail";
+import BlogPost from "./pages/BlogDetail";
 import StudentCenter from "./pages/StudentCenter";
 import Home from "./pages/Home";
 import BookAMentor from "./pages/BookAMentor";
@@ -51,8 +52,12 @@ function App() {
             <Route path="/community" element={<Community />} />
             <Route path="/about" element={<About />} />
             <Route path="/student-center" element={<StudentCenter />} />
+
+            {/* Blogs */}
             <Route path="/blogs" element={<Blogs />} />
-            <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
+            <Route path="/create-blog" element={<BlogPost />} />
+
             <Route path="/resources" element={<Resources />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/book-a-mentor" element={<BookAMentor />} />
@@ -69,8 +74,6 @@ function App() {
             <Route path="/student-projects" element={<StudentProjects />} />
             <Route path="/staff-login" element={<StaffLogin />} />
             <Route path="/staff-dashboard" element={<StaffDashboard />} />
-
-
           </Routes>
         </main>
 

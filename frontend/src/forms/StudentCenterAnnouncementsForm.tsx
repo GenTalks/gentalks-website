@@ -35,7 +35,7 @@ export default function StudentCenterAnnouncementForm() {
   return (
     <div className="p-4 rounded-lg border bg-white shadow">
       <h3 className="text-lg font-semibold mb-4">
-        Student Center Announcement Form
+        New Student Center Announcement
       </h3>
 
       <form onSubmit={handleSubmit} className="space-y-3">

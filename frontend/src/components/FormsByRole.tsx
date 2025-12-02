@@ -6,13 +6,13 @@ import MentorCardForm from "../forms/MentorCardForm";
 import AAplicationStatusForm from "../forms/AApplicationStatusForm";
 import BlogForm from "../forms/BlogForm";
 import CPForm from "../forms/CPForm";
-import HomeFAQsForm from "../forms/HomeFAQsForm";
 import MApplicationStatusForm from "../forms/MApplicationStatusForm";
 import NHSForm from "../forms/NHSForm";
 import SRForm from "../forms/SRForm";
 import StudentCenterAnnouncementsForm from "../forms/StudentCenterAnnouncementsForm";
 import StudentProjectsForm from "../forms/StudentProjectsForm";
 import StudentStoriesForm from "../forms/StudentStoriesForm";
+import HomeStatisticsForm from "../forms/HomeStatisticsForm";
 
 type Props = {
     role: string;
@@ -26,8 +26,8 @@ export function FormsByRole({ role, biography }: Props) {
             <BlogForm />,
             <CPForm />,
             <CommunityAnnouncementForm />,
-            <HomeFAQsForm />,
             <HTAForm />,
+            <HomeStatisticsForm />,
             <InternshipsForm />,
             <MApplicationStatusForm />,
             <MentorCardForm />,
@@ -43,9 +43,10 @@ export function FormsByRole({ role, biography }: Props) {
             <BlogForm />,
             <CPForm />,
             <CommunityAnnouncementForm />,
-            <HomeFAQsForm />,
             <HTAForm />,
             <InternshipsForm />,
+            <HomeStatisticsForm />,
+
             <MApplicationStatusForm />,
             <MentorCardForm />,
             <NHSForm />,
@@ -61,12 +62,13 @@ export function FormsByRole({ role, biography }: Props) {
             <CPForm />,
             <CommunityAnnouncementForm />,
             <InternshipsForm />,
-            <HomeFAQsForm />,
             <HTAForm />,
             <NHSForm />,
             <ScholarshipsForm />,
             <StudentCenterAnnouncementsForm />,
             <StudentProjectsForm />,
+            <HomeStatisticsForm />,
+
             <SRForm />,
             <StudentStoriesForm />
         ],
@@ -76,6 +78,8 @@ export function FormsByRole({ role, biography }: Props) {
             <HTAForm />,
             <InternshipsForm />,
             <MentorCardForm />,
+            <HomeStatisticsForm />,
+
             <NHSForm />,
             <ScholarshipsForm />,
             <SRForm />,
@@ -85,6 +89,8 @@ export function FormsByRole({ role, biography }: Props) {
             <NHSForm />,
             <StudentCenterAnnouncementsForm />,
             <StudentProjectsForm />,
+            <HomeStatisticsForm />,
+
             <SRForm />,
             <StudentStoriesForm />
         ],

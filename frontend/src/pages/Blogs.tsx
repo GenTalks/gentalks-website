@@ -1,66 +1,67 @@
 import React, { useEffect, useState } from "react";
-import { sanityClient } from "../lib/sanityClient";
+import { supabase } from "../lib/supabase";
 import { Link } from "react-router-dom";
 
 interface BlogPost {
+  id: string;
   title: string;
-  author: string,
-  slug: { current: string };
   summary: string;
-  publishedAt: string;
+  author: string;
+  slug: string;
+  date_posted: string;
 }
 
-const Blogs : React.FC = () => {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
+const Blogs: React.FC = () => {
+  const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const query = `*[_type == "blogPost"] | order(publishedAt desc){
-          title,
-          author,
-          slug,
-          summary,
-          publishedAt,
-        }`;
-        const data = await sanityClient.fetch(query);
-        setPosts(data);
-      } catch (error) {
-        console.error("Error fetching posts:", error);
-      } finally {
-        setLoading(false);
+    const fetchBlogs = async () => {
+      const { data, error } = await supabase
+        .from("blogs")
+        .select("*")
+        .order("date_posted", { ascending: false });
+
+      if (error) {
+        console.error("Error fetching blogs:", error);
+      } else {
+        setBlogs(data || []);
       }
+      setLoading(false);
     };
 
-    fetchPosts();
+    fetchBlogs();
   }, []);
 
-  return (
-    <div className="min-h-screen font-teachers bg-cream text-fog px-4 py-12 max-w-5xl mx-auto">
-      <h1 className="text-4xl font-teachers mb-8 text-center">GenBlogs</h1>
+  const formatDate = (dateString: string) =>
+    new Date(dateString).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
 
-      {loading ? (
-        <p className="text-center text-xl">Loading posts...</p>
-      ) : posts.length === 0 ? (
-        <p className="text-center text-xl">No blog posts found.</p>
+  if (loading) return <p className="text-center mt-12">Loading blogs...</p>;
+
+  return (
+    <div className="min-h-screen bg-cream text-fog px-4 py-12 max-w-5xl mx-auto font-teachers">
+      <h1 className="text-4xl font-bold mb-8 text-center">GenBlogs</h1>
+
+      {blogs.length === 0 ? (
+        <p className="text-center text-xl">No blog posts yet.</p>
       ) : (
-        <ul className="space-y-8 font-teachers">
-          {posts.map((post) => (
-            <li key={post.slug.current} className="border rounded-lg p-6  font-teachers hover:shadow-lg transition-shadow duration-200">
-              <Link to={`/blog/${post.slug.current}`}>
-                <a className="block">
-                  <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
-                  <p className="text-xl font-semibold mb-2">by {post.author}</p>
-                  <p className="text-fog mb-3">{post.summary}</p>
-                  <time className="text-sm text-fog">
-                    {new Date(post.publishedAt).toLocaleDateString(undefined, {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </time>
-                </a>
+        <ul className="space-y-8">
+          {blogs.map((blog) => (
+            <li
+              key={blog.id}
+              className="border rounded-lg p-6 hover:shadow-lg transition-shadow duration-200"
+            >
+              <Link to={`/blog/${blog.slug}`}>
+                <h2 className="text-2xl font-semibold mb-2">{blog.title}</h2>
+                <p className="text-lg font-medium mb-1">by {blog.author}</p>
+                <p className="text-sm text-gray-500 mb-2">
+                  {formatDate(blog.date_posted)}
+                </p>
+                <p className="line-clamp-3">{blog.summary}</p>
               </Link>
             </li>
           ))}
