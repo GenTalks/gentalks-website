@@ -18,7 +18,7 @@ const StatusLight: React.FC<StatusLightProps> = ({ status, className }) => {
     },
     reviewing: {
       text: "Reviewing",
-      bg: "bg-canary",
+      bg: "bg-toffee",
     },
     closed: {
       text: "Closed",
