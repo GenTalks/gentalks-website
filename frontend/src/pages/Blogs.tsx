@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase";
-import { Link } from "react-router-dom";
 
 interface BlogPost {
   id: string;
   title: string;
   summary: string;
   author: string;
-  slug: string;
+  link: string;
   date_posted: string;
 }
 
@@ -27,14 +26,15 @@ const Blogs: React.FC = () => {
       } else {
         setBlogs(data || []);
       }
+
       setLoading(false);
     };
 
     fetchBlogs();
   }, []);
 
-  const formatDate = (dateString: string) =>
-    new Date(dateString).toLocaleDateString("en-US", {
+  const formatDate = (date: string) =>
+    new Date(date).toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -53,16 +53,24 @@ const Blogs: React.FC = () => {
           {blogs.map((blog) => (
             <li
               key={blog.id}
-              className="border rounded-lg p-6 hover:shadow-lg transition-shadow duration-200"
+              className="border rounded-lg p-6 hover:shadow-lg transition-shadow duration-200 bg-white"
             >
-              <Link to={`/blog/${blog.slug}`}>
-                <h2 className="text-2xl font-semibold mb-2">{blog.title}</h2>
+              {/* Clicking opens the blog link in a new tab */}
+              <a href={blog.link} target="_blank" rel="noopener noreferrer">
+                <h2 className="text-2xl font-semibold mb-1">{blog.title}</h2>
+
                 <p className="text-lg font-medium mb-1">by {blog.author}</p>
-                <p className="text-sm text-gray-500 mb-2">
+
+                <p className="text-sm text-gray-500 mb-3">
                   {formatDate(blog.date_posted)}
                 </p>
-                <p className="line-clamp-3">{blog.summary}</p>
-              </Link>
+
+                <p className="line-clamp-3 text-fog">{blog.summary}</p>
+
+                <p className="mt-3 text-laurel underline text-sm">
+                  Read full blog →
+                </p>
+              </a>
             </li>
           ))}
         </ul>

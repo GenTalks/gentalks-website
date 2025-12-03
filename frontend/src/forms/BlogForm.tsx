@@ -1,35 +1,53 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase";
-import {useUser} from "../hooks/useUser";
-import slugify from "slugify";
 
 export default function BlogForm() {
-  const { profile } = useUser();
   const [title, setTitle] = useState("");
   const [summary, setSummary] = useState("");
-  const [content, setContent] = useState("");
+  const [link, setLink] = useState("");
+  const [author, setAuthor] = useState("");
+
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!profile) {
-      setMessage("❌ You must be logged in to create a blog post.");
-      return;
+  // Fetch the logged-in user's profile name
+  useEffect(() => {
+    async function fetchProfile() {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+
+      if (!user) return;
+
+      const { data, error } = await supabase
+        .from("profiles")
+        .select("name")
+        .eq("id", user.id)
+        .single();
+
+      if (!error && data) setAuthor(data.name);
     }
 
+    fetchProfile();
+  }, []);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
     setLoading(true);
     setMessage("");
 
-    const slug = slugify(title, { lower: true, strict: true });
+    if (!author) {
+      setMessage("❌ Error: Could not fetch your profile name.");
+      setLoading(false);
+      return;
+    }
 
     const { error } = await supabase.from("blogs").insert([
       {
         title,
         summary,
-        content,
-        author: profile.name, // automatically set
-        slug,
+        link,
+        author,
         date_posted: new Date().toISOString(),
       },
     ]);
@@ -38,52 +56,64 @@ export default function BlogForm() {
 
     if (error) {
       console.error(error);
-      setMessage("❌ Error creating blog post.");
-    } else {
-      setMessage("✅ Blog post created successfully!");
-      setTitle("");
-      setSummary("");
-      setContent("");
+      setMessage("❌ Error submitting blog post.");
+      return;
     }
-  };
+
+    setMessage("✅ Blog post submitted!");
+
+    setTitle("");
+    setSummary("");
+    setLink("");
+  }
 
   return (
     <div className="p-4 rounded-lg border bg-white shadow">
-      <h3 className="text-lg font-semibold mb-4">New Blog Post</h3>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <h3 className="text-lg font-semibold mb-4">Create New Blog Post</h3>
+
+      <form onSubmit={handleSubmit} className="space-y-3">
         <div>
-          <label className="block mb-1 font-medium">Title</label>
+          <label className="block text-sm font-medium mb-1">Title</label>
           <input
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
             className="w-full p-2 border rounded"
-            placeholder="Blog title"
+            placeholder="Enter blog title"
           />
         </div>
 
         <div>
-          <label className="block mb-1 font-medium">Summary</label>
+          <label className="block text-sm font-medium mb-1">Summary</label>
           <textarea
             value={summary}
             onChange={(e) => setSummary(e.target.value)}
             required
-            rows={3}
             className="w-full p-2 border rounded"
-            placeholder="Short summary"
+            placeholder="Short summary of the blog"
           />
         </div>
 
         <div>
-          <label className="block mb-1 font-medium">Content</label>
-          <textarea
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
+          <label className="block text-sm font-medium mb-1">Blog Link</label>
+          <input
+            type="url"
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
             required
-            rows={8}
             className="w-full p-2 border rounded"
-            placeholder="Write your blog content here..."
+            placeholder="https://medium.com/"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium mb-1">Author</label>
+          <input
+            type="text"
+            value={author || "Loading..."}
+            disabled
+            className="w-full p-2 border rounded bg-gray-100 text-gray-600"
           />
         </div>
 
@@ -92,11 +122,11 @@ export default function BlogForm() {
           disabled={loading}
           className="px-4 py-2 bg-laurel text-cream rounded hover:bg-basil"
         >
-          {loading ? "Saving..." : "Create Blog Post"}
+          {loading ? "Posting..." : "Submit Blog"}
         </button>
-
-        {message && <p className="mt-3 text-sm">{message}</p>}
       </form>
+
+      {message && <p className="mt-3 text-sm">{message}</p>}
     </div>
   );
 }

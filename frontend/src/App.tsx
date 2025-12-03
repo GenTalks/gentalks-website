@@ -6,8 +6,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import About from "./pages/About";
 import Community from "./pages/Community";
 import Blogs from "./pages/Blogs";
-import BlogDetail from "./pages/BlogDetail";
-import BlogPost from "./pages/BlogDetail";
 import StudentCenter from "./pages/StudentCenter";
 import Home from "./pages/Home";
 import BookAMentor from "./pages/BookAMentor";
@@ -55,8 +53,6 @@ function App() {
 
             {/* Blogs */}
             <Route path="/blogs" element={<Blogs />} />
-            <Route path="/blog/:id" element={<BlogDetail />} />
-            <Route path="/create-blog" element={<BlogPost />} />
 
             <Route path="/resources" element={<Resources />} />
             <Route path="/faqs" element={<FAQs />} />
