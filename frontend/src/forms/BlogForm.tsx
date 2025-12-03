@@ -56,11 +56,11 @@ export default function BlogForm() {
 
     if (error) {
       console.error(error);
-      setMessage("❌ Error submitting blog post.");
+      setMessage("Error submitting blog post.");
       return;
     }
 
-    setMessage("✅ Blog post submitted!");
+    setMessage("Blog post submitted!");
 
     setTitle("");
     setSummary("");

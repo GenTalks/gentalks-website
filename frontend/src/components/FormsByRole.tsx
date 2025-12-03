@@ -64,11 +64,11 @@ export function FormsByRole({ role, biography }: Props) {
             <InternshipsForm />,
             <HTAForm />,
             <NHSForm />,
+
             <ScholarshipsForm />,
             <StudentCenterAnnouncementsForm />,
             <StudentProjectsForm />,
             <HomeStatisticsForm />,
-
             <SRForm />,
             <StudentStoriesForm />
         ],
@@ -78,8 +78,8 @@ export function FormsByRole({ role, biography }: Props) {
             <HTAForm />,
             <InternshipsForm />,
             <MentorCardForm />,
-            <HomeStatisticsForm />,
 
+            <HomeStatisticsForm />,
             <NHSForm />,
             <ScholarshipsForm />,
             <SRForm />,

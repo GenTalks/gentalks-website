@@ -1,52 +1,32 @@
 import React, { useEffect, useState } from "react";
-import { sanityClient } from "../lib/sanityClient";
-import MentorBookingCard from "../components/MentorBookingCard";
+import { supabase } from "../lib/supabase";
+import MentorCard from "../components/MentorCard";
 
-export interface BookAMentor {
-  _id: string;
-  mentorImage: string;
-  mentorname: string;
+export interface Mentor {
+  id: string;
+  mentor_image: string;
+  mentor_name: string;
   linkedin: string;
   calendly: string;
-  role: string;
-  growth: string[];
-  topics: string[];
-  desc: string;
+  title: string;
+  categories: string[]; 
+  tutoring: string[];   
 }
 
-const mentorQuery = `
-  *[_type == "mentorpage"] | order(_createdAt desc) {
-    _id,
-    mentorImage,
-    mentorname,
-    linkedin,
-    calendly,
-    role,
-    growth,
-    topics,
-    desc,
-  }
-`;
-
 const BookAMentor: React.FC = () => {
-  const [mentors, setMentors] = useState<BookAMentor[]>([]);
+  const [mentors, setMentors] = useState<Mentor[]>([]);
 
   useEffect(() => {
-    sanityClient
-      .fetch(mentorQuery)
-      .then((data: BookAMentor[]) => {
-        const sortedData = data
-          .filter((item) => !!item.mentorname)
-          .sort(
-            (a, b) =>
-              new Date(b.mentorname).getTime() -
-              new Date(a.mentorname).getTime()
-          );
+    const fetchMentors = async () => {
+      const { data, error } = await supabase
+        .from("mentors")
+        .select("*")
+        .order("created_at", { ascending: false });
 
-        console.log("Sorted internships:", sortedData);
-        setMentors(sortedData);
-      })
-      .catch(console.error);
+      if (!error && data) setMentors(data);
+    };
+
+    fetchMentors();
   }, []);
 
   return (
@@ -54,19 +34,18 @@ const BookAMentor: React.FC = () => {
       <h1 className="text-4xl font-teachers pl-16">book a mentor</h1>
       <div className="flex-1"></div>
 
-      {/* Right side for cards */}
       <div className="shadow-md flex flex-col gap-6 w-1/2 overflow-y-auto max-h-screen">
-        {mentors.slice().map((item) => (
-          <MentorBookingCard
-            key={item._id}
-            mentorImage={item.mentorImage}
-            mentorname={item.mentorname}
-            linkedin={item.linkedin}
-            calendly={item.calendly}
-            role={item.role}
-            growth={item.growth}
-            topics={item.topics}
-            desc={item.desc}
+        {mentors.map((m) => (
+          <MentorCard
+            key={m.id}
+            id={m.id}
+            image={m.mentor_image}
+            name={m.mentor_name}
+            title={m.title}
+            linkedin={m.linkedin}
+            calendly={m.calendly}
+            categories={m.categories} 
+            tutoring={m.tutoring}     
           />
         ))}
       </div>
