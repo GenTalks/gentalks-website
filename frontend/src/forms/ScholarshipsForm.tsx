@@ -3,12 +3,12 @@ import { supabase } from "../lib/supabase";
 
 export default function ScholarshipsForm() {
   const [title, setTitle] = useState("");
-  const [organization, setOrganization] = useState("");
+  const [organizationName, setOrganizationName] = useState("");
   const [deadline, setDeadline] = useState("");
   const [amount, setAmount] = useState("");
   const [eligibility, setEligibility] = useState<string[]>([]);
   const [applicationType, setApplicationType] = useState<string[]>([]);
-  const [applicationUrl, setApplicationUrl] = useState("");
+  const [applicationLink, setApplicationLink] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -35,14 +35,15 @@ export default function ScholarshipsForm() {
     const { error } = await supabase.from("scholarships").insert([
       {
         title,
-        organization,
+        organization_name: organizationName,
         deadline: deadline || new Date().toISOString(),
         amount,
-        eligibility,
-        applicationtype: applicationType,
-        application_url: applicationUrl,
+        eligibility,               // array of strings
+        application_type: applicationType, // <-- MUST match column name exactly
+        application_link: applicationLink,
       },
     ]);
+
 
     setLoading(false);
 
@@ -54,16 +55,16 @@ export default function ScholarshipsForm() {
 
     setMessage("Scholarship submitted!");
     setTitle("");
-    setOrganization("");
+    setOrganizationName("");
     setDeadline("");
     setAmount("");
     setEligibility([]);
     setApplicationType([]);
-    setApplicationUrl("");
+    setApplicationLink("");
   }
 
   return (
-    <div className="p-4 rounded-lg border bg-white shadow max-w-lg mx-auto">
+    <div className="p-4 rounded-lg border bg-white shadow">
       <h3 className="text-lg font-semibold mb-4">Scholarships Form</h3>
 
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -80,12 +81,12 @@ export default function ScholarshipsForm() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Organization</label>
+          <label className="block text-sm font-medium mb-1">Organization Name</label>
           <input
             type="text"
             className="w-full p-2 border rounded"
-            value={organization}
-            onChange={e => setOrganization(e.target.value)}
+            value={organizationName}
+            onChange={e => setOrganizationName(e.target.value)}
             placeholder="Organization name"
           />
         </div>
@@ -119,9 +120,8 @@ export default function ScholarshipsForm() {
                 type="button"
                 key={option}
                 onClick={() => toggleOption(option, eligibility, setEligibility)}
-                className={`px-3 py-1 border rounded-full text-sm ${
-                  eligibility.includes(option) ? "bg-laurel text-cream" : "bg-gray-100 text-gray-700"
-                }`}
+                className={`px-3 py-1 border rounded-full text-sm ${eligibility.includes(option) ? "bg-laurel text-cream" : "bg-gray-100 text-gray-700"
+                  }`}
               >
                 {option}
               </button>
@@ -137,9 +137,8 @@ export default function ScholarshipsForm() {
                 type="button"
                 key={option}
                 onClick={() => toggleOption(option, applicationType, setApplicationType)}
-                className={`px-3 py-1 border rounded-full text-sm ${
-                  applicationType.includes(option) ? "bg-laurel text-cream" : "bg-gray-100 text-gray-700"
-                }`}
+                className={`px-3 py-1 border rounded-full text-sm ${applicationType.includes(option) ? "bg-laurel text-cream" : "bg-gray-100 text-gray-700"
+                  }`}
               >
                 {option}
               </button>
@@ -148,12 +147,12 @@ export default function ScholarshipsForm() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Application URL</label>
+          <label className="block text-sm font-medium mb-1">Application Link</label>
           <input
             type="url"
             className="w-full p-2 border rounded"
-            value={applicationUrl}
-            onChange={e => setApplicationUrl(e.target.value)}
+            value={applicationLink}
+            onChange={e => setApplicationLink(e.target.value)}
             placeholder="https://example.com/apply"
           />
         </div>

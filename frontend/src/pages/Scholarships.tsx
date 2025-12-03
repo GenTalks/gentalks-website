@@ -13,12 +13,12 @@ import { MdOutlinePsychology } from "react-icons/md";
 export interface Scholarship {
   id: string;
   title: string;
-  organization: string;
+  organization_name: string;
   deadline: string;
   amount: string;
-  eligibility: string[];
-  applicationtype: string[];
-  application_url: string;
+  eligibility: string; 
+  application_type: string; 
+  application_link: string;
 }
 
 const Scholarships: React.FC = () => {
@@ -82,12 +82,12 @@ const Scholarships: React.FC = () => {
           <ScholarshipCard
             key={item.id}
             title={item.title}
-            organization={item.organization}
+            organization_name={item.organization_name}
             deadline={item.deadline}
             amount={item.amount}
             eligibility={item.eligibility}
-            applicationtype={item.applicationtype}
-            applicationUrl={item.application_url}
+            application_type={item.application_type}
+            application_link={item.application_link}
           />
         ))}
       </div>
