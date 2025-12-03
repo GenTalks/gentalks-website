@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { supabase } from "../lib/supabase";
 
 export default function ScholarshipsForm() {
@@ -7,139 +7,167 @@ export default function ScholarshipsForm() {
   const [deadline, setDeadline] = useState("");
   const [amount, setAmount] = useState("");
   const [eligibility, setEligibility] = useState<string[]>([]);
-  const [applicationtype, setApplicationType] = useState<string[]>([]);
+  const [applicationType, setApplicationType] = useState<string[]>([]);
   const [applicationUrl, setApplicationUrl] = useState("");
-
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const eligibilityOptions = [
+    "High school students",
+    "College students",
+    "Graduate students",
+    "Minority students",
+    "Women",
+    "STEM",
+  ];
+
+  const applicationTypeOptions = ["Essay", "Portfolio", "Recommendation", "Transcript", "Other"];
+
+  const toggleOption = (option: string, state: string[], setter: (val: string[]) => void) => {
+    setter(state.includes(option) ? state.filter(o => o !== option) : [...state, option]);
+  };
+
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    setError("");
-    setSuccess(false);
+    setMessage("");
 
-    const { data, error } = await supabase.from("scholarships").insert([
+    const { error } = await supabase.from("scholarships").insert([
       {
         title,
         organization,
-        deadline,
+        deadline: deadline || new Date().toISOString(),
         amount,
         eligibility,
-        applicationtype,
+        applicationtype: applicationType,
         application_url: applicationUrl,
       },
     ]);
 
     setLoading(false);
-    if (error) {
-      setError(error.message);
-    } else {
-      setSuccess(true);
-      // Clear form
-      setTitle("");
-      setOrganization("");
-      setDeadline("");
-      setAmount("");
-      setEligibility([]);
-      setApplicationType([]);
-      setApplicationUrl("");
-    }
-  };
 
-  const handleArrayInput = (setter: React.Dispatch<React.SetStateAction<string[]>>, value: string) => {
-    const items = value.split(",").map((v) => v.trim()).filter((v) => v);
-    setter(items);
-  };
+    if (error) {
+      console.error(error);
+      setMessage("Error submitting scholarship.");
+      return;
+    }
+
+    setMessage("Scholarship submitted!");
+    setTitle("");
+    setOrganization("");
+    setDeadline("");
+    setAmount("");
+    setEligibility([]);
+    setApplicationType([]);
+    setApplicationUrl("");
+  }
 
   return (
-    <div className="p-6 rounded-lg border bg-cream shadow max-w-lg mx-auto">
-      <h3 className="text-2xl font-semibold mb-4 font-teachers">Add a Scholarship</h3>
+    <div className="p-4 rounded-lg border bg-white shadow max-w-lg mx-auto">
+      <h3 className="text-lg font-semibold mb-4">Scholarships Form</h3>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block mb-1 font-semibold">Title</label>
+          <label className="block text-sm font-medium mb-1">Title</label>
           <input
             type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            className="w-full p-2 border rounded"
             required
-            className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-laurel"
+            value={title}
+            onChange={e => setTitle(e.target.value)}
+            placeholder="Scholarship title"
           />
         </div>
 
         <div>
-          <label className="block mb-1 font-semibold">Organization</label>
+          <label className="block text-sm font-medium mb-1">Organization</label>
           <input
             type="text"
+            className="w-full p-2 border rounded"
             value={organization}
-            onChange={(e) => setOrganization(e.target.value)}
-            className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-laurel"
+            onChange={e => setOrganization(e.target.value)}
+            placeholder="Organization name"
           />
         </div>
 
         <div>
-          <label className="block mb-1 font-semibold">Deadline</label>
+          <label className="block text-sm font-medium mb-1">Deadline</label>
           <input
             type="date"
+            className="w-full p-2 border rounded"
             value={deadline}
-            onChange={(e) => setDeadline(e.target.value)}
-            className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-laurel"
+            onChange={e => setDeadline(e.target.value)}
           />
         </div>
 
         <div>
-          <label className="block mb-1 font-semibold">Amount</label>
+          <label className="block text-sm font-medium mb-1">Amount</label>
           <input
             type="text"
+            className="w-full p-2 border rounded"
             value={amount}
-            onChange={(e) => setAmount(e.target.value)}
-            className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-laurel"
+            onChange={e => setAmount(e.target.value)}
+            placeholder="Scholarship amount"
           />
         </div>
 
         <div>
-          <label className="block mb-1 font-semibold">Eligibility (comma separated)</label>
-          <input
-            type="text"
-            value={eligibility.join(", ")}
-            onChange={(e) => handleArrayInput(setEligibility, e.target.value)}
-            className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-laurel"
-          />
+          <label className="block text-sm font-medium mb-1">Eligibility</label>
+          <div className="flex flex-wrap gap-2">
+            {eligibilityOptions.map(option => (
+              <button
+                type="button"
+                key={option}
+                onClick={() => toggleOption(option, eligibility, setEligibility)}
+                className={`px-3 py-1 border rounded-full text-sm ${
+                  eligibility.includes(option) ? "bg-laurel text-cream" : "bg-gray-100 text-gray-700"
+                }`}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div>
-          <label className="block mb-1 font-semibold">Application Type (comma separated)</label>
-          <input
-            type="text"
-            value={applicationtype.join(", ")}
-            onChange={(e) => handleArrayInput(setApplicationType, e.target.value)}
-            className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-laurel"
-          />
+          <label className="block text-sm font-medium mb-1">Application Type</label>
+          <div className="flex flex-wrap gap-2">
+            {applicationTypeOptions.map(option => (
+              <button
+                type="button"
+                key={option}
+                onClick={() => toggleOption(option, applicationType, setApplicationType)}
+                className={`px-3 py-1 border rounded-full text-sm ${
+                  applicationType.includes(option) ? "bg-laurel text-cream" : "bg-gray-100 text-gray-700"
+                }`}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div>
-          <label className="block mb-1 font-semibold">Application URL</label>
+          <label className="block text-sm font-medium mb-1">Application URL</label>
           <input
             type="url"
+            className="w-full p-2 border rounded"
             value={applicationUrl}
-            onChange={(e) => setApplicationUrl(e.target.value)}
-            className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-laurel"
+            onChange={e => setApplicationUrl(e.target.value)}
+            placeholder="https://example.com/apply"
           />
         </div>
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full py-2 px-4 bg-laurel text-cream font-semibold rounded hover:bg-darkLaurel transition"
+          className="px-4 py-2 bg-laurel text-cream rounded hover:bg-basil transition"
         >
-          {loading ? "Submitting..." : "Submit"}
+          {loading ? "Submitting..." : "Submit Scholarship"}
         </button>
-
-        {success && <p className="text-green-600 mt-2">Scholarship added successfully!</p>}
-        {error && <p className="text-red-600 mt-2">{error}</p>}
       </form>
+
+      {message && <p className="mt-3 text-sm">{message}</p>}
     </div>
   );
 }
