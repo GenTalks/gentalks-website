@@ -20,7 +20,6 @@ import Internships from "./pages/Internships";
 import NavHS from "./pages/NavHS";
 import Scholarships from "./pages/Scholarships";
 import StudentStories from "./pages/StudentStories";
-import StudentStory from "./pages/StudentStoryPage";
 import StudentProjects from "./pages/StudentProjects";
 import StaffLogin from "./pages/StaffLogin";
 import StaffDashboard from "./pages/StaffDashboard";
@@ -66,7 +65,6 @@ function App() {
             <Route path="/navigating-high-school" element={<NavHS />} />
             <Route path="/scholarships" element={<Scholarships />} />
             <Route path="/student-stories" element={<StudentStories />} />
-            <Route path="/student-story/:slug" element={<StudentStory />} />
             <Route path="/student-projects" element={<StudentProjects />} />
             <Route path="/staff-login" element={<StaffLogin />} />
             <Route path="/staff-dashboard" element={<StaffDashboard />} />

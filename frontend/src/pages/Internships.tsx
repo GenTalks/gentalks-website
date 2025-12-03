@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { sanityClient } from "../lib/sanityClient";
+import React, { useEffect, useState } from "react";
+import { supabase } from "../lib/supabase";
 import InternshipCard from "../components/InternshipCard";
 
 import { RiSuitcaseLine } from "react-icons/ri";
@@ -11,52 +11,31 @@ import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
 
 export interface Internship {
-  _id: string;
-  title: string;
-  company: string;
+  id: string;
+  internship_title: string;
+  company_name: string;
   location: string;
   compensation: string;
   industries: string[];
-  pros: string[];
-  cons: string[];
-  applicationUrl: string;
-  datePosted: string;
+  application_link: string;
+  date_posted: string;
 }
-
-const internshipsQuery = `
-  *[_type == "internship"] | order(_createdAt desc) {
-    _id,
-    title,
-    company,
-    location,
-    compensation,
-    industries,
-    pros,
-    cons,
-    applicationUrl,
-    datePosted
-  }
-`;
 
 const Internships: React.FC = () => {
   const [internships, setInternships] = useState<Internship[]>([]);
 
   useEffect(() => {
-    sanityClient
-      .fetch(internshipsQuery)
-      .then((data: Internship[]) => {
-        const sortedData = data
-          .filter((item) => !!item.datePosted) // optional: skip items without date
-          .sort(
-            (a, b) =>
-              new Date(b.datePosted).getTime() -
-              new Date(a.datePosted).getTime()
-          );
+    async function loadResources() {
+      const { data, error } = await supabase
+        .from("internships")
+        .select("*")
+        .order("date_posted", { ascending: false });
 
-        console.log("Sorted internships:", sortedData);
-        setInternships(sortedData);
-      })
-      .catch(console.error);
+      if (error) console.error("Error loading internships:", error);
+      else setInternships(data || []);
+    }
+
+    loadResources();
   }, []);
 
   return (
@@ -70,7 +49,7 @@ const Internships: React.FC = () => {
         </Link>
       </div>
 
-      <h1 className="text-4xl font-bold mb-6 font-teachers">Categories</h1>
+      <h1 className="text-4xl font-bold mb-6 font-bosk">Categories</h1>
 
       {/* Category buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -130,16 +109,14 @@ const Internships: React.FC = () => {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-cream text-fog">
         {internships.map((item) => (
           <InternshipCard
-            key={item._id}
-            title={item.title}
-            company={item.company}
+            key={item.id}
+            title={item.internship_title}    
+            company={item.company_name}     
             location={item.location}
-            datePosted={item.datePosted}
             compensation={item.compensation}
             industries={item.industries}
-            pros={item.pros}
-            cons={item.cons}
-            applicationUrl={item.applicationUrl}
+            applicationUrl={item.application_link}
+            datePosted={item.date_posted}        
           />
         ))}
       </div>

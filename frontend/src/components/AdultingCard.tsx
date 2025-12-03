@@ -18,7 +18,6 @@ function formatLocalDate(dateString: string) {
   });
 }
 
-
 const AdultingCard: React.FC<AdultingCardProps> = ({
   title,
   author,
@@ -27,42 +26,46 @@ const AdultingCard: React.FC<AdultingCardProps> = ({
   datePosted,
 }) => {
   return (
-    <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream shadow hover:shadow-md transition">
-      <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="italic">{author || "Unknown author"}</p>
+    <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream shadow-sm hover:shadow-md transition">
+      <h3 className="text-xl font-semibold mb-1">{title}</h3>
 
-      {/* Add Date Posted */}
-      <p>
+      {/* Only show author if provided */}
+      {author && <p className="italic mb-1">{author}</p>}
+
+      {/* Date */}
+      <p className="text-sm mb-3">
         <strong>Date Posted:</strong>{" "}
         {datePosted ? formatLocalDate(datePosted) : "N/A"}
       </p>
 
-      <p className="mt-2 leading-[2.5rem]">
-        <strong>Tags:</strong>{" "}
-        {tags?.length
-          ? tags.map((tag, i) => (
-              <span
-                key={i}
-                className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
-              >
-                {tag}
-              </span>
-            ))
-          : "N/A"}
-      </p>
+      {/* Tags */}
+      <div className="flex flex-wrap gap-1 mb-4">
+        {tags?.length ? (
+          tags.map((tag, i) => (
+            <span
+              key={i}
+              className="bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm"
+            >
+              {tag}
+            </span>
+          ))
+        ) : (
+          <span className="italic">No tags</span>
+        )}
+      </div>
 
-      {/* Resource Link Button */}
+      {/* Link */}
       {resourceUrl ? (
         <a
           href={resourceUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-4 px-4 py-2 bg-laurel text-cream rounded hover:bg-darkLaurel transition"
+          className="inline-block px-4 py-2 bg-laurel text-cream rounded hover:bg-darkLaurel transition"
         >
           Learn more
         </a>
       ) : (
-        <p className="mt-4 italic">No resource link available</p>
+        <p className="italic">No resource link available</p>
       )}
     </div>
   );

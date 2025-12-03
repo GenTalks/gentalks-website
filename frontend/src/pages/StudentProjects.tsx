@@ -1,48 +1,37 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { sanityClient } from "../lib/sanityClient";
+import { supabase } from "../lib/supabase";
 import StudentProjectCard from "../components/StudentProjectCard";
 
-
 export interface StudentProject {
-  _id: string;
+  id: string;
   title: string;
   creator: string;
   categories: string[];
-  projectUrl: string;
-  dateFeatured: string;
+  project_url: string;
+  date_featured: string;
 }
 
-const studentProjectQuery = `
-  *[_type == "studentProject"] | order(_createdAt desc) {
-    _id,
-    title,
-    creator,
-    categories,
-    projectUrl,
-    dateFeatured,
-  }
-`;
-
 const StudentProjects: React.FC = () => {
-  const [studentProjects, setStudentProject] = useState<StudentProject[]>([]);
+  const [studentProjects, setStudentProjects] = useState<StudentProject[]>([]);
 
   useEffect(() => {
-    sanityClient
-      .fetch(studentProjectQuery)
-      .then((data: StudentProject[]) => {
-        const sortedData = data
-          .filter((item) => !!item.dateFeatured) 
-          .sort(
-            (a, b) =>
-              new Date(b.dateFeatured).getTime() -
-              new Date(a.dateFeatured).getTime()
-          );
+    const fetchProjects = async () => {
+      const { data, error } = await supabase
+        .from("student_projects")
+        .select("*")
+        .order("date_featured", { ascending: false });
 
-        console.log("Sorted internships:", sortedData);
-        setStudentProject(sortedData);
-      })
-      .catch(console.error);
+      if (error) {
+        console.error(error);
+        return;
+      }
+
+      const filtered = data.filter((p) => !!p.date_featured);
+      setStudentProjects(filtered);
+    };
+
+    fetchProjects();
   }, []);
 
   return (
@@ -62,15 +51,16 @@ const StudentProjects: React.FC = () => {
         Student Projects
       </h2>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-cream text-fog">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {studentProjects.map((item) => (
           <StudentProjectCard
-            key={item._id}
+            key={item.id}
+            id={item.id}
             title={item.title}
             creator={item.creator}
             categories={item.categories}
-            projectUrl={item.projectUrl}
-            dateFeatured={item.dateFeatured}
+            projectUrl={item.project_url}
+            dateFeatured={item.date_featured}
           />
         ))}
       </div>

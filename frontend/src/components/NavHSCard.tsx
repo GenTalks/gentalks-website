@@ -18,7 +18,6 @@ function formatLocalDate(dateString: string) {
   });
 }
 
-
 const NavHSCard: React.FC<NavHSCardProps> = ({
   title,
   author,
@@ -34,10 +33,8 @@ const NavHSCard: React.FC<NavHSCardProps> = ({
         <strong>by:</strong> {author || "N/A"}
       </p>
 
-      {/* Add Date Posted */}
       <p>
-        <strong>Date Posted:</strong>{" "}
-        {datePosted ? formatLocalDate(datePosted) : "N/A"}
+        <strong>Date Posted:</strong> {datePosted ? formatLocalDate(datePosted) : "N/A"}
       </p>
 
       <p className="mt-2 leading-[2.5rem]">
@@ -54,7 +51,6 @@ const NavHSCard: React.FC<NavHSCardProps> = ({
           : "N/A"}
       </p>
 
-      {/* Resource Link Button */}
       {resourceUrl ? (
         <a
           href={resourceUrl}

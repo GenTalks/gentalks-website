@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import { sanityClient } from "../lib/sanityClient";
+import { supabase } from "../lib/supabase";
 import StudyResourceCard from "../components/StudyResourceCard";
 
 import { RiSuitcaseLine } from "react-icons/ri";
@@ -11,42 +11,32 @@ import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
 
 export interface StudyResource {
-  _id: string;
+  id: string;
   title: string;
-  subject: string;
-  resourceUrl: string;
-  dateCreated: string;
+  author: string;
+  topic: string;
+  resource_url: string;
+  date_posted: string;
 }
 
-const studyResourceQuery = `
-  *[_type == "studyresource"] | order(_createdAt desc) {
-    _id,
-    title,
-    subject,
-    resourceUrl,
-    dateCreated,
-  }
-`;
-
 const StudyResources: React.FC = () => {
-  const [studyResources, setStudyResource] = useState<StudyResource[]>([]);
+  const [studyResources, setStudyResources] = useState<StudyResource[]>([]);
 
   useEffect(() => {
-    sanityClient
-      .fetch(studyResourceQuery)
-      .then((data: StudyResource[]) => {
-        const sortedData = data
-          .filter((item) => !!item.dateCreated) // optional: skip items without date
-          .sort(
-            (a, b) =>
-              new Date(b.dateCreated).getTime() -
-              new Date(a.dateCreated).getTime()
-          );
+    async function loadResources() {
+      const { data, error } = await supabase
+        .from("study_resources")
+        .select("*")
+        .order("date_posted", { ascending: false });
 
-        console.log("Sorted resources:", sortedData);
-        setStudyResource(sortedData);
-      })
-      .catch(console.error);
+      if (error) {
+        console.error("Error loading study resources:", error);
+      } else {
+        setStudyResources(data || []);
+      }
+    }
+
+    loadResources();
   }, []);
 
   return (
@@ -120,11 +110,12 @@ const StudyResources: React.FC = () => {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-cream text-fog">
         {studyResources.map((item) => (
           <StudyResourceCard
-            key={item._id}
+            key={item.id}
             title={item.title}
-            subject={item.subject}
-            dateCreated={item.dateCreated}
-            resourceUrl={item.resourceUrl}
+            author={item.author}
+            topic={item.topic}
+            datePosted={item.date_posted}
+            resourceUrl={item.resource_url}
           />
         ))}
       </div>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import { sanityClient } from "../lib/sanityClient";
+import { supabase } from "../lib/supabase";
 import ScholarshipCard from "../components/ScholarshipCard";
 
 import { RiSuitcaseLine } from "react-icons/ri";
@@ -11,47 +11,31 @@ import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
 
 export interface Scholarship {
-  _id: string;
+  id: string;
   title: string;
   organization: string;
   deadline: string;
   amount: string;
   eligibility: string[];
   applicationtype: string[];
-  applicationUrl: string;
+  application_url: string;
 }
-
-const internshipsQuery = `
-  *[_type == "scholarship"] | order(_createdAt desc) {
-    _id,
-    title,
-    organization,
-    deadline,
-    amount,
-    eligibility,
-    applicationtype,
-    applicationUrl,
-  }
-`;
 
 const Scholarships: React.FC = () => {
   const [scholarships, setScholarships] = useState<Scholarship[]>([]);
 
   useEffect(() => {
-    sanityClient
-      .fetch(internshipsQuery)
-      .then((data: Scholarship[]) => {
-        const sortedData = data
-          .filter((item) => !!item.deadline) // optional: skip items without date
-          .sort(
-            (a, b) =>
-              new Date(a.deadline).getTime() - new Date(b.deadline).getTime()
-          );
+    async function loadResources() {
+      const { data, error } = await supabase
+        .from("scholarships")
+        .select("*")
+        .order("deadline", { ascending: true });
 
-        console.log("Sorted internships by nearest deadline:", sortedData);
-        setScholarships(sortedData);
-      })
-      .catch(console.error);
+      if (error) console.error("Error loading scholarships:", error);
+      else setScholarships(data || []);
+    }
+
+    loadResources();
   }, []);
 
   return (
@@ -69,69 +53,41 @@ const Scholarships: React.FC = () => {
 
       {/* Category buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <Link
-          to="/study-resources"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <LuBookOpenText size={20} />
-          Study Resources
+        <Link to="/study-resources" className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream">
+          <LuBookOpenText size={20} /> Study Resources
         </Link>
-
-        <Link
-          to="/internships"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <RiSuitcaseLine size={20} />
-          Internships
+        <Link to="/internships" className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream">
+          <RiSuitcaseLine size={20} /> Internships
         </Link>
-
-        <Link
-          to="/scholarships"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <FaUserGraduate size={20} />
-          Scholarships
+        <Link to="/scholarships" className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream">
+          <FaUserGraduate size={20} /> Scholarships
         </Link>
-
-        <Link
-          to="/navigating-high-school"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <MdOutlinePsychology size={20} />
-          Navigating High School
+        <Link to="/navigating-high-school" className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream">
+          <MdOutlinePsychology size={20} /> Navigating High School
         </Link>
-
-        <Link
-          to="/college-prep"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <IoSchoolOutline size={20} />
-          College Prep
+        <Link to="/college-prep" className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream">
+          <IoSchoolOutline size={20} /> College Prep
         </Link>
-
-        <Link
-          to="/how-to-adult"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <GiHeartWings size={20} />
-          How to Adult
+        <Link to="/how-to-adult" className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream">
+          <GiHeartWings size={20} /> How to Adult
         </Link>
       </div>
+
       <h2 className="text-5xl font-teachers font-semibold pl-2 mt-12 mb-4">
-        Internships
+        Scholarships
       </h2>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-cream text-fog">
         {scholarships.map((item) => (
           <ScholarshipCard
-            key={item._id}
+            key={item.id}
             title={item.title}
             organization={item.organization}
             deadline={item.deadline}
             amount={item.amount}
             eligibility={item.eligibility}
             applicationtype={item.applicationtype}
-            applicationUrl={item.applicationUrl}
+            applicationUrl={item.application_url}
           />
         ))}
       </div>

@@ -4,8 +4,8 @@ interface CollegePrepCardProps {
   title: string;
   author?: string;
   tags?: string[];
-  resourceUrl?: string;
-  datePosted?: string;
+  resource_url?: string;
+  date_posted?: string;
 }
 
 function formatLocalDate(dateString: string) {
@@ -18,13 +18,12 @@ function formatLocalDate(dateString: string) {
   });
 }
 
-
 const CollegePrepCard: React.FC<CollegePrepCardProps> = ({
   title,
   author,
   tags,
-  resourceUrl,
-  datePosted,
+  resource_url,
+  date_posted,
 }) => {
   return (
     <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream shadow hover:shadow-md transition">
@@ -34,10 +33,9 @@ const CollegePrepCard: React.FC<CollegePrepCardProps> = ({
         <strong>by:</strong> {author || "N/A"}
       </p>
 
-      {/* Add Date Posted */}
       <p>
         <strong>Date Posted:</strong>{" "}
-        {datePosted ? formatLocalDate(datePosted) : "N/A"}
+        {date_posted ? formatLocalDate(date_posted) : "N/A"}
       </p>
 
       <p className="mt-2 leading-[2.5rem]">
@@ -54,10 +52,9 @@ const CollegePrepCard: React.FC<CollegePrepCardProps> = ({
           : "N/A"}
       </p>
 
-      {/* Application Link Button */}
-      {resourceUrl ? (
+      {resource_url ? (
         <a
-          href={resourceUrl}
+          href={resource_url}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-4 px-4 py-2 bg-laurel text-cream rounded hover:bg-darkLaurel transition"

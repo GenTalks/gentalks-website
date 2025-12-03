@@ -2,9 +2,10 @@ import React from "react";
 
 interface StudyResourceCardProps {
   title: string;
-  subject?: string;
+  author?: string;
+  topic?: string;
   resourceUrl?: string;
-  dateCreated?: string;
+  datePosted?: string;
 }
 
 function formatLocalDate(dateString: string) {
@@ -17,35 +18,36 @@ function formatLocalDate(dateString: string) {
   });
 }
 
-
 const StudyResourceCard: React.FC<StudyResourceCardProps> = ({
   title,
-  subject,
+  author,
+  topic,
   resourceUrl,
-  dateCreated,
+  datePosted,
 }) => {
   return (
     <div className="border border-fog rounded-lg p-4 font-teachers text-fog bg-cream shadow hover:shadow-md transition">
+
       <h3 className="text-xl font-semibold">{title}</h3>
 
-      {/* Add Date Created */}
+      <p className="italic">{author || "Unknown author"}</p>
+
       <p>
         <strong>Date Created:</strong>{" "}
-        {dateCreated ? formatLocalDate(dateCreated) : "N/A"}
+        {datePosted ? formatLocalDate(datePosted) : "N/A"}
       </p>
 
       <p className="mt-2 leading-[2.5rem]">
         <strong>Subject:</strong>{" "}
-        {subject ? (
+        {topic ? (
           <span className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1">
-            {subject}
+            {topic}
           </span>
         ) : (
           "N/A"
         )}
       </p>
 
-      {/* Resource Link Button */}
       {resourceUrl ? (
         <a
           href={resourceUrl}

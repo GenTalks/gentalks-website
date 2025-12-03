@@ -74,7 +74,7 @@ const MentorCard: React.FC<MentorCardProps> = ({
               categories.map((cat, i) => (
                 <span
                   key={i}
-                  className="inline-block bg-laurel text-cream px-2 py-1 rounded-md text-sm mr-1"
+                  className="inline-block bg-laurel text-cream px-2 py-1 mx-1 my-1 rounded-md text-sm mr-1"
                 >
                   {cat}
                 </span>
@@ -91,7 +91,7 @@ const MentorCard: React.FC<MentorCardProps> = ({
               tutoring.map((topic, i) => (
                 <span
                   key={i}
-                  className="inline-block bg-laurel/10 text-laurel px-2 py-1 rounded-md text-sm mr-1"
+                  className="inline-block bg-laurel/10 text-laurel px-2 py-1 mx-1 my-1 rounded-md text-sm mr-1"
                 >
                   {topic}
                 </span>

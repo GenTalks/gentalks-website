@@ -6,8 +6,6 @@ interface InternshipCardProps {
   location?: string;
   compensation?: string;
   industries?: string[];
-  pros?: string[];
-  cons?: string[];
   applicationUrl?: string;
   datePosted?: string;
 }
@@ -22,15 +20,12 @@ function formatLocalDate(dateString: string) {
   });
 }
 
-
 const InternshipCard: React.FC<InternshipCardProps> = ({
   title,
   company,
   location,
   compensation,
   industries,
-  pros,
-  cons,
   applicationUrl,
   datePosted,
 }) => {
@@ -39,22 +34,12 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="italic">{company || "Unknown company"}</p>
 
-      {/* Add Location */}
-      <p>
-        <strong>Location:</strong> {location || "N/A"}
-      </p>
-
-      {/* Add Date Posted */}
-      <p>
-        <strong>Date Posted:</strong>{" "}
-        {datePosted ? formatLocalDate(datePosted) : "N/A"}
-      </p>
+      <p><strong>Location:</strong> {location || "N/A"}</p>
+      <p><strong>Date Posted:</strong> {datePosted ? formatLocalDate(datePosted) : "N/A"}</p>
 
       <p>
         <strong>Compensation:</strong>{" "}
-        {compensation
-          ? compensation.charAt(0).toUpperCase() + compensation.slice(1)
-          : "N/A"}
+        {compensation ? compensation[0].toUpperCase() + compensation.slice(1) : "N/A"}
       </p>
 
       <p className="mt-2 leading-[2.5rem]">
@@ -71,36 +56,10 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
           : "N/A"}
       </p>
 
-      {/* Pros tags */}
-      {pros && pros.length > 0 && (
-        <div className="mt-2">
-          <strong>Pros:</strong>
-          <ul className="list-disc list-inside">
-            {pros.map((pro, idx) => (
-              <li key={idx}>{pro.charAt(0).toUpperCase() + pro.slice(1)}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Cons tags */}
-      {cons && cons.length > 0 && (
-        <div className="mt-2">
-          <strong>Cons:</strong>
-          <ul className="list-disc list-inside">
-            {cons.map((con, idx) => (
-              <li key={idx}>{con.charAt(0).toUpperCase() + con.slice(1)}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Application Link Button */}
       {applicationUrl ? (
         <a
           href={applicationUrl}
           target="_blank"
-          rel="noopener noreferrer"
           className="inline-block mt-4 px-4 py-2 bg-laurel text-cream rounded hover:bg-darkLaurel transition"
         >
           Apply Now

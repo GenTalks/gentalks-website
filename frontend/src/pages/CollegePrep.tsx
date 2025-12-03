@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { sanityClient } from "../lib/sanityClient";
-import NavHSCard from "../components/NavHSCard";
+import React, { useEffect, useState } from "react";
+import { supabase } from "../lib/supabase";
+import CollegePrepCard from "../components/CollegePrepCard";
 
 import { RiSuitcaseLine } from "react-icons/ri";
 import { IoSchoolOutline } from "react-icons/io5";
@@ -11,44 +11,29 @@ import { GiHeartWings } from "react-icons/gi";
 import { MdOutlinePsychology } from "react-icons/md";
 
 export interface CollegePrep {
-  _id: string;
+  id: string;
   title: string;
   author: string;
+  resource_url: string;
   tags: string[];
-  resourceUrl: string;
-  datePosted: string;
+  date_posted: string;
 }
 
-const collegeprepQuery = `
-  *[_type == "collegeprep"] | order(_createdAt desc) {
-    _id,
-    title,
-    author,
-    tags,
-    resourceUrl,
-    datePosted
-  }
-`;
-
-const CollegePrep: React.FC = () => {
-  const [collegeprep, setCollegePrep] = useState<CollegePrep[]>([]);
+const CollegePrepPage: React.FC = () => {
+  const [items, setItems] = useState<CollegePrep[]>([]);
 
   useEffect(() => {
-    sanityClient
-      .fetch(collegeprepQuery)
-      .then((data: CollegePrep[]) => {
-        const sortedData = data
-          .filter((item) => !!item.datePosted) // optional: skip items without date
-          .sort(
-            (a, b) =>
-              new Date(b.datePosted).getTime() -
-              new Date(a.datePosted).getTime()
-          );
+    async function loadResources() {
+      const { data, error } = await supabase
+        .from("college_prep")
+        .select("*")
+        .order("date_posted", { ascending: false });
 
-        console.log("Sorted resources:", sortedData);
-        setCollegePrep(sortedData);
-      })
-      .catch(console.error);
+      if (error) console.error("Error loading resources:", error);
+      else setItems(data || []);
+    }
+
+    loadResources();
   }, []);
 
   return (
@@ -64,70 +49,40 @@ const CollegePrep: React.FC = () => {
 
       <h1 className="text-4xl font-bold mb-6 font-bosk">Categories</h1>
 
-      {/* Category buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <Link
-          to="/study-resources"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <LuBookOpenText size={20} />
-          Study Resources
+        <Link to="/study-resources" className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream">
+          <LuBookOpenText size={20} /> Study Resources
         </Link>
-
-        <Link
-          to="/internships"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <RiSuitcaseLine size={20} />
-          Internships
+        <Link to="/internships" className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream">
+          <RiSuitcaseLine size={20} /> Internships
         </Link>
-
-        <Link
-          to="/scholarships"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <FaUserGraduate size={20} />
-          Scholarships
+        <Link to="/scholarships" className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream">
+          <FaUserGraduate size={20} /> Scholarships
         </Link>
-
-        <Link
-          to="/navigating-high-school"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <MdOutlinePsychology size={20} />
-          Navigating High School
+        <Link to="/navigating-high-school" className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream">
+          <MdOutlinePsychology size={20} /> Navigating High School
         </Link>
-
-        <Link
-          to="/college-prep"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <IoSchoolOutline size={20} />
-          College Prep
+        <Link to="/college-prep" className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream">
+          <IoSchoolOutline size={20} /> College Prep
         </Link>
-
-        <Link
-          to="/how-to-adult"
-          className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream"
-        >
-          <GiHeartWings size={20} />
-          How to Adult
+        <Link to="/how-to-adult" className="flex items-center gap-2 px-5 py-3 border-2 border-fog rounded-lg hover:bg-laurel hover:text-cream transition font-teachers bg-cream">
+          <GiHeartWings size={20} /> How to Adult
         </Link>
       </div>
 
       <h2 className="text-5xl font-teachers font-semibold pl-2 mt-12 mb-4">
-        Preparing for college
+        College Prep
       </h2>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 bg-cream text-fog">
-        {collegeprep.map((item) => (
-          <NavHSCard
-            key={item._id}
+        {items.map((item) => (
+          <CollegePrepCard
+            key={item.id}
             title={item.title}
             author={item.author}
-            resourceUrl={item.resourceUrl}
             tags={item.tags}
-            datePosted={item.datePosted}
+            resource_url={item.resource_url}
+            date_posted={item.date_posted}
           />
         ))}
       </div>
@@ -135,4 +90,4 @@ const CollegePrep: React.FC = () => {
   );
 };
 
-export default CollegePrep;
+export default CollegePrepPage;

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import MentorCard from "./MentorCard";
+import MiniMentorCard from "./MiniMentorCard";
 import NavButton from "./NavButton";
 import { sanityClient } from "../lib/sanityClient";
 
@@ -63,7 +63,7 @@ const MentorCarousel = () => {
   }, [origCount, cardWidth]);
 
   return (
-    <div className="bg-cream relative w-full py-16">
+    <div className="bg-cream relative w-full py-16 font-teachers">
       <h2 className="text-4xl lg:text-6xl text-center mb-16 font-teachers text-fog tracking-wide">
         our mentors
       </h2>
@@ -80,16 +80,17 @@ const MentorCarousel = () => {
       <div ref={containerRef} className="relative overflow-hidden w-full mt-20">
         {/* Scrolling track */}
         <div
-          className="flex"
+          className="flex gap-12"
           style={{ transform: `translateX(${translateX}px)` }}
         >
           {mentors.map((mentor, idx) => (
             <div key={idx} className="mentor-card flex-shrink-0">
-              <MentorCard
+              <MiniMentorCard
                 image={mentor.image}
                 name={mentor.name}
                 title={mentor.title}
               />
+
             </div>
           ))}
         </div>
